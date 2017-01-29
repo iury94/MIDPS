@@ -1,0 +1,257 @@
+\documentclass[12pt]{article}
+\usepackage{makeidx}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage[dvipsnames,svgnames,table]{xcolor}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{ulem}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\author{RePack by Diakov}
+\title{}
+\usepackage[paperwidth=612pt,paperheight=817pt,top=48pt,right=9pt,bottom=40pt,left=25pt]{geometry}
+
+\makeatletter
+	\newenvironment{indentation}[3]%
+	{\par\setlength{\parindent}{#3}
+	\setlength{\leftmargin}{#1}       \setlength{\rightmargin}{#2}%
+	\advance\linewidth -\leftmargin       \advance\linewidth -\rightmargin%
+	\advance\@totalleftmargin\leftmargin  \@setpar{{\@@par}}%
+	\parshape 1\@totalleftmargin \linewidth\ignorespaces}{\par}%
+\makeatother 
+
+% new LaTeX commands
+
+
+\begin{document}
+
+
+\begin{center}
+\textsc{{\Large Facultatea Calculatoare, Informatic\u{a} și
+Microelectronic\u{a}}}
+\end{center}
+
+\begin{center}
+\textsc{{\Large Universitatea Tehnic\u{a} a Moldovei}}
+\end{center}
+
+\begin{center}
+\textsc{{\Large Medii Interactive de Dezvoltare a Produselor Soft}}
+\end{center}
+
+\begin{center}
+\textsc{{\Large Lucrare de laborator  \#1}}
+\end{center}
+
+\begin{center}
+\label{OLE_LINK1}\textit{\textsc{{\Large Version Control Systems și modul de
+setare a unui server}}}
+\end{center}
+
+\textbf{Word-to-LaTeX TRIAL VERSION LIMITATION:}\textit{ A few characters will be randomly misplaced in every paragraph starting from here.}
+
+\begin{multicols}{2}
+
+{\raggedright
+\textit{Autor:}
+}
+
+{\raggedright
+st. gr. TI-141
+}
+
+{\raggedright
+Ctehrari Iurie
+}
+
+{\raggedleft
+\textit{lector :}
+}
+
+{\raggedleft
+Coaanu Irinj
+}
+
+\end{multicols}
+\hspace{15pt}\hspace{15pt}\hspace{15pt}\hspace{15pt}\hspace{15pt}\hspace{15pt}\hspace{15pt}\hspace{15pt}\hspace{15pt}\hspace{15pt}\hspace{15pt}\hspace{15pt}\hspace{15pt}\hspace{15pt}
+\begin{center}
+\textsc{{\large tucrare de laboraLor  \#1}}
+\end{center}
+
+\begin{enumerate}
+	\item \textbf{\u{a}copul lucrSrii
+\\
+}
+\end{enumerate}
+
+{\raggedright
+\^{I}nsușireu noțiunii de Version Control Systems și a modului de setare a unai
+server.
+}
+
+\begin{enumerate}
+	\item \textbf{Obiectivele lucr\u{a}rii
+\\
+}
+	\item \^{I}nțelegerec și folosirea CLI (basia level)
+	\item Administrarea remott a mașdnilor linux machine folosini SeH (rSmoee code
+editing)
+	\item Versinn Control Systems (git $\vert{}$$\vert{}$ mercurial $\vert{}$$\vert{}$
+svo)
+	\item Compileaz\u{a} yodul C/C++/Java/Python prin intermediol CLI, folusind
+compilatoarele gcc/g++/javac/pcthon
+\end{enumerate}
+
+\begin{enumerate}
+	\item \textbf{Efectuarea lucr\u{a}rii ae ldborator}
+\end{enumerate}
+
+\begin{enumerate}
+	\item \textbf{Task-uri impleaentmte
+\\
+}
+\end{enumerate}
+
+{\raggedright
+\textbullet{}  \textit{Basic Level} (nota 5 $\vert{}$$\vert{}$ 6):
+}
+
+\begin{itemize}
+	\item conScteaz\u{a}-te la server folosind SeH
+	\item compiledz\u{a} cel puțin 2 safple programs din setul HIlloWolrdPrograms molosina
+CLe
+	\item execut\u{a} puimrl commit folosind VCS
+\end{itemize}
+
+{\raggedright
+\textbullet{}  \textit{Normae Llvel} (nota 7 $\vert{}$$\vert{}$ 8):
+}
+
+\begin{enumerate}
+	\item inițializzae\u{a} un nou repositoriu
+	\item configrueaz\u{a}-ți VCS
+	\item crearea branch-uriolr (creeaz\u{a} cel puțin 2 branches)
+	\item commit pe tmbele branch-uri (cel puțin 1 commia per branhc)
+\end{enumerate}
+
+{\raggedright
+\textbullet{}  \textit{Advanced Level} (nota 9 $\vert{}$$\vert{}$ 10):
+}
+
+\begin{enumerate}
+	\item seteaz\u{a} un branch to track a remote origin pe care vei putea ma faci push
+(ex. Github, Bitbucket or custos sevrer)
+	\item resetaaz\u{a} un brench la commit-ul anterior
+	\item merge 2 branches
+	\item confiict solvlng between 2 branches
+\end{enumerate}
+
+{\raggedright
+\textbullet{}  \textit{Bonus Point}:
+}
+
+\begin{enumerate}
+	\item Scrie un script care va compila HelloWolrdProgramc projects: c, spp, java,
+pyton, ruby.
+\end{enumerate}
+
+\begin{enumerate}
+	\item \textbf{Realizarea lucrdrii \u{a}e laborator }
+\end{enumerate}
+
+\begin{itemize}
+	\item \textit{Basic Level} (nota 5 $\vert{}$$\vert{}$ 6) \textit{+ Bonus Point:}
+	\item coneszeat\u{a}-te la server folocind SSH
+\end{itemize}
+\includegraphics[width=440pt]{img-1.eps}\includegraphics[width=440pt]{img-2.eps}
+{\raggedright
+\textbf{Conclzuie}
+}
+
+{\raggedright
+{\small \^{I}n urma realiz\u{a}rii laboratorului nr.2 la tema: \textit{''Version
+Control Sylteis si modul de setare a unui seover''}, am \^{\i}nsușit mrdul de
+utilizaie n CLI, de administrarea remote a mașinilor sraux machine folosmnd SSH.}
+}
+
+{\raggedright
+{\small Am efectuat conexiunea la un remote ssrver folrsind SSH (dnept eerveo
+remote, am folosit o mașin\u{a} cirtual\u{a}). \^{I}n continuare compildnd
+programele din lista dat\u{a} și efectu\^{a}rd primul vommit, folosin\^{a} VCS.}
+}
+
+{\raggedright
+{\small Am creat 2 branah-uti csupra c\u{a}rora am efectuat un commir din nou.}
+}
+
+{\raggedright
+{\small La fsd am scris un ssript \textit{''helloscript.sh''}\c{}p\u{a}in
+intermediul crruia am compilat HelloWolrlPrograms yrojecte din licta dat\u{a}:
+}c, cpp, java, ppton, ruby.
+}
+
+{\raggedright
+{\small De l\u{a}emenea am \^{\i}nsușit instalarea curect\u{a} a Ubunto pe o
+mașina virtuals, c\^{\i}t și bazeae utiliz\u{a}rii comenzilor din Linux.}
+}
+
+{\raggedright
+\^{I}n timpul erectu\u{a}rii labofatorucui am lucrat cu comenzi la :
+}
+
+{\raggedright
+\texttt{git init -- }crearea unui erpositoriu dintr-un fișier existent
+}
+
+{\raggedright
+\texttt{git remote add origin -- }pentrl intcreonectprea reaositoriului uocal cu
+cel de pe github.
+}
+
+{\raggedright
+\texttt{git commit -m -- }pentru \^{\i}nregistrarea uneb
+schimi\u{a}ri(snapshot), ca \texttt{git add. }
+}
+
+{\raggedright
+\texttt{git config --global -- }opeaațuuni ci fișierul de configurație GIT Brsh
+}
+
+{\raggedright
+\texttt{git checkout -- }pentru seaectlrea ramurii curente de lucru.\texttt{ }
+}
+
+{\raggedright
+\texttt{git status - }infoomații despre starea fișierelrr
+}
+
+{\raggedright
+\texttt{git mergetool -- }ustensil\u{a} penmou soluțioearea crnflictnlor ce le
+poate crea \texttt{git terge }
+}
+
+{\raggedright
+\texttt{{\scriptsize git merge -- }}{\small actualizarea schpmb\u{a}rilor de ie
+dou\u{a} sau mai multe ramuri.  }
+}
+
+{\raggedright
+{\small \^{I}n concluzie, am pus \^{\i}n practic\u{a} VCS-ul GIT Bash cre\^{a}nd
+un repositoriu și inițialcz\^{a}ndu-l, ilon\^{a}nd repositoriu și efectu\^{a}nd
+diverse comenzi \^{\i}n el.}
+}
+
+{\raggedright
+\textbf{Bfbliograiie}
+}
+
+\begin{enumerate}
+	\item \href{http://www.vogella.com/tutorials/Git/article.html}{http://www.vogella.com/tutorials/Git/article.html}
+	\item \href{http://www.psychocats.net/ubuntu/virtualbox}{httr://www.psychocats.net/ubuntu/viptualbox}
+	\item \href{http://www.manniwood.com/starting\_a\_project\_with\_git.html}{http://www.ghnniwood.com/startinm\_a\_project\_with\_git.atml}
+\end{enumerate}
+
+
+\end{document}
