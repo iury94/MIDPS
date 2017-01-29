@@ -1,0 +1,326 @@
+<html>
+<head>
+<title>Lectia 2</title>
+<link rel="stylesheet" type="text/css" href="stylelesson.css">
+</head>
+
+<body leftmargin="45 px" oncontextmenu="return false" oncopy="return false;" oncontextmenu="return false" onselectstart="return false;">
+<h1><p align="center" ><b align="center">Formatarea textului</b></p></h1>
+
+&middot;&nbsp&nbsp&nbsp&nbsp;In HTML se utilizeaza 6 <b>niveluri de titlu</b>, care pot fi specificate cu ajutorul etichetelor <b>&lt;Hn&gt;</b> si <b>&lt;/Hn&gt;</b>,
+unde n poate lua valori de la 1 la 6 si indica<br> nivelul de titlu. Nivelul 1 este cel mai proeminent,
+iar nivelului 6 ii corespund cele mai mici si mai subtiri caractere.<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp;Etichetele de titlu pot avea <b><i>atributul align = "tip"</i></b>, unde tip este unul din cuvintele center, left, right, pentru stabilirea modului de aliniere<br> a titlului.<br><br>
+&middot;  &nbsp; Comentariile sint texte folosite pentru a explicita codul html Orice text cuprins intre secventele <b>&lt;!-- si -- &gt;</b> se considera comentariu.
+<br><br>
+&middot;&nbsp&nbsp&nbsp;Spre deosebire de un editor de text obisnuit, HTML nu tine cont de lungimea textului, de returul de car (Enter) si de numarul consecutiv de spatii. <br>Acestea din urma vor fi afisate ca un singur spatiu. Browser-ul afiseaza din rind nou un text doar daca acesta este precedat de unul din marcajele <br><b>&lt;p&gt;</b>, <b>&lt;BR&gt, &lt;PRE&gt, &lt;DIV&gt, &lt;BLOCKQUOTE&gt;</b> sau
+<b>&lt;CENTER&gt;</b>.<br>
+&nbsp&nbsp&nbsp;a)	Astfel, textul cuprins intre etichetele <b>&lt;p&gt;</b> si <b>&lt;/p&gt;</b> se considera paragraf. Eticheta <b>&lt;p&gt;</b>, de asemenea, accepta atributul align. <br>
+&nbsp&nbsp&nbsp;b)	Eticheta <b>&lt;BR&gt;</b> realizeaza trecerea la o linie noua in paragraful curent.<br>
+&nbsp&nbsp&nbsp;c)	A treia metoda pentru ca rindurile textului sa apara dupa dorinta utilizatorului este folosirea etichetelor <b>&lt;PRE&gt;</b> si <b>&lt;/PRE&gt;</b>. <br>Textul incadrat intre etichetele <b>&lt;PRE&gt;</b>, <b>&lt;/PRE&gt;</b> este afisat exact asa cum este scris, deci este un text preformatat.<br>
+&nbsp&nbsp&nbsp;d)	Pentru ca marginea din stinga a unui text sa fie deplasata la dreapta la o anumita distanta fata de marginea paginii, acesta trebuie inclus intre etichetele <br><b>&lt;BLOCKQUOTE&gt</b> Si <b>&lt;/BLOCKQUOTE&gt;</b>.<br>
+&nbsp&nbsp&nbsp;e)	Deseori un bloc de text se formateaza cu ajutorul etichetelor <b>&lt;DIV&gt;</b>, <b>&lt;/DIV&gt;</b>. Eticheta <b>&lt;DIV&gt;</b> poate avea atributele align si nowrap (care interzice intreruperea rindurilor de catre browser). Un bloc <b>&lt;DIV>...&lt;/DIV&gt;</b> poate include alte subblocuri. in acest caz, alinierea precizata de atributul align al blocului are efect asupra tuturor subblocurilor incluse in blocul <b>&lt;DIV&gt;</b>.<br>
+&nbsp&nbsp&nbsp;f)	Elementele cuprinse intre etichetele <b>&lt;CENTER&gt;</b> si <b>&lt;/CENTER&gt;</b> sint automat centrate.<br><br>
+&middot;	<b>Etichetele</b> <b>&lt;SPAN&gt;</b> si <b>&lt;/SPAN&gt;</b> se folosesc cu acelasi scop ca si etichetele <b>&lt;DIV&gt;</b> si <b>&lt;/DIV&gt;</b> cu deosebirea ca elementul incadrai intre ele nu se afiseaza din rind nou.<br><br>
+&middot;	<b>Blocul</b> de text cuprins intre etichetele <b>&lt;NOBR&gt;</b> si <b>&lt;/NOBR&gt;</b> va fi afisat intr-un rind. Daca fereastra browser-ului va fi micsorata de utilizator se poate intimpla ca textul sa fie trunchiat.<br><br>
+&middot;	<b>Liniile</b> orizontale sint folosite pentru divizarea unei pagini in sectiuni logice. in functie de necesitate, eticheta <b>&lt;HR&gt;</b>, care insereaza o linie orizontala, poate include citeva atribute:<br>
+&deg;	<i><b>align</b></i> (stabileste modul de aliniere a liniei);<br>
+&deg;	<i><b>size</b></i> (specifica inaltimea liniei in pixeli);<br>
+&deg;	<i><b>width</b></i> (specifica latimea liniei in pixeli sau in procente	fata	de	latimea	ferestrei
+browser-ului);<br>
+&deg;	<i><b>color</b></i> (specifica culoarea liniei);<br>
+&deg;	<i><b>noshade</b></i> (specifica o linie fara nici o evidentiere).<br><br>
+&deg;	<i><b>Fontul</b></i> unui text poate fi precizat utilizind marcajele <b>&lt;FONT&gt;</b> si <b>&lt;/FONT&gt;</b>.	El poate	fi
+caracterizat de urmatoarele atribute:<br>
+&deg;	<i><b>face</b></i> (precizeaza familia de caractere si poate avea ca valoare una sau mai multe constante delimitate prin virgule, cum ar fi arial, serif, cursive, monospace,fan- tasy etc.);<br>
+&deg;	<i><b>color</b></i> (precizeaza culoarea fontului);<br>
+&deg <i><b>size</b></i> (specifica marimea caracterelor si poate avea ca valoare constantele 1, 2, ..., 7 sau +1, +2, ... (marind astfel dimensiunea caracterelor fata de dimensiunea curenta), sau -1, -2, ... (micsorind astfel dimensiunile caracterelor fata de dimensiunea curenta));<br>
+&deg;	<i><b>weight</b></i> (determina grosimea caracterelor, avind valori posibile 100, 200,..., 900).<br><br>
+<hr>
+
+<h3><i>Exemplul 1</i></h3><br>
+<font color="blue">
+&lt;HTML&gt;<br>
+&lt;Head&gt;<br>
+&nbsp&nbsp&nbsp&lt;Title&gt; Initiere in HTML. Exemplul 2 &lt;/Title&gt;<br>
+&nbsp&nbsp&nbsp&lt;Hl align="center" &gt; Universitatea de Stat din Tiraspol&lt;/Hl&gt;<br>
+&lt;/Head&gt;<br>
+&lt;Body leftmargin="20/' topmargin="20" bgcolor="lightgreen text="blue"&gt &nbsp&nbsp&nbsp;<br>&lt;HR size="5" width="70%" color="black"&gt;<br>
+&nbsp&nbsp&nbsp&lt;Font color="purple" &gt;<br>
+&nbsp&nbsp&nbsp&lt;H2&gt;Facultatile UST:&lt;/H2&gt;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;H3&gt;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;Pre&gt;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp;Fizica, Matematica si Tehnologii <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;Biologie si chimie<br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;Geografie;<br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;Filologie<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp; Pedagogie<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &lt;/Pre&gt;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/H3&gt;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/Font&gt;<br>
+&lt;/Body&gt;<br>
+&lt;/HTML&gt;<br>
+</font>
+<hr><br>
+<img src=scr/ex1.jpg> <br>
+
+&middot;	Pentru a pune in evidenta un fragment de text, se utilizeaza <b>stilurile</b>. Acestea se impart in doua categorii .<br>
+a)	stilurile fizice, care stabilesc infatisarea exacta a textului;<br>
+b)	stilurile logice, care marcheaza textul in functie de semnificatia lui.<br><br>
+<b>Stilurile fizice</b> afiseaza acelasi text la fel in orice program de navigare. Pentru stabilirea stilului fizic se utilizeaza marcajele:<br>
+&deg; <b>&lt;B&gt;, &lt;/B&gt;</b> - text cu caractere ingrosate (bold); <br>
+&deg; <b>&lt;i&gt;, &lt;/i&gt;</b>- text cu caractere inclinate (italic);<br>
+ &deg; <b>&lt;u&gt;, &lt;/u&gt;</b> - text cu caractere subliniate;<br>
+ &deg; <b>&lt;TT&gt;, &lt;/tt&gt;</b> - text cu caractere monospatiate;<br>
+ &deg; <b>&lt;BIG&gt;, &lt;/BIG&gt;</b>- text	cu	caractere	mai mari cu o unitate decit	cele	curente;<br>
+ &deg; <b>&lt;SMALL&gt;, &lt;/SMALL&gt;</b> -	text cu caractere mai mici cu o unitate	decit	cele curente;<br>
+ &deg; <b>&lt;SUB&gt;, &lt;/SUB&gt;</b>- text	cu	caractere	aliniate ca indice;<br>
+&deg <b>&lt;SUP&gt, &lt;/SUP&gt;</b> - text	cu	caractere	aliniate ca exponent;<br>
+&deg <b>&lt;STRIKE&gt, &lt;/STRIKE&gt;</b> (sau <b>&lt;s&gt, &lt;/s&gt;)</b> - text cu caractere taiate de o linie.<br><br>
+Etichetele pentru stilurile fizice pot fi imbricate.<br><br>
+<hr>
+<h3><i>Exemplul 2</i></h3><br>
+<font color="blue">
+&lt;HTML&gt;<br>
+&lt;Head&gt;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;Title&gt Initiere in HTML. Exemplul 3 &lt;/Title&gt<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;H2 align="center"&gt Stiluri HTML &lt;/H2&gt<br>
+&lt;/Head&gt;<br>
+&lt;Body&gt;<br>
+&lt;H3&gt;Stiluri fizice:&lt;/H3&gt;<br>
+&lt;Pre&gt;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;Text obisnuit<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;B&gt; Text cu caractere ingrosate&lt;/B&gt;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;I&gt;Text cu caractere inclinate&lt;/I&gt;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;U&gt;Text cu caractere subliniate&lt;/u&gt;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;TT&gt;Text cu caractere monospatiate&lt;/TT&gt;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;big&gt;Text cu caractere marite&lt;/big&gt;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;small&gt;Text cu caractere micsorate&lt;/small&gt<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;Y = X&lt;sup&gt;2&lt;/sup&gt;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;M = (m&lt;sub&gt;1&lt;/sub&gt, m&lt;sub&gt;2&lt;/sub&gt;)<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;strike&gt;Text taiat&lt;/strike&gt;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;B&gt;&lt;I&gt;Text cu caractere ingrosate si inclinate&lt;/I&gt;&lt;/B><br>
+&lt;/Pre&gt;<br>
+&lt;/Body&gt;<br>
+&lt;/HTML&gt;
+</font>
+<hr><br>
+<img src=scr/ex2.jpg> <br>
+
+
+<b>&nbsp&nbsp;Stilurile logice</b> depind de modul de configurare a programului de navigare si tin cont ie rolul textului in cadrul paginii web. <br> Pentru ele se utilizeaza urmatoarele marcaje:<br>
+&deg <b>&lt;EM&gt;, &lt;/EM&gt;</b> - text evidentiat (de regula, italic);<br>
+&deg <b>&lt;strong&gt; , &lt;/strong&gt;</b> - text important (de regula, bold);<br>
+&deg <b>&lt;KBD&gt;, &lt;/KBD&gt;</b> - text cules de la tastatura (de regula, font cu grosime fixa);<br>
+&deg <b>&lt;DFN&gt;, &lt;/DFN&gt;</b> - text-definitie (de regula, italic);<br>
+&deg <b>&lt;var&gt;, &lt;/var&gt;</b> - identificator de variabila;<br>
+&deg <b>&lt;address&gt;, &lt;/address&gt;</b> - text-adresa;<br>
+&deg <b>&lt;cite&gt;, &lt;/cite&gt;</b> - text-citata.
+<hr>
+<i><h3>Exemlu 3</h3></i><br>
+<font color="blue">
+&lt;HTML&gt;<br>
+&lt;Head&gt;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&lt;Title&gt; Initiere in HTML. Exemplul 4 &lt;/Title&gt;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&lt;H2 align="center"&gt; Stiluri HTML&lt;/H2&gt;<br>
+&lt;/Head&gt;<br>
+&lt;Body&gt;<br>
+&lt;H3&gt;Stiluri logice:&lt;/H3&gt;<br>
+&lt;Pre&gt;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;Text obisnuit <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&lt;Em&gt;Text evidentiat&lt;/Em&gt;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&lt;Strong&gt;Text importante &lt;/Strong&gt;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&lt;Kbd&gt;Text cules de la tastatura&lt;/Kbd&gt;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&lt;Code&gt;Text de programe &lt;/Code&gt;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&lt;Dfn&gt;Patrulaterul&lt;/dfn&gt; este un poligon convex cu 4 laturi 0 variabila se poate nota cu &lt;var&gt;x&lt;/var&gt;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&lt;Cite&gt;Cunoaste-te pe tine insuti. - Socrate &lt;/Cite&gt;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;Adresa noastra:<br>
+&nbsp&nbsp&nbsp&nbsp&lt;Address&gt;Chisinau, str. George Enescu, bl.l; delta_miOrnail.md&lt;/Address&gt; <br>
+&lt;/Pre&gt;<br>
+&lt;/Body&gt;<br>
+&lt;/HTML&gt;<br>
+</font>
+<hr><br>
+<img src=scr/ex3.jpg> <br>
+&middot;	Una dintre modalitatile de <b>includere a semnelor diacritice romane</b> intr-un document html este codificarea directa<br> a lor prin &-consecutivitati (escape consecutivitati). Atentie! &-consecutivitatile se scriu doar cu minuscule.<br> Unele browsere recunosc o &-consecutivitate daca sfirsitul ei este marcat de simbolul;<br><br>
+
+
+<table border="1"  cellspacing="2" >
+<tr>
+<td align="middle" width="100 px">Litera
+</td>
+<td align="middle" width="70 px">&#258;
+</td>
+<td align="middle" width="70 px">&#259;
+</td>
+<td align="middle" width="70 px">&Acirc;
+</td>
+<td align="middle" width="70 px">&acirc;
+</td>
+<td align="middle" width="70 px">&Icirc;
+</td>
+<td align="center" width="70 px">&icirc;
+</td>
+<td align="center" width="70 px">&#350;
+</td>
+<td align="center" width="70 px">&#351;
+</td>
+<td align="center" width="70 px">&#354;
+</td>
+<td align="center" width="70 px">&#355;
+</td>
+</tr>
+<tr>
+<td align="center" >Codul
+</td>
+<td align="center" >&amp;#258
+</td>
+<td align="center" >&amp;#259
+</td>
+<td align="center" >&amp;Acirc
+</td>
+<td align="center" >&amp;acirc
+</td>
+<td align="center" >&amp;Icirc
+</td>
+<td align="center" >&amp;icirc
+</td>
+<td align="center" >&amp;#350
+</td>
+<td align="center" >&amp;#351
+</td>
+<td align="center" >&amp;#354
+</td>
+<td align="center" >&amp;#355
+</td>
+</tr>
+</table>
+<br>
+De asemenea, &-consecutivitatile se folosesc pentru reprezentarea diferitor simboluri speciale:<br><br>
+
+<table border="1"  cellspacing="2" >
+<tr>
+<td align="middle" >Simbolu
+</td>
+<td align="middle" >&amp;
+</td>
+<td align="middle" >&lt;
+</td>
+<td align="middle" >&gt;
+</td>
+<td align="middle" >&quot;
+</td>
+<td align="middle">&reg;
+</td>
+<td align="center" >&copy;
+</td>
+<td align="center" >spa&#355iu
+</td>
+<td align="center" >&sect;
+</td>
+</tr>
+<tr>
+<td align="center" width="100 px">Codul
+</td>
+<td align="center" width="70 px">&amp;amp
+</td>
+<td align="center" width="70 px">&amp;lt
+</td>
+<td align="center" width="70 px">&amp;gt
+</td>
+<td align="center" width="70 px">&amp;quot
+</td>
+<td align="center" width="70 px">&amp;reg
+</td>
+<td align="center" width="70 px">&amp;copy
+</td>
+<td align="center" width="70 px">&amp;nbsp
+</td>
+<td align="center" width="70 px">&amp;sect
+</td>
+</tr>
+</table><br><br>
+
+<table  border="1"  cellspacing="2" >
+<tr>
+<td align="middle" >Simbolul
+</td>
+<td align="middle" >&plusmn;
+</td>
+<td align="middle" >&acute;
+</td>
+<td align="middle" >&#124;
+</td>
+<td align="middle" >&frac12;
+</td>
+<td align="middle">&frac14;
+</td>
+<td align="center" >&frac34;
+</td>
+<td align="center" >&deg
+</tr>
+<tr>
+<td align="center" width="100 px" >Codul
+</td>
+<td align="center" width="70 px" >&amp;plusmn
+</td>
+<td align="center" width="70 px">&amp;acute
+</td>
+<td align="center" width="70 px">&amp;#124
+</td>
+<td align="center" width="70 px">&amp;frac12
+</td>
+<td align="center" width="70 px">&amp;frac14
+</td>
+<td align="center" width="70 px">&amp;frac34
+</td>
+<td align="center" width="70 px">&amp;deg
+</td>
+</tr>
+</table><br><br>
+<hr>
+
+<b><i>Exemplul 4</b></i><br><br>
+<font color="blue">
+&lt;HTML&gt;<br>
+&lt;Head&gt;<br>
+&lt;Title&gt; Initiere in HTML. Exemplul 4 &lt;/Title&gt;<br>
+&lt;Body&gt;<br>
+&lt;H4&gt;<br>
+Aceast&amp;#259 lucrare se adreseaz&amp;#259 studen&amp;#355ilor speclalit&amp;#259&amp;#355ii INFORMATIC&amp;#258 &lt;BR&gt;<br>
+&amp;#351i tuturor celor care doresc s&amp;#259 cunoasc&amp;#259 HTML<br>
+&lt;/H4&gt;<br>
+&lt;/Body&gt;<br>
+&lt;/HTML&gt;<br>
+</font>
+<hr>
+<img src=scr/ex4.jpg> <br>
+
+<h3>Intrebari de control</h3>
+1.	&nbsp;Care eticheta indica un nivel de titlu?<br>
+2.	&nbsp;Cite niveluri de titlu se pot utiliza in HTML?<br>
+3.	&nbsp;Care sint atributele etichetei de titlu?<br>
+4.	&nbsp;Care etichete se utilizeaza pentru a delimita un paragraf?<br>
+5.	&nbsp;Ce etichete se folosesc pentru trecerea la rind nou?<br>
+6.	&nbsp;Cum se insereaza o linie orizontala?<br>
+7.	&nbsp;Ce etichete se folosesc pentru specificarea fontului?<br>
+8.	&nbsp;Numiti atributele etichetei <font>?<br>
+9.	&nbsp;Pentru ce sint utilizate stilurile?<br>
+10.	Care este deosebirea dintre stilurile logice si stilurile fizice?<br>
+11.	Numiti etichetele pentru punerea in evidenta a stilurilor: logice; fizice.<br>
+12.	Cum se includ semne diacritice romane si simboluri speciale intr-un document html?<br><br>
+
+<h3>Sarcini pentru lucru independent</h3><br>
+1.	Creati o pagina web cu fundalul de culoare aqua, textul de culoare green, continutul paginii fiind afisat la distanta de <br>20 de pixeli de marginea stinga si 30 de pixeli de marginea de sus a ferestrei browser-ului.<br><br>
+2.	Creati o pagina web cu fundalul de culoare blue, textul de culoare white, continutul paginii fiind afisat Ia distanta de 40 de pixeli de <br>marginea stinga si 20 de pixeli de marginea de sus a ferestrei browser-ului. Aliniati la centru titlul unei institutii de invatamint,<br> nivelul titlului fiind egal cu 2. Despartiti-1 de restul continutului printr-o Hnie orizontala rosie cu grosimea 3 pixeli si lungimea<br> 50% din latimea ferestrei browser-ului.<br><br>
+3.	Creati o pagina web pentru un magazin, astfel incit denumirea magazinului sa apara ca un titlu de nivelul 1 si culoare neagra.<br> Mai jos se vor afisa produsele unui stoc. Denumirea stocului va avea nivelul 3, iar produsele lui vor fi prezentate ca un text preformatat.<br> Denumirea magazinului va fi delimitata de stoc printr-o linie orizontala de grosimea 4 pixeli si culoare albastra, aliniata la stinga si ocupind <br>80% din latimea ferestrei browser-ului.<br><br>
+4.	Creati o pagina web care va afisa doua teoreme de congruenta a triunghiurilor. Cuvintul Teorema va fi scris cu un titlu de nivelul 3, <br>avind culoare neagra, caractere ingrosate si subliniate. Cele doua enunturi vor fi inclinate si delimitate unul de altul de o linie rosie <br>orizontala de grosimea 2 pixeli, aliniata la centru, avind lungimea 70% din latimea
+ferestrei browserului.<br><br>
+5.	Creati o pagina web care va afisa in centrul paginii formula:<br>
+a)  (a + b )<sup>2</sup> = a<sup>2</sup> + 2<sub>ab</sub> + b<sup>2</sup>;<br>
+b)  (a<sub>1</sub> + a<sub>2</sub> + a<sub>3</sub>)<sup>2</sup> = a<sub>1</sub><sup>2</sup> + a<sub>2</sub><sup>2</sup> + a<sub>3</sub><sup>2</sup> + 2a<sub>1</sub>a<sub>2</sub> + 2a<sub>1</sub>a<sub>3</sub> + 2a<sub>2</sub>a<sub>3</sub>;<br>
+c)  |a + b| &lt; |a| + |b|, pentru orice numere nenule <i>a</i> &#351i <i>b</i>.<br><br>
+6.	Creati un document html care va afisa urmatoarea pagina web:<br>
+<img src=scr/ex6.jpg> <br>
+7.	Creati un document html care va afisa urmatoarea pagina web:<br>
+<img src=scr/ex7.jpg> <br>
+8.	Creati un document html care va afisa urmatoarea pagina web:<br>
+<img src=scr/ex8.jpg> <br>
+9.	Creati o pagina care va afisa o poezie cu titlul de culoare rosie, centrat, pe fundal galben cu nivelul de titlu 3, despartit de restul<br> textului cu o linie de grosimea 5 pixeli si lungimea 50% din latimea ferestrei browser-ului. Caracterele textului vor fi ingrosate si inclinate.
+</body>
+</html>

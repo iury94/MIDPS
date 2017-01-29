@@ -1,0 +1,249 @@
+<html>
+<head>
+<title>Lectia 1</title>
+</head>
+
+<body leftmargin="45px" oncontextmenu="return false" oncopy="return false;" oncontextmenu="return false" onselectstart="return false;">
+<h1 align=center>Filtre grafice</h1>
+<h3>13.1.	Modalit&#259;&#355;i de aplicare a filtrelor grafice</h3><br>
+Odat&#259; cu lansarea versiunii 4.0 a browser-ului Internet Explorer a ap&#259;rut posibilitatea redact&#259;rii imaginilor elementelor html cu ajutorul filtrelor grafice.
+Un filtru grafic (&icirc;n continuare vom spune filtru) este un algoritm care transform&#259; imaginea unui element (&icirc;n particular o imagine). De exemplu, butonul al doilea 
+al urm&#259;toarei pagini web a fost „r&#259;sturnat” cu ajutorul unui filtra.<br>
+Filtrele se pot diviza &icirc;n dou&#259; tipuri:<br>
+a)	filtre statice (ele efectueaz&#259; imediat o transformare a imaginii pentru care se aplic&#259;);<br>
+b)	filtre dinamice (creeaz&#259; un efect de anima&#355;ie cu imaginea pentru care se aplic&#259;).<br>
+Filtrele se pot aplica asupra elementelor definite de etichetele BODY, IMG, TABLE, TH, TD, TEXTAREA, DIV, SPAN. 
+&icirc;n cazul ultimelor dou&#259; filtrul va avea efect dac&#259; eticheta respectiv&#259; va avea atributele 
+width &#351;i height sau elementele definite de ele vor fi pozi&#355;ionate absolut.
+Un filtru poate fi apelat prin proprietatea FILTER descris&#259;:<br>
+a)	&icirc;ntr-o foaie de stiluri &icirc;n cascad&#259; sau<br>
+b)	&icirc;ntr-un cod de script (de exemplu, &icirc;n limbajul JavaScript).<br>
+     Sintaxa declar&#259;rii propriet&#259;&#355;ii f&icirc;lter<br><br>
+	 Un filtru poate avea unul, mai mul&#355;i sau nici un parametru. Parantezele din declara&#355;ie s&icirc;nt obligatorii. Dac&#259; acela&#351;i element folose&#351;te c&icirc;teva filtre, se poate scrie un singur cuv&icirc;nt- cheie f ilter, urmat de denumirile filtrelor, fiecare dou&#259; fiind separate prmtr-un spa&#355;iu.
+
+Filter : Numele filtrului ([parametrii])
+<hr>
+	<font color=blue> 
+	 <h4>Exemplul 1</h4>
+<i>Urm&#259;torul cod HTML afi&#351;eaz&#259; documentul html din imaginea prezentat&#259; Ia &icirc;nceputul lec&#355;iei.</i><br><br>
+&lt;HTML&gt;<br>
+&lt;Head&gt;<br>
+&lt;Style type="text/css"&gt;<br>
+.cl {filter: FlipV ();}<br>
+&lt;/Style&gt;<br>
+&lt;/Head&gt;<br>
+&lt;Body&gt;<br>
+&lt;Form&gt;<br>
+&lt;Input type=button value="Butonul 1"&gt; - Buton obi&#351;nuit &lt;br&gt;&lt;Hr&gt;<br>
+dnput class="cl" type=button value="Butonul 2" &gt; - Buton "filtrat" &lt;/Form&gt;<br>
+&lt;/Body&gt;<br>
+&lt;/HTML&gt;<br>
+</font>
+<hr> <br>
+<img src ="scr/ex1.jpg"> <br>
+
+   Obseratie <br>
+	Vom examina exemple cu descrierea propriet&#259;&#355;ii filter doar &icirc;n foi de stiluri &icirc;n cascad&#259;.<br>
+<br>
+<h3>13.2.	Filtre grafice statice utilizate frecvent</h3>
+Filtrul alpha confer&#259; transparen&#355;&#259; &icirc;ntregii imagini sau unei p&#259;r&#355;i a ei.<br>
+<H4 align=center>Sintaxa filtrului alpha  </h4>
+Filter: alpha {Opacity = nl, FinishOpacity = n2, Style = n3,
+StartX = n4, StartX = n5, FinishX = n6, FinishY = n7) <br> <br>
+-	Opacity stabile&#351;te gradul de transparen&#355;&#259; &#351;i poate lua valori de la 0 (transparen&#355;&#259; maximal&#259;, adic&#259; imagine invizibil&#259;) la 100 (imagine normal&#259;).
+-	style determin&#259; modul de creare a efectului de transparen&#355;&#259;. Valoarea 0 este implicit&#259; &#351;i aplic&#259; transparen&#355;a asupra &icirc;ntregii imagini.
+Dac&#259; style = 1, atunci parametrii startx, startY, Finishx, FinishY definesc o dreapt&#259; a c&#259;rei puncte au gradul de transparen&#355;&#259; FinishOpacity. Gradele de transparen&#355;&#259; a punctelor imaginii situate &icirc;ntre aceast&#259; dreapt&#259; &#351;i hotarele imaginii se modific&#259; de la Opacity p&icirc;n&#259; la B’inishOpacity.
+Dac&#259; style = 2, atunci gradele de transparen&#355;&#259; ale punctelor se modific&#259; din centrul imaginii spre elipsa &icirc;nscris&#259; &icirc;n dreptunghiul &icirc;n care este &icirc;ncadrat&#259; imaginea (de la Opacity p&icirc;n&#259; la FinishOpacity).
+<br><br>
+<hr>
+<font color=blue>
+Dac&#259; style = 3, atunci gradele de transparen&#355;&#259; ale punctelor se modific&#259; din centrul imaginii spre hotarele ei (de la Opacity p&icirc;n&#259; la Finishopacity).
+<br>
+<h4>Exemplul 2</h4><br>
+&lt;HTML&gt;<br>
+&lt;Head&gt;<br>
+&lt;Style type="text/css"&gt;<br>
+.cl {Filter: alpha(Opacity = 90, FinishOpacity = 5, Style = 1,<br>
+StartX = 0, StartX = 0, FinishX = 100, FinishY = 70);)<br>
+.c2 {Filter: alpha(Opacity = 100, Finishopacity = 5, Style = 2,<br>
+StartX = 0, StartX = 0, FinishX = 0, FinishY = 0);}<br>
+.c3 {Filter: alpha(Opacity = 100, Finishopacity = S, Style = 3,<br>
+StartX = 0, StartX = 0, FinishX = 0, FinishY = 0),-}<br>
+&lt;/Style&gt;<br>
+&lt;/Head&gt;<br>
+&lt;Body&gt;<br>
+&lt;Table&gt;<br>
+&lt;TR align=center&gt;<br>
+&lt;TD&gt; Imaginea normala &lt;TD&gt; Clasa cl &lt;TD&gt; Clasa c2 &lt;TD&gt; Clasa c3 &lt;/TR&gt;<br>
+&lt;Tr&gt;<br>
+&lt;TD&gt; &lt;lmg src=desen.jpg width=100 height=100&gt;<br>
+&lt;TD&gt; &lt;lmg src=desen.jpg width=100 height=100 class=cl&gt;<br>
+&lt;TD&gt; &lt;img src=desen.jpg width=100 height=100 class=c2&gt;<br>
+&lt;TD&gt; &lt;Img src=desen.jpg width=100 height=100 class=c3&gt;<br>
+&lt;/TR&gt;<br>
+&lt;/Table&gt;<br>
+&lt;/Body&gt;<br>
+&lt;/HTML&gt;<br>
+</font>
+	<hr> <br>
+<img src ="scr/ex2.jpg"> <br>
+	Filtrul blur „dizolv&#259; &#351;i &icirc;ntinde” imaginea.<br>
+<h4 align=center>Sintaxa filtrului blur</h4>
+Filter: blur (Add = nl/expresie logic&#259;, Direction = n2, Strength = n3)<br>
+-	Add stabile&#351;te dac&#259; imaginea ini&#355;ial&#259; va fi (pentru valoarea true sau pentru un num&#259;r nenul) sau nu (pentru valoarea false sau pentru 0) inclus&#259; &icirc;n imaginea-rezultat.<br>
+-	Direction determin&#259; direc&#355;ia &icirc;n care imaginea va fi „&icirc;ntins&#259;”.<br>
+-	strength stabile&#351;te gradul de intensitate al filtrului. Poate lua valori de la 0 la 255.<br><br>
+	<hr>
+	<font color=blue>
+	<h4>Exemplul 3</h4><br>
+&lt;HTML&gt;<br>
+&lt;Head&gt;<br>
+&lt;Style type="text/css"&gt;<br>
+.cl {Filter: blur{Add = false, Direction = 10, Strength = 20);} &lt;/Style&gt;<br>
+&lt;/Head&gt;<br>
+&lt;Body&gt;<br>
+&lt;Table&gt;<br>
+&lt;TR align=center&gt;<br>
+&lt;TD&gt; Imaginea normala &lt;TD&gt; Clasa cl &lt;/TR&gt;<br>
+&lt;TR&gt;<br>
+&lt;TD&gt; &lt;Img src=desen.jpg width=100 height=100&gt;<br>
+&lt;TD&gt; &lt;Img src=desen.jpg width=100 height=100 class=cl&gt;<br>
+&lt;/TR&gt;<br>
+&lt;/Table&gt; <br>
+&lt;/Body&gt;<br>
+&lt;/HTML&gt;<br>
+
+</font>	
+<br>
+<hr>	
+<img src ="scr/ex3.jpg"> <br>	
+ Filtrul DropShadow creeaz&#259; umbr&#259; imaginii.<br>
+<h4 align=center> Sintaxa filtrului DropShadow</h4>
+Filter: DropShadow (Color = culoare, Offx = nl, OffY = n2, Positive = n3/expresie logic&#259;)<br>
+-	Color stabile&#351;te culoarea umbrei.<br>
+-	of fx specific&#259; (&icirc;n pixeli) deplasarea &icirc;n direc&#355;ie orizontal&#259; a umbrei (valorile pozitive deplaseaz&#259; umbra spre dreapta, cele negative - spre st&icirc;ng&#259;).<br>
+-	of fY specific&#259; (&icirc;n pixeli) deplasarea &icirc;n direc&#355;ie vertical&#259; a umbrei (valorile pozitive deplaseaz&#259; umbra &icirc;n jos, cele negative - &icirc;n sus).<br>
+-	Positive determin&#259; dac&#259; umbra va fi (pentru valoarea true sau pentru valoare nenul&#259;) sau nu creat&#259; doar &icirc;n baza punctelor (pixeli-lor) transparente.<br>
+<br>Filtrul chroma confer&#259; transparen&#355;&#259; unei culori a imaginii.<br>
+<h4 align=center>Sintaxa filtrului chroma </h4>
+ Filter: chroma (Color = culoare)<br>
+Culoarea se define&#351;te dup&#259; regulile cunoscute.<br>
+<hr>	
+<font color=blue>
+<h4>Exemplul 4</h4><br>
+&lt;HTML&gt;<br>
+&lt;Head&gt;<br>
+&lt;Style type="text/css"&gt;<br>
+.cl {Filter: chroma {Color - red);}<br>
+&lt;/Styie&gt;<br>
+&lt;/Head&gt;<br>
+&lt;Body class=cl&gt;<br>
+&lt;H1&gt;<br>
+&lt;Font color = blue&gt; Text albastru &lt;/Font&gt;<br>
+&lt;Font color = red&gt; Text ro&#351;u &lt;/Font&gt;<br>
+&lt;Font color = green&gt; Text verde &lt;/Font&gt;<br>
+&lt;/Hl&gt;<br>
+&lt;/Body&gt;<br>
+&lt;/HTML&gt;<br>
+</font>
+	<br>
+	<hr>
+	<img src ="scr/ex4.jpg"> <br>
+Filtrele flipH &#351;i flipV „r&#259;stoarn&#259;” orizontal &#351;i respectiv vertical imaginea.<br>
+
+<h4 align=center>Sintaxa filtrelor flipH &#351;i flipV</h4>
+Filter: flipH () Filter: flipV ()<br>
+<hr>
+<font color=blue>
+<h4>Exemplul 5</h4>
+&lt;HTML&gt;<br>
+&lt;Head&gt;<br>
+&lt;Style type="text/css"&gt;<br>
+.cl {Filter: flipH ();}<br>
+.c2 {Filter: flipV ();}<br>
+&lt;/Style&gt;<br>
+&lt;/Head&gt;<br>
+&lt;Body&gt;<br>
+&lt;center&gt;<br>
+&lt;f orm&gt;<br>
+&lt;Input type=button value="buton de comanda" &gt;<br>
+&lt;Hr&gt;<br>
+&lt;Input class=cl type=button value="buton de comanda" &gt; &lt;Hr&gt;<br>
+&lt;Input class=c2 type=button value=”buton de comanda" &gt; &lt;/form&gt;<br>
+&lt;/center&gt;<br>
+&lt;/Body&gt;<br>
+&lt;/HTML&gt;<br>
+</font>
+	<hr>
+	<br>
+	<img src ="scr/ex6.jpg"> <br>
+Filtrele Gray, Xray afi&#351;eaz&#259; imaginea &icirc;n format alb-negru.<br>
+Filtrul Invert schimb&#259; culorile imaginii cu „opusele” lor.<br>
+<h4 align=center>Sintaxa filtrelor Gray, Xray &#351;i Invert</h4>
+Filter: Gray () Filter: Xray () Filter: Invert ()<br>
+
+<hr>
+<font color=blue>
+<h4>Exemplul 6</h4>
+&lt;HTML&gt;<br>
+&lt;Head&gt;<br>
+&lt;Style type="text/css"&gt;<br>
+.cl {Filter: Gray{) ; }<br>
+.c2 {Filter: Invert();}<br>
+&lt;/Style&gt;<br>
+&lt;/Head&gt;<br>
+&lt;Body&gt;<br>
+&lt;Table&gt;<br>
+&lt;TR align=center&gt;<br>
+&lt;TD&gt; Imaginea normala &lt;TD&gt; Clasa cl &lt;TD&gt; Clasa c2 &lt;/TR&gt;<br>
+&lt;TR&gt;<br>
+&lt;TDximg	src-desen.jpg width=100	height=100	&gt;<br>
+&lt;TD&gt;&lt;img	src=desen.jpg width=100	height=100	class=	cl	&gt;<br>
+&lt;TDximg	src=desen. jpg width=100	height=100	class=	c2	&gt;<br>
+&lt;/TR&gt;<br>
+&lt;/Table&gt;<br>
+&lt;/Body&gt;<br>
+&lt;/HTML&gt;<br>
+</font>	
+<hr>	
+<br>
+<img src ="scr/ex5.jpg"> <br>
+Filtrul Wave adaug&#259; imaginii unde.<br>
+<h4 align=center>Sintaxa filtrului Wave</h4>
+Filter: Wave (Add = nl/expresie logica, Freq = nl, LightStrength = n2, Phase = n3, Strength = n4)<br>
+-	Add stabile&#351;te dac&#259; imaginea ini&#355;ial&#259; va fi (pentru valoarea true sau pentru un num&#259;r nenul) sau nu (pentru valoarea false sau pentru 0) inclus&#259; &icirc;n imaginea-rezultat.<br>
+-	Freq specific&#259; num&#259;rul de unde.<br>
+-	LightStrength stabile&#351;te puterea undelor (&icirc;n procente).<br>
+-	Phase determin&#259; unghiul de deplasare a undelor (&icirc;n procente, adic&#259; 100% corespund celor 360 de grade).<br>
+-	strength specific&#259; intensitatea undelor.<br>
+<hr>
+<font color=blue>
+<h4>Exemplul 7</h4>
+&lt;HTML&gt;<br>
+&lt;Head&gt;<br>
+&lt;Style type="text/css"&gt;<br>
+.cl {Filter: wave(Add=true, Freq=5, LightStrength=20, Phase=10, Strength=20);}<br>
+.c2 {Filter: wave(Add=false, Freq=5, LightStrength=20, Phase=10, Strength=20);)<br>
+&lt;/Style&gt;<br>
+&lt;/Head&gt;<br>
+&lt;Body&gt;<br>
+&lt;Table&gt;<br>
+&lt;TR align=center&gt;<br>
+&lt;TD&gt; Imaginea normala &lt;TD&gt; Clasa cl &lt;TD&gt; Clasa c2 &lt;/TR&gt;<br>
+&lt;TR&gt;<br>
+&lt;TDximg	src=desen. jpg width=100	height=100	&gt;<br>
+&lt;TDximg	src=desen. jpg width=100	height=100	class=	cl	&gt;<br>
+&lt;TDximg	src=desen. jpg width=100	height=100	class=	c2	&gt;<br>
+&lt;/TR&gt;<br>
+&lt;/Table&gt;<br>
+&lt;/Body&gt;<br>
+&lt;/HTML&gt;<br><br>
+
+</font>
+<hr>
+<br> <img src ="scr/ex7.jpg"> <br>
+Filtrele dinamice, de regul&#259;, se lanseaz&#259; &icirc;n urma unei ac&#355;iuni a utilizatorului. De aceea pentru a le aplica se folosesc coduri JavaScript care permit prelucrarea diferitor evenimente ale aplica&#355;iei web.
+
+	
+</body>
+</html>

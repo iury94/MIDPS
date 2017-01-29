@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Lectia 12</title>
+</head>
+<body leftmargin="45px" oncontextmenu="return false" oncopy="return false;" oncontextmenu="return false" onselectstart="return false;">
+<h1 align="center">Descrierea unui document HTML</h1>
+
+Elaborarea specifica&#355;iilor pentru limbajul HTML are loc mai &icirc;ncet dec&icirc;t lansarea versiunilor noi de browsere. De aceea &icirc;n antetul unui document html se pot<br> specifica informa&#355;ii care nu se refer&#259; obligator la HTML.<br>
+Totodat&#259; sistemele de c&#259;utare, precum ar fi google.com, yandex.com, yahoo.com, excite.com scaneaz&#259; resursele Internet &#351;i acumuleaz&#259; date despre<br> diferite pagini 
+web. Aceste date s&icirc;nt oferite utilizatorilor &icirc;n urma cererilor de c&#259;utare. Datele (cu descrierea paginii) furnizate sistemelor de c&#259;utare de<br> asemenea se insereaz&#259; &icirc;n antetul documentului html &#351;i nu s&icirc;nt afi&#351;ate &icirc;n fereastra browser-ului.<br>
+
+<ul>
+<li>Pentru a realiza aceste lucruri se utilizeaz&#259; eticheta &lt;META&gt;, care poate avea urm&#259;toarele atribute:
+<ol>
+<li>NAME = "description" / "keywords";
+<li>CONTENT = "text" / "text/html; charset = codificare" / "n"&gt;;
+<li>HTTP-EQUIV = "Content-type" / "Refresh";
+<li>URL = "Adres&#259; URL".
+</ol>
+</ul>
+
+Atributul NAME se scrie &icirc;mpreun&#259; cu atributul CONTENT.<br>
+Dac&#259; NAME= "description", atunci CONTENT = "text", unde "text" este o propozi&#355;ie care descrie succint documentul html sau o list&#259; de cuvinte-cheie<br>
+ care caracterizeaz&#259; acest document.<br><br>
+ <hr>
+ <em><b>Exemple</b></em><br><br>
+ <font color="blue">
+a)	&lt;META	NAME = "description" CONTENT = "Informa&#355;ii despre prima universitate din Republica Moldova "&gt;<br><br>
+b)	&lt;META	NAME = "description" CONTENT = "universitate, student, facultate, Tiraspol"&gt;<br><br>
+</font>
+<hr>
+Atributul HTTP-EQUIV de asemenea se scrie &icirc;mpreun&#259; cu atributul CONTENT.<br>
+Dac&#259; HTTP-EQUIV = "Content-type", atunci CONTENT = "text/html; charset = codificare", unde text/html, charset s&icirc;nt cuvinte-cheie, iar codificare -<br>
+ specific&#259; modul de interpretare a documentului HTML de c&#259;tre browser.<br><br>
+<hr>
+<em><b>Exemple</b></em><br><br>
+<font color="blue">
+a)	&lt;META HTTP-EQUIV = "Content-Type" CONTENT = "text/html;
+charset=windows-1250"&gt;<br><br>
+b)	&lt;META HTTP-EQUIV = "Content-type" CONTENT= " text/html;
+charset = koi8-r"&gt;<br><br>
+</font>
+<hr>
+
+Dac&#259; HTTP-EQUIV = "Refresh", atunci &icirc;n afar&#259; de atributul CONTENT = ”n" se scrie URL = "Adres&#259; URL", ceea ce semnific&#259; c&#259; dac&#259; peste n<br> secunde dup&#259; &icirc;nc&#259;rcarea documentului utilizatorul nu va efectua nici o ac&#355;iune asupra acestui document, atunci automat &icirc;n browser se va &icirc;nc&#259;rca<br> documentul html de pe adresa "Adres&#259; URL".<br>
+<hr>
+<em><b>Exemplu</b></em><br><br>
+<font color="blue">
+&lt;META HTTP-EQUIV = "Refresh" CONTENT = "5" URL - "http://www.ust.md"&gt;
+</font>
+<hr><br>
+<h3>Intrebari de control</h3>
+1. Explica&#355;i rolul etichetei &lt;META&gt;.<br>
+2. Ce atribute admite aceast&#259; etichet&#259;?<br>
+3. Care este semnifica&#355;ia lor?<br>
+
+
+</body>
+</html>

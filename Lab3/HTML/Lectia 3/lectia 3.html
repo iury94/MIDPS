@@ -1,0 +1,122 @@
+<html>
+<head>
+<title>Lectia 3</title> <link rel="stylesheet" type="text/css" href="stylelesson.css">
+</head>
+<body leftmargin="45" oncontextmenu="return false" oncopy="return false;" oncontextmenu="return false" onselectstart="return false;">
+<H1 align="center" > Liste </h1>
+Pentru organizarea structurat&#259; a informa&#355;iei unui document html se pot folosi listele. Deosebim: a) liste neordonate; b) liste ordonate; c) liste de defini&#355;ii.<br><br>
+a)	<b>Listele neordonate </b> se utilizeaz&#259; pentru a indica o succesiune f&#259;r&#259; o subordonare ierarhic&#259;. 
+<br> &deg Pentru a specifica &icirc;nceputul &#351;i sf&icirc;r&#351;itul unei astfel de liste se utilizeaz&#259; etichetele  &lt;UL&gt; &#350i &lt;/UL&gt; ("unordered list" - list&#259; neordonat&#259;).<br>
+&deg	Orice element al listei este precedat de eticheta &lt;LI&gt; ("list item" - nu este nevoie de eticheta &lt;/LI&gt;).<br>
+Fiec&#259;rei dintre etichetele &lt;UL&gt;, &lt;LI&gt; i se poate ata&#351;a  atributul <i>type</i>, care poate lua una dintre urm&#259;toarele trei valori:<i> Circle, Square, Disc</i>. Acest atribut specific&#259;  marcajul care precede fiecare element al listei.
+<br><br> b)	<b> Listele ordonate </b>(se mai numesc <i>liste numerotate</i>) se &icirc;ncadreaz&#259; &icirc;ntre etichetele &lt;OL&gt; &#351i &lt;/OL&gt; ("ordered list" - list&#259; ordonat&#259;).<br>
+Ca &#351;i &icirc;n  cazul listei neordonate, orice element al listei ordonate este precedat de eticheta &lt;LI&gt;. Atributul <i>type</i> al etichetelor  &lt;OL&gt; &#351;i  &lt;/OL&gt; (&icircn cazul acestei liste) poate lua una din valorile: A, a, I, i, 1. <br>
+Dac&#259; atributul <i>type</i> nu este specificat, elementele listei vor fi numerotate.
+<br><br>c)	<b>Listele de defini&#355;ii </b> se utilizeaz&#259;, de regul&#259;, pentru organizarea glosarelor. Termenii unui glosar s&icirc;nt lista&#355;i &icirc;n ordine alfabetic&#259;, fiecare fiind urmat de defini&#355;ia lui..
+<br>	&degListele de defini&#355;ii se &icirc;ncadreaz&#259; &icirc;ntre etichetele &lt;DL&gt; &#351;i  &lt;/DL&gt; (&quot definition list &quot - list&#259; de defini&#355;ii).
+<br>	&degFiecare termen al listei este precedat de eticheta &lt;DT&gt; (&quot definition term&quot - termen definit), iar defini&#355;ia (descrierea) lui - de eticheta &lt;DD&gt; (&quot definition descrip- tion &quot - descrierea defini&#355;iei).
+<br>
+<h3>Observa&#355;ii </h3>
+1.	Listele pot fi imbricate. <br>
+2.	&Icirc;n  interiorul unei liste s&icirc;nt permise utilizarea etichetelor &lt;P&gt; &#351;i  &lt;BR&gt; &#351;i  a elementelor de formatare a textului. <br>
+3.	List&#259; ordonat&#259; poate fi &icirc;ntrerupt&#259; pentru un text. &Icirc;n acest caz se folosesc dou&#259; seturi de etichete &lt;OL&gt;: <br>una pentru prima parte a listei (p&icirc;n&#259; la textul inserat) &#351;i alta pentru partea a doua (dup&#259; text). &Icirc;n acest caz etichetei &lt;OL&gt; din partea a doua a listei i se ata&#351;eaz&#259; atributul start cu valoarea &icircntreag&#259, care indic&#259 &icircnceputul numerot&#259rii.
+<br>
+<br>
+
+<hr>  
+<b><i>Exemplul 1</i></b> <br><br>
+<font color="blue">
+&lt;HTML&gt;<br>
+&lt;Head&gt;<br>
+&lt;Title&gt; Initiere in HTML. Liste neordonate &lt;/Title&gt;<br>
+&lt;/Head&gt; <br>
+&lt;Body&gt; <br>
+&lt;H4&gt;Catedrele facultatii Fizica, Matematica si <br>
+Tehnologii Informationale (FMI)&lt;H4&gt; <br>
+&lt;UL&gt; <br>
+&lt;LI&gt; Informatica si tehnologii informationale &lt;LI&gt; Algebra, geometrie si topologie &lt;LI&gt; Analiza matematica si ecuatii diferentiale &lt;LI&gt; Fizica <br>
+&lt;LI&gt; Metodica predarii matematicii, fizicii si informaticii &lt;/UL&gt; <br>
+&lt;H4&gt;Specialitatile duble ale facultatii FMI&lt;/H4&gt; <br>
+&lt;UL TYPE=square> <br>
+&lt;LI&gt;Informatica si matematica &lt;LI&gt; Matematica si informatica &lt;LI&gt; Informatica si fizica &lt;LI&gt; Fizica si informatica &lt;LI&gt; Informatica si limbi moderne aplicate &lt;LI&gt; Matematica si fizica &lt;LI&gt; Fizica si matematica &lt;/UL&gt; <br>
+&lt;/Body&gt; <br>
+&lt;/HTML&gt; <hr>
+ <br> 
+ </font>
+<img src="scr/ex1.jpg"> <br>
+ 
+ <hr>
+ <B><i>Exemplul 2</i></b>
+<br><br>
+<font color="blue">
+&lt;HTML&gt; <br>
+&lt;Head&gt; <br>
+&lt;Title&gt; Iniţiere in HTML. Liste ordonate&lt;/Title&gt; <br>
+&lt;/Head&gt; <br>
+&lt;Body&gt; <br>
+&lt;H4&gt;Disciplinele studiate in semestrul 5 la specialitatea IM &lt;/H4&gt; &lt;0L&gt; <br>
+&lt;LI&gt; Programarea orientata pe obiecte cu limbajul C++ <br>
+&lt;LI&gt; Tehnici de programare &lt;LI&gt; Didactica informaticii &lt;LI&gt; Didactica matematicii &lt;LI&gt; Geometrii neeuclidiene &lt;LI&gt; Varietati algebrice &lt;LI&gt; Grafica asistata de calculator &lt; /0L&gt; <br>
+&lt;H4&gt;Stagiile de practica la specialitatea IM&lt;/H4&gt; <br>
+&lt;0L TYPE=A&gt; <br>
+&lt;LI&gt; Practica de ini&#355iere - 2 credite &lt;LI&gt; Practica pedagogica la informatica - 12 credite &lt;LI&gt; Practica pedagogica la matematica - 8 credite &lt;LI&gt; Practica de licen&#355a - 8 credite &lt;/0L&gt; <br>
+&lt;/Body&gt; <br>
+&lt;/HTML&gt; <br>
+<hr>
+</font>
+<img src="scr/ex2.jpg"> <br>
+
+<br>
+<hr>
+<B> <i>Exemplul 3 </i></b>
+<br><br>
+<font color="blue">
+&lt;HTML&gt; <br>
+&lt;Head&gt; <br>
+&lt;Title&gt; Ini&#355iere in HTML. Lista de defini&#355ii&lt;/Title&gt; <br>
+&lt;/Head&gt; <br>
+&lt;Body&gt; <br>
+&lt;H4&gt; Citeva no&#355iuni din informatica &lt;/H4&gt; <br>
+&lt;DL&gt; <br>
+&lt;DT&gt; Constanta &lt;DD&gt; - m&#259rime a c&#259rei valoare nu se poate modifica pe parcursul execu&#355iei algoritmului <br>
+&lt;DT&gt; Variabila &lt;DD&gt; - m&#259rime a c&#259rei valoare se poate modifica pe parcursul execu&#355iei algoritmului <br>
+&lt;DT&gt; Identificator &lt;DD&gt; - secven&#355a de caractere care incepe (de regula) cu o litera, ce poate fi urmata de nici una sau mai multe litere sau cifre, utilizata pentru a denumi constante, variabile, tipuri, subprograme. <br>
+&lt;/DL&gt; <br>
+&lt;/Body&gt; <br>
+&lt;/HTML&gt; <br>
+<hr>
+</font>
+<img src="scr/ex3.jpg"> <br>
+
+<h3>&Icircntreb&#259ri de control</h3>
+1.	Cu ce scop se folosesc listele?<br>
+2.	Ce tipuri de liste cunoa&#351;te&#355;i?<br>
+3.	Numi&#355;i etichetele utilizate pentru fiecare tip de list&#259;?<br>
+4.	Cum se specific&#259; un element al unei liste?<br>
+5.	Care s&icirc;nt atributele acestor etichete &#351;i ce valori pot primi ele?<br>
+
+<h3>Sarcini pentru lucrul independent:</h3>
+<b>1.</b>Crea&#355;i o pagin&#259; web care va afi&#351;a titlul &quot Disciplinele preferate &quot pe fundal <i>bleu</i>, de
+nivelul 4, dup&#259; care va urma o list&#259; neordonat&#259; cu disciplinele respective. &Icirc;n calitate
+de semn de marcare se va folosi <i>p&#259;tratul.</i><br>
+<b>2.</b>Crea&#355;i o pagin&#259; web care va afi&#351;a titlul &quot Obiectele studiate &icirc;n primul an universitar
+de studiu &quot pe fundal <i>bleu</i>, de nivelul 3, dup&#259; care va urma o list&#259; neordonat&#259; cu aceste
+obiecte. &Icircn calitate de semn de marcare se va folosi <i>discul</i>. Dup&#259; list&#259; vor fi dou&#259;
+r&icirc;nduri goale &#351;i va ap&#259;rea alt&#259; list&#259; neordonat&#259; cu examenele &#351;i notele unei sesiuni.
+<br>
+<b>3.</b>Crea&#355;i o pagin&#259 web care va afi&#351a titlul &quot Lista studen&#355ilor grupei &quot pe fundal de culoare
+<i>aqua</i>, de nivelul 5, aliniat la centru, dup&#259 care va urma o list&#259 neordonat&#259 cu numele
+studen&#355;ilor grupei. Dup&#259 list&#259 vor fi dou&#259 r&icircnduri goale &#351i va ap&#259rea alt&#259 list&#259 neordonat&#259
+cu numele studen&#355;ilor care la ultima sesiune au ob&#355;inut note mai mari dec&icirc;t 8.<br>
+<b>4.</b>	Crea&#355;i un document html care va afi&#351a urm&#259toarea pagin&#259 web:
+<br>
+<img src="scr/ex4.jpg"> <br>
+<b>5.</b>	Crea&#355;i o pagin&#259; web care va afi&#351;a titlul &quot CUPRINS &quot de nivelul 3, dup&#259; care vor urma capitolele unei c&#259;r&#355;i &#351;i temele cuprinse &icirc;n aceste capitole. Folosi&#355;i liste ordonate &#351;i liste imbricate.<br>
+<b>6.</b>	Crea&#355;i o pagin&#259; web care va afi&#351;a dou&#259; liste ordonate: prima cu titlul &quot Produse alimentare &quot de nivelul 2, &icirc;n care elementele vor fi numerotate, iar cealalt&#259; cu titlul &quot Produse industriale &quot de nivelul 3, care vor fi numerotate cu litere.<br>
+<b>7.</b>	Crea&#355;i o pagin&#259; web care va afi&#351;a o	list&#259; ordonat&#259; a institu&#355;iilor superioare de	&icirc;nv&#259;&#355;&#259;m&icirc;nt din &#355;ar&#259;. Lista va fi &icirc;ntrerupt&#259; de	urm&#259;torul text cursiv: <i> &quot Acestea au fost institu&#355iile de &icircnv&#259&#355&#259m&icircnt superior de stat, acum urmeaz&#259 institu&#355iile de &icircnv&#259&#355&#259m&icircnt superior particulare:&quot </i>.Titlul listei va avea	nivelul 4 &#351;i culoarea albastr&#259; <br>
+<b>8.</b>	Crea&#355;i un document html care va	afi&#351;a urm&#259;toarea pagin&#259; web:<br>
+<img src="scr/ex8.jpg"> <br>
+<b>9.</b>	Crea&#355;i o pagin&#259; web care va afi&#351;a defini&#355;iile a cinci no&#355;iuni geometrice precedate de titlul &quot No&#355;iuni geometrice &quot de nivelul 3, culoare gri, aliniat la dreapta &#351;i desp&#259;r&#355;it de no&#355;iuni printr-o linie orizontal&#259; neagr&#259; de grosimea 3 pixeli, aliniat&#259; la centru.<br>
+
+</body>
+</html>

@@ -1,0 +1,253 @@
+<html>
+<head>
+<title>Lectia 9</title>
+</head>
+
+<body leftmargin="45px" oncontextmenu="return false" oncopy="return false;" oncontextmenu="return false" onselectstart="return false;">
+<h1 align="center">H&#259;r&#355;i-imagine</h1>
+<br />
+Navig&icirc;nd prin Internet &icirc;nt&icirc;lnim site-uri &icirc;n care un meniu este reprezentat printr-o imagine. Diferite domenii ale imaginii s&icirc;nt zone active care leag&#259; pagina web cu diferite documente.
+O	astfel de imagine se nume&#351;te imagine-hart&#259;.
+<br />
+<i><b>Ovserva&#355;ie</b></i>
+<br />
+&Icirc;n aceast&#259; lec&#355;ie vom examina doar h&#259;r&#355;i-imagine ce &#355;in de client (acestea s&icirc;nt procesate de browser, imaginile-h&#259;r&#355;i ce &#355;in de server s&icirc;nt procesate de un program special pe server).
+<br />
+Imaginea propriu-zis&#259;se insereaz&#259;&icirc;n document dup&#259; algoritmul studiat &icirc;n lec&#355;ia 5 (cu ajutorul etichetei <img>). Pentru a o transforma &icirc;n imagine-hart&#259; &icirc;n interiorul etichetei <IMG> se scrie atributul USEMAP, a c&#259;rei valoare este o ancor&#259; din interiorul documentului, mai exact un text de forma #numehart&#259;.
+<br />
+<br />
+&middot;&nbsp;&nbsp; Numele h&#259;r&#355;ii (nume hart&#259;), coordonatele &#351;i informa&#355;iile URL pentru aceast&#259; hart&#259;se definesc prin intermediul etichetelor <MAP></MAP>. Eticheta <MAP> are un singur atribut obligator, NAME, a c&#259;rui valoare este numele h&#259;r&#355;ii (adic&#259; nume hart&#259;).
+&icirc;ntre etichetele <map>&#351;i </map> se admit doar etichete <AREA>.
+<br />
+<br />
+&middot;&nbsp;&nbsp; Eticheta <AREA> se utilizeaz&#259; pentru definirea coordonatelor zonelor active ale imaginii &#351;i a leg&#259;turilor corespunz&#259;toare. Ea poate avea atributele:
+<br />
+1.	Shape= "rect" / "circle" / "poly" / "default";<br />
+2.	Coords;,<br />
+3.	Href= "URL";<br />
+4.	Nohref;<br />
+5.	Alt = "text"<br />
+<br />
+
+1.	Atributul Shape specific&#259; forma geometric&#259; a domeniului de imagine care devine zon&#259; activ&#259;, astfel &icirc;nc&icirc;t recteste valoare predefinit&#259;&#351;i define&#351;te un dreptunghi, cilcle - un disc, poly - un poligon, iar default - restul por&#355;iunii de imagine.
+<br />
+2.	Atributul Coords stabile&#351;te coordonatele zonelor active (col&#355;ul st&icirc;nga-sus al imaginii are coordonatele (0, 0), coordonata x cre&#351;te de la st&icirc;nga spre dreapta, iar coordonata y- de sus &icirc;n jos). Forma valorii acestui atribut depinde de valoarea atributului Shape.
+<br />
+Pentru dreptunghi (adic&#259; pentru Shape = rect) valoarea atributului Coords este un text de forma "xl,y\,x2, y2", unde (xl,y\)&#351;i (x2,y2) s&icirc;nt respectiv coordonatele v&icirc;rfului st&icirc;nga-sus &#351;i aie v&icirc;rfului dreapta-jos ale dreptunghiului.<br>
+<img src="scr/ex1.jpg"><br>
+<br />
+<br />
+&Icirc;n cazul discului valoarea atributului Coords este un text de forma "x, y, R", unde (x, y) s&icirc;nt coordonatele centrului discului, iar R este raza lui.
+<br />
+&icircn cazul unui poligon cu N laturi (adic&#259; pentru Shape= poly) valoarea atributului Coords este un text de forma "xl, y 1, x2, y2, ... , xN, yN, xl,yl", unde (xl, y 1), (x2, y2),..., (xN,yN) s&icirc;nt respectiv coordonatele celor N v&icirc;rfuri ale poligonului. Evident, un dreptunghi poate fi definit ca un poligon cu patru laturi.
+<br />
+Chiar dac&#259;&icirc;n englez&#259; cuv&icirc;ntul defauh are semnifica&#355;ia predefinit (anume cu un astfel de sens este utilizat de cele mai dese ori &icirc;n informatic&#259;), &icirc;n acest caz el are &icirc;n&#355;elesul de a specifica restul imaginii (care nu a fost pus &icirc;n eviden&#355;&#259; de etichetele <Area> ale h&#259;r&#355;ii), &icirc;n cazul valorii defauh, atributul Coords nu se scrie.
+<br />
+Aten&#355;ie! Unele browsere nu recunosc expresia Shape = default, de aceea se recomand&#259; ca &icirc;n loc de folosirea valorii default, dup&#259; specificarea tuturor domeniilor active din interiorul imaginii, s&#259; se scrie o expresie de forma
+<br />
+<b>&lt;Area shape= rect coords ="0, 0, xF, yF" Href = "URL"&gt; </b>, unde (xF,yF) s&icirc;nt coordonatele v&icirc;rfului dreapta-jos al dreptunghiului-h&#259;r&#355;ii-imagine.
+<br />
+<br />
+3.	Atributul Href stabile&#351;te adresa documentului referit&#259; de zona activ&#259; (de dreptunghi, de disc, de poligon sau de restul imaginii).
+<br />
+<br />
+4.	Atributul Nohref nu are valori &#351;i se utilizeaz&#259; pentru a ar&#259;ta c&#259; domeniul corespunz&#259;tor este o leg&#259;tur&#259; (vezi exemplul 2, mai jos).
+<br />
+<br />
+5.	Atributul Alt specific&#259; un text alternativ explicativ al domeniului definit de Shape. De fapt, acest text are rol de comentariu pentru programator, deoarece, dac&#259;&icirc;nc&#259;rcarea imaginilor &icirc;n browser este interzis&#259;, atunci (spre deosebire de textul alternativ al atributului Alt al etichetei <IMG>) nici imaginea &#351;i nici textul explicativ nu se vor afi&#351;a.
+<br />
+<br />
+<hr />
+<b><i>Exemplul 1</i></b>
+<br />
+Fi&#351;ierele <i>C.html, Pascal.html, Java.html, Html html, Harta.jpg </i>se afla &icirc;n acela&#351;i catalog.
+<br />
+Fi&#351;ierul Harta.jpg a fost creat cu redactorul grafic Paint.
+<br />
+<img align="center" src="scr/ex2.jpg" ><br>
+<h5 align="center"><i>Harta.jpg</i></h5>
+<br />
+<br />
+Dimensiunile imaginii: 250 x 190.
+<br />
+Dreptunghiul din imagine este definit de coordonatele (20, 110), (110, 170).
+<br />
+Discul are centrul &icirc;n punctul (160, 90) &#351;i raza egal&#259; cu 50.
+<br />
+Coordonatele v&icirc;rfurilor patrulaterului (&icirc;ncep&icirc;nd de la col&#355;ul st&icirc;nga-jos &#351;i continu&icirc;nd &icirc;n direc&#355;ia mi&#351;c&#259;rii acelor de ceas): (10, 90), (30, 30), (80, 40), (100, 90).
+<br />
+<br />
+&middot;&nbsp;&nbsp; Fi&#351;ierul Exl.html con&#355;ine harta-imagine &#351;i are urm&#259;toarea structur&#259; (s&#259;geata indic&#259; cu ce document HTML este legat fiecare domeniu al imaginii):
+<br />
+Dreptunghiul	> HTML.html
+<br />
+Discul 	> Pascal.html
+<br />
+Patrulaterul albastru	> Java.html
+<br />
+Restul imaginii	> C.html
+<br />
+<br />
+Con&#355;inutul fi&#351;ierului Exl.html.
+<br /> <font color=blue>
+<br />&lt;HTML&gt;
+<br />&lt;head&gt;
+<br />&lt;title&gt;Exemplu cu harta-imagine&lt;/title&gt;
+<br />&lt;/head&gt;
+<br />&lt;Body&gt;
+<br />&lt;center>
+<br />&lt;H2> Exemplu de harta-imagine&lt;/H2>
+<br />&lt;img src="harta.jpg" usemap="#limbaje">
+<br />&lt;Map name="limbaje">
+<br />&lt;Area shape = rect coords="20, 110, 110, 170" href="Html.html"> &lt;Area shape = circle coords="160, 90, 50" href="Pascal.html">
+<br />&lt;Area shape = poly coords="10, 90, 30, 30, 80, 40, 100, 90, 10, 90" href="Java.html">
+<br />&lt;Area shape= rect coords="0, 0, 250, 190" href="C-html">
+<br />&lt;/Map>
+<br />&lt;/center>
+<br />&lt;/body>
+<br />&lt;/html> </font>
+<br />
+<br />
+Con&#355;inutul fi&#351;ierului HTML.html:
+<br />
+<font color=blue>
+<br />&lt;HTML&gt;
+<br />&lt;head&gt;
+<br />&lt;title&gt;HTML&lt;/title&gt;
+<br />&lt;/head&gt;
+<br />&lt;Body text="green"&gt;
+<br />&lt;h3&gt;HTML este un limbaj de hiperlegaturi&lt;/h3&gt;
+<br />&lt;/body&gt;
+<br />&lt;/html&gt;
+</font>
+<br />
+<br />
+Con&#355;inutul fi&#351;ierului Pascal.html:
+<br /> <font color=blue>
+<br />&lt;H1ML&gt;
+<br />&lt;head&gt;
+<br />&lt;title&gt;Pascal&lt;/title&gt;
+<br />&lt;/head&gt;
+<br />&lt;Body text="red"&gt;
+<br />&lt;h3&gt;PASCAL este un limbaj de programare&lt;/h3&gt;
+<br />&lt;body&gt;
+</font>
+<br />
+<br />
+Con&#355;inutul fi&#351;ierului Java.html:
+<br /><font color=blue>
+<br />&lt;HTML&gt;
+<br />&lt;head&gt;
+<br />&lt;title&gt;JAVA&lt;/title&gt;
+<br />&lt;/head&gt;
+<br />&lt;Body text="blue"&gt;
+<br />&lt;h3&gt;JAVA este un limbaj de programare&lt;/h3&gt; &lt;/body&gt;
+<br />&lt;/html&gt;
+</font>
+<br />
+<br />
+Con&#355;inutul fi&#351;ierului C.html:
+<br /> <font color=blue>
+<br />&lt;HTML&gt;
+<br />&lt;head&gt;
+<br />&lt;title&gt;Limbajul C++&lt;/title&gt; &lt;/head&gt;
+<br />&lt;Body&gt;
+<br />&lt;H4&gt;
+<br />C++ este un limbaj de programare&lt;br&gt;
+<br />C++ este un limbaj de programare&lt;br&gt;
+<br />C++ este un limbaj de programare&lt;br&gt;
+<br />C++ este un limbaj de programare&lt;br&gt;
+<br />C++ este un limbaj de programare&lt;br&gt;
+<br />C++ este un limbaj de programare&lt;br&gt;
+<br />&lt;/h4&gt; &lt;/body&gt;
+<br />&lt;/html&gt;
+</font>
+<br />
+<img align="center" src="scr/ex3.jpg" ><br>
+<br />
+<br /><hr>
+<b><i>Exemplul 2</i></b>
+<br />
+Fi&#351;ierele Ex2.html, Coroana.html &#351;i Harta2.jpg se afl&#259; &icirc;n acela&#351;i catalog. Fi&#351;ierul Harta.jpg a fost creat cu redactorul grafic Paint.
+<br />
+<h3 align="center">
+<img align="center" src="scr/ex4.jpg" ><br>
+<h5 align="center"><i>Harta2.jpg</i></h5>
+<br />Dimensiunile imaginii: 200 x 190.
+<br />Cercul mare are centrul &icirc;n punctul (95, 95) &#351;i raza egal&#259; cu 75.
+<br />Cercul mic are centrul &icirc;n punctul (95, 95) &#351;i raza egal&#259; cu 40.
+<br />
+<br />
+
+&middot;&nbsp;&nbsp; Fi&#351;ierul <i>Ex2.html</i> con&#355;ine &icirc;n calitate de harta-imagine desenul <i>Harta2.jpg</i>.
+<br />Zon&#259; activ&#259; este doar coroana circular&#259;. Ea este legat&#259; cu fi&#351;ierul <i>Coroana.html</i>.
+<br />
+Con&#355;inutul fi&#351;ierului Exl.html:
+<br /> <font color=blue> 
+<br />&lt;HTML&gt;
+<br />&lt;head&gt; &lt;title&gt; Exemlul2 (harta/imagine) &lt;/title&gt;
+<br />&lt;/head&gt;
+<br />&lt;Body&gt;
+<br />&lt;center&gt;
+<br />&lt;H2&gt; Doar coroana circulara este zona activa&lt;/H2&gt;
+<br />&lt;img src="harta2.jpg" usemap="#coroana"&gt;
+<br />&lt;Map najne=" coroana "&gt;
+<br />&lt;Area shape = circle coords=*95, 95, 40" NoHref&gt;
+<br />&lt;Area shape = circle coords="95, 95, 75" Href=*Coroana.html &lt;/Map&gt;
+<br />&lt;/center&gt;
+<br />&lt;/body&gt;
+<br />&lt;/HTML&gt; </font>
+<br /><br />Con&#355;inutul fi&#351;ierului Coroana.html:
+<font color=blue><br />&lt;html&gt;
+<br />&lt;head&gt; &lt;title&gt;Pascal&lt;/title&gt;
+<br />&lt;/head&gt;
+<br />&lt;Body text="red"&gt;
+<br />&lt;h3&gt;Aria coroanei circulare este &lt;br&gt;
+<br />&lt;center&gt; A=Pi*(Rl*Rl-r2*r2), &lt;br&gt; &lt;/center&gt; unde R1 este raza mare, iar r2 - raza mica&lt;/h3&gt;
+<br />&lt;/body&gt;
+<br />&lt;/html&gt;
+</font><br />
+<img align="center" src="scr/ex5.jpg" ><br>
+<br />
+<hr />
+<br />
+<b>Problem&#259;</b>. Ce efect vom ob&#355;ine dac&#259; vom schimba &icirc;ntre ele locurile urm&#259;toarelor dou&#259; r&icirc;nduri din fi&#351;ierul Ex2.html ?
+<br />
+<br />
+&lt;Area shape = circle coords="95, 95, 40" NoHref&gt;<br />
+&lt;Area shape = circle coords="95, 95, 75" Href="Coroana.html"&gt;<br />
+<br />
+Trage&#355;i concluzia.
+<br />
+<br />
+<b><i>&Icirc;ntreb&#259;ti de control.</i></b>
+<br />
+<br />1. Ce este o imagine-hart&#259;?
+<br />2. Cum se creeaz&#259; o imagine-hart&#259;?
+<br />3. Ce valori poate lua atributul Usemapl
+<br />4. Ce definesc etichetele &lt;MAP&gt; &#351;i &lt;/MAP&gt;?
+<br />5. Care este atributul obligator al etichetei &lt;MAP&gt;?
+<br />6. Pentru ce &#351;i unde se utilizeaz&#259; eticheta &lt;AREA&gt;?
+<br />7. C&icirc;te atribute are eticheta &lt;AREA&gt;?
+<br />8. Ce specific&#259; atributul Shape?
+<br />9. Ce stabile&#351;te atributul Coords?
+<br />10. Care este rolul atributului Href?
+<br />
+<br />
+<b><i>Sarcini pentru lucru independent</i></b>
+<br />
+<br />1.	Utiliz&icirc;nd redactorul grafic Paint, desena&#355;i un dreptunghi cu o diagonal&#259; dat&#259; de punctele de coordonate (60, 60), (120, 180). Crea&#355;i un document html, care va folosi &icirc;n calitate de hart&#259;-imagine interiorul acestui dreptunghi.
+<br />2.	Utiliz&icirc;nd redactorul grafic Paint, desena&#355;i un triunghi. Crea&#355;i o pagin&#259; web, care va folosi &icirc;n calitate de hart&#259;-imagine interiorul acestui triunghi. La accesarea lui &icirc;n alt&#259; fereastr&#259; vor ap&#259;rea tipurile de triunghiuri.
+<br />3.	Utiliz&icirc;nd redactorul grafic Paint, desena&#355;i un disc cu centrul &icirc;n punctul de coordonate (150, 150) &#351;i raza de 80. Crea&#355;i un document html, care va folosi &icirc;n calitate de hart&#259;- imagine acest disc. La accesarea lui, &icirc;n alt&#259; fereastr&#259; va ap&#259;rea o informa&#355;ie despre h&#259;r&#355;i-imagine.
+<br />4.	Utiliz&icirc;nd redactorul grafic Paint, desena&#355;i un disc cu centrul &icirc;n punctul de coordonate (140, 180) &#351;i raza de 100. Crea&#355;i un document html, care va folosi &icirc;n calitate de hart&#259;-imagine desenul dreptunghiular cu acest disc. Dimensiunile desenului vor f&icirc; 250 x 300. La accesarea zonei din exteriorul discului, &icirc;n alt&#259; fereastr&#259; va ap&#259;rea alt&#259; imagine.
+<br />5.	Crea&#355;i o pagin&#259; web. care va folosi &icirc;n calitate de hart&#259;-imagine un desen pe care va fi reprezentat un disc &icirc;nscris &icirc;ntr-un trapez. La accesarea discului va ap&#259;rea defini&#355;ia lui, iar la accesarea exteriorului discului, dar &icirc;n interiorul trapezului - defini&#355;ia trapezului.
+<br />6.	Crea&#355;i o pagin&#259; web, care va folosi &icirc;n calitate de hart&#259;-imagine un desen pe care vor fi reprezentate un trapez, un romb &#351;i un cerc. La accesarea interiorului fiec&#259;rei figuri geometrice &icirc;ntr-o alt&#259; fereastr&#259; se va afi&#351;a defini&#355;ia acestei figuri.
+<img src="scr/ex7.jpg" align="right" />
+<br />
+<br />7.	Crea&#355;i o pagin&#259; web, care va afi&#351;a urm&#259;toarea imagine. Fiecare din cele trei "sertare" din imagine va fi o leg&#259;tur&#259; c&#259;tre un fi&#351;ier html care va con&#355;ine informa&#355;ii despre ziarele, revistele sau canalele TV din &#355;ar&#259;.
+
+<br />
+<br /><br />8.	Utiliz&icirc;nd un redactor grafic, crea&#355;i o pagin&#259; web care va afi&#351;a arborele genealogic al familiei dumneavoastr&#259; (cu imagini ale membrilor familiei). Fiecare imagine- persoan&#259; va fi o leg&#259;tur&#259; c&#259;tre un fi&#351;ier html care va con&#355;ine informa&#355;ii despre aceast&#259; persoan&#259;.
+<br />
+</body>
+</html>

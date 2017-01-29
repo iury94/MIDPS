@@ -1,0 +1,272 @@
+<html>
+<head>
+<title>Lectia 6</title>
+</head>
+
+<body leftmargin="45px" oncontextmenu="return false" oncopy="return false;" oncontextmenu="return false" onselectstart="return false;">
+<h1 align="center">Tabele</h1><br><br>
+
+In cele mai dese cazuri tabelele se utilizeaza pentru organizarea structurata a datelor.
+De asemenea, asa cum fiecare celula a tabelului poate avea propriile<br> culori, stiluri,efecte pentru text si fundal, tabelele se folosesc si pentru solutii de design.
+Un tabel, de regula, are:<br>
+&deg titlu pentru specificarea numelui tabelului;<br>
+&deg rinduri si coloane;<br>
+&deg cap de tabel (tabel header) pentru descrierea continutului coloanelor sau rindurilor;<br>
+&deg celule de date, care formeaza rindurile si coloanele tabelului.<br><br>
+Etichetele pentru definirea unui tabel sint prezentate (intentionat) in urmatorul tabel: Etichete <br><br>
+<b>Etichete pentru definirea unui tabel intr-un document html</b><br>
+<table width="800px" border="1px">
+ <tr>
+  <td>&nbsp&nbsp&nbsp&nbsp&nbsp<b>Etichete</b></td>
+  <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<b>Descrierea etichetelor</b></td>
+ </tr>
+ <tr>
+  <td>&nbsp&nbsp&nbsp&nbsp&lt;TABLE&gt&nbsp&nbsp&nbsp<br>&nbsp&nbsp&nbsp&nbsp&lt;/TABLE&gt&nbsp&nbsp&nbsp</td>
+  <td>Definesc un tabel. Eticheta <b>&lt;TABLE&gt</b> poate avea atributele:<br>
+- <b>BORDER</b>, care adauga un chenar tabelului si a carei valoare intreaga pozitiva este grosimea in pixeli a chenarului (valoarea 1 este pre¬stabilita, iar valoarea 0 semnifica absenta chenarului);<br>
+- <b>ALIGN</b>, care stabileste modul de aliniere a tabelului in document si poate avea una din valorile left, right, center,<br>
+- <b>BGCOLOR</b>, care specifica culoarea de fond pentru tot tabelul;<br>
+- <b>CELLSPACING</b>, care stabileste distanta in pixeli dintre doua celule vecine ale tabelului (valoarea prestabilita este 2);<br>
+- <b>CELLPADDING</b>, care stabileste distanta in pixeli dintre marginea celulei si continutul ei (valoarea prestabilita este 1);<br>
+- <b>WIDTH</b> si <b>HEIGHT</b>, care specifica latimea si inaltimea tabelului (valori ale atributului pot fi numere intregi pozitive (numar de pixeli) sau numere intregi pozitive mai mici decit 101 si urmate de simbo¬lul % (specificind astfel fractiuni din latimea si inaltimea paginii)).<br>
+</td>
+ </tr>
+ <tr>
+  <td>&nbsp&nbsp&lt;CAPTION&gt&nbsp&nbsp<br>&nbsp&nbsp&lt;/CAPTION&gt&nbsp&nbsp</td>
+  <td>Definesc titlul tabelului si pot fi plasate intre etichetele <b>&lt;Table&gt</b> si <b>&lt;/Table&gt</b>, dar nu in interiorul etichetelor care definesc celulele sau rindurile tabelului. Eticheta <b>&lt;CAPTION&gt</b> poate avea atributul <b>ALIGN</b>, care stabileste pozitia titlului fata de tabel si care va avea una din valorile <em>bottom, top, left, right.</em></td>
+ </tr>
+ <tr>
+  <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;TR&gt&nbsp&nbsp<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/TR&gt&nbsp&nbsp</td>
+  <td>Specifica un rind in tabel. Eticheta <b>&lt;TR&gt</b> poate avea atributele:<br>
+- <b>ALIGN</b> pentru alinierea orizontala <em>(cu una din valorile left, center, right);</em><br>
+- <b>VALIGN</b> pentru alinierea verticala <em>(cu una din valorile top, middle, bottom).</em>
+</td>
+ </tr>
+ <tr>
+  <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;TH&gt&nbsp&nbsp<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/TH&gt&nbsp&nbsp</td>
+  <td>Definesc o celula-antet, In mod prestabilit, textul unei astfel de celule
+este centrat si ingrosat. Eticheta <b>&lt;TH&gt</b> poate avea atributele:<br>
+-	<b>WIDTH</b> si <b>HEIGHT</b> pentru stabirea latimii si inaltimii celulei;<br>
+-	<b>ALIGN</b> si <b>VALIGN</b>;<br>
+-	<b>ROWSPAN</b>, care unifica celula cu citeva celule de desubtul ei (valoa¬rea atributului este numarul total de celule care se unifica);<br>
+-	<b>COLSPAN</b>, care unifica celula cu citeva celule din dreapta ei (valoa¬rea atributului este numarul total de celule care se unifica);<br>
+-	<b>NOWRAP</b>, care interzice intreruperea liniei de text din celula (deci coloana care contine celula poate deveni oricit de mare) si care se scrie fara valori;<br>
+-	<b>BGCOLOR</b>, care specifica culoarea de fond pentru celula (culoarea textului celulei poate fi stabilita cu ajutorul atributului Color al etichetei <b>&lt;Font&gt</b>).
+</td>
+ </tr>
+ <tr>
+  <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;TD&gt&nbsp&nbsp<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/TD&gt&nbsp&nbsp</td>
+  <td>Definesc o celula de date obisnuita. Eticheta <b>&lt;TD&gt</b> poate avea oricare dintre atributele etichetei <b>&lt;TH&gt</b>.</td>
+ </tr>
+</table>
+<br>
+Daca o celula a tabelului sete vida, atunci in mod normal ea este afisatafara chenar.
+Pentru a evita acest efect, in locul continutul celulei se va scrie textul <u>&amp;nbsp;</u> sau &lt;br&gt
+<br><br>
+<hr>
+
+<b><i>Exemplul 1</i></b><br>
+<font color="blue">
+&lt;HTML&gt<br>
+&nbsp;&nbsp;&nbsp;&lt;Head&gt;&nbsp&nbsp;&lt;Title&gt;Initiere in HTML&lt;/Title&gt;&lt;/Head&gt;<br>
+&lt;Body&gt<br>
+&nbsp;&lt;Table border=2 width="90%" height="80%" align="center" bgcolor="lightcyan"&gt<br>
+&nbsp;&lt;Caption align="left"&gt;&lt;Font color="Red" Size=6&gt; Orarul lectiilor&lt;/font&gt;<br>
+&nbsp;&lt;/Caption&gt;<br>
+&nbsp;&nbsp;&lt;Tr&gt;&lt;Th Colspan=2&gt;Luni&lt;Th&gt;Marti&lt;Th&gt;Miercuri&lt;Th&gt;Joi&lt;Th&gt;Vineri&lt;/Tr&gt;<br>
+&nbsp;&nbsp;&lt;Tr align="center"&gt;&lt;Td&gt;1&lt;Td&gt;Romina&lt;Td&gt;Chimia&lt;Td&gt;Fizica&lt;Th&gt;Istori&lt;Th&gt;Biologia&lt;/Tr&gt;<br>
+&nbsp;&nbsp;&lt;Tr align="center"&gt;&lt;Td&gt;2&lt;Td&gt;Engleza&lt;Td&gt;Fizica&lt;Td&gt;Informatica&lt;Th&gt;Rusa&lt;Th&gt;Biologia&lt;/Tr&gt;<br>
+&nbsp;&nbsp;&lt;Tr align="center"&gt;&lt;Td&gt;3&lt;Td&gt;Franceza&lt;Td&gt;Algebra&lt;Td&gt;Geometria&lt;Th&gt;Muzica&lt;Th&gt;Munca&lt;/Tr&gt;<br>
+&nbsp;&lt;/Table&gt;<br>
+&lt;/Body&gt;<br>
+&lt;/HTML&gt;<br>
+</font>
+
+<img src="scr/ex1.jpg"> <br>
+<hr>
+<em><b>Exemplul 2</b></em><br>
+<font color="blue"><br>
+&lt;HTML&gt;<br>
+&nbsp;&nbsp;&lt;Body&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;Table border=3 width=200 height=50&gt;<br>
+&nbsp;&lt;Tr&gt;<br>
+&nbsp;&nbsp;&lt;td colspan=5&gt;<br>
+&nbsp;&lt;/Tr&gt;<br>
+&nbsp;&lt;Tr align=center&gt;<br>
+&nbsp;&nbsp;&lt;td colspan=2&gt;<br>
+&nbsp;&nbsp;&lt;td colspan=2 bgcolor=gray&gt;{cnbsp&nbsp&nbsp&nbsp&nbsp &lt;td colspan=2&gt;<br>
+&nbsp;&lt;/Tr&gt;<br>
+&nbsp;&lt;Tr&gt;<br>
+&nbsp;&nbsp;&lt;td colspan=5&gt;<br>
+&nbsp;&lt;/Tr&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;/Table&gt;<br>
+&nbsp;&nbsp;&lt;/Body&gt;<br>
+&lt;/HTML&gt;<br>
+</font>
+<img src="scr/ex2.jpg"> <br>
+<hr>
+<em><b>Exemplul 3</b></em><br><br>
+<font color="blue">
+&lt;HTML&gt;<br>
+&lt;Body&gt;<br>
+&lt;Table border=3 width=200&gt;<br>
+&lt;Tr&gt;<br>
+&lt;td bgcolor=“blackxbr&gt;&lt;/td&gt;&lt;td bgcolor=whitexbrx/td&gt;&lt;td bgcolor=blackxbrx/tdxtd bgcolor=whitexbrx/td&gt;&lt;/Tr&gt;<br>
+&lt;Tr&gt;<br>
+&lt;td bgcolor=whitexbr&gt;&lt;/td&gt;&lt;td bgcolor=blackxbrx/td&gt;&lt;td bgcolor=whiteXbrX/td&gt;&lt;td bgcolor=blackxbrx/td&gt;&lt;/Tr&gt;<br>
+&lt;Tr&gt;<br>
+&lt;td bgcolor=blackxbr&gt;&lt;/td&gt;&lt;td bgcolor=white&gt;&lt;brx/td&gt;&lt;td bgcolor“black&gt;&lt;brX/td&gt;&lt;td bgcolor=whitexbrx/td&gt;&lt;/Tr&gt;<br>
+&lt;Tr&gt;<br>
+&lt;td bgcolor=whitexbr&gt;&lt;/td&gt;&lt;td bgcolor=blackxbrx/td&gt;&lt;td bgcolor-whitexbrx/tdxtd bgcolor=black&gt;&lt;brx/td&gt;&lt;/Tr&gt;<br>
+&lt;/body&gt;<br>
+&lt;/HTML&gt;<br>
+<img src="scr/ex3.jpg"> <br>
+</font><br>
+<h3>Intrebari</h3>
+1. Pentru ce s&icirc;nt utilizate tabelele?<br>
+2. Numi&#355;i atributele etichetei &lt;<b>TABLE</b>&gt;&#351;i valorile posibile ale acestor atribute?<br>
+3. Care s&icirc;nt atributele etichetei <b>&lt;CAPTION&gt;</b>&#351;i valorile posibile ale acestor atribute?<br>
+4. Cum se specific&#259; un r&icirc;nd de tabel?<br>
+5. Care etichete definesc o celul&#259;-antet?<br>
+6. Care s&icirc;nt atributele acestor etichete &#351;i valorile lor posibile?<br>
+7. Care etichete definesc o celul&#259; de date? Care s&icirc;nt atributele acestor etichete?<br>
+<h3><em>Sarcini pentru lucrul independent</em></h3>
+<b>1.</b> Creati o pagina web care va afisa urmatorul tabel:<br><br>
+<table border="1px" width="400px">
+<tr align="center">
+<td>A</td>
+<td>C</td>
+<td>E</td>
+</tr>
+<tr align="center">
+<td>B</td>
+<td>D</td>
+<td>F</td>
+</tr>
+</table><br><br>
+<b>2.</b> Creati o pagina web care va afisa urmatorul tabel:<br><br>
+<table border="1px" width="400px">
+<tr align="center">
+<td rowspan="2">A</td>
+<td>B</td>
+<td>C</td>
+</tr>
+<tr align="center">
+<td>D</td>
+<td>E</td>
+</tr>
+</table>
+<br><br>
+<b>3.</b> Creati o pagina web care va afisa urmatorul tabel:<br><br>
+<table border="1px" width="400px">
+<tr align="center">
+<td colspan="2">A</td>
+<td>D</td>
+</tr>
+<tr align="center">
+<td>B</td>
+<td>C</td>
+<td>E</td>
+</tr>
+</table>
+<br><br>
+<b>4.</b> Creati o pagina web care va afisa urmatorul tabel:<br><br>
+<table border="1px" width="400px">
+<tr align="center">
+<td>A</td>
+<td>C</td>
+<td rowspan="2">E</td>
+</tr>
+<tr align="center">
+<td colspan="2">B</td>
+</tr>
+</table>
+<br><br>
+<b>5.</b> Creati o pagina web care va afisa urmatorul tabel:<br><br>
+<table border="1px" width="400px">
+<tr align="center">
+<td rowspan="2">A</td>
+<td colspan="3">B</td>
+<td rowspan="2">C</td>
+</tr>
+<tr align="center">
+<td>D</td>
+<td>E</td>
+<td>F</td>
+</tr>
+<tr align="center">
+<td>D</td>
+<td colspan="3">H</td>
+<td>I</td>
+</tr>
+</table>
+<br><br>
+<b>6.</b> Creati o pagina web care va afisa urmatorul tabel:<br><br>
+<table border="1px" width="400px">
+<tr align="center">
+<td>A</td>
+<td>C</td>
+<td>E</td>
+</tr>
+<tr align="center">
+<td rowspan="2">B</td>
+<td>D</td>
+<td>F</td>
+</tr>
+<tr align="center">
+<td>G</td>
+<td>H</td>
+</tr>
+</table>
+<br><br>
+<b>7.</b> Creati o pagina web care va afisa urmatorul tabel:<br><br>
+<table border="1px" width="400px">
+<tr align="center">
+<td rowspan="2">A</td>
+<td>B</td>
+<td rowspan="2">D</td>
+<td bgcolor="#A9A9A9">E</td>
+<td bgcolor="#A9A9A9">F</td>
+<td bgcolor="#A9A9A9">G</td>
+</tr>
+<tr align="center">
+<td>C</td>
+<td colspan="3">H</td>
+</tr>
+</table>
+<br><br>
+<b>8.</b> Crea&#355;i un document html care va afi&#351;a urm&#259;toarea pagin&#259; web (se poate folosi alt&#259; imagine):<br>
+<img src="scr/ex4.jpg"> <br>
+<b>9.</b> Crea&#355;i un document html care va afi&#351;a urm&#259;toarea pagin&#259; web (se poate folosi alt&#259; imagine):<br>
+<img src="scr/ex5.jpg"> <br>
+<b>10.</b>Ce va afi&#351;a pagina web cu urm&#259;torul cod html?<br><br>
+&lt;HTML&gt;<br>
+&nbsp;&lt;Head&gt;&lt;Title&gt;Ce afisam?&lt;/Title&gt;<br>
+&nbsp;&lt;/Head&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;Body&gt;<br>
+&nbsp;&nbsp;&lt;Table align=center border=2 width=100&gt;<br>
+&nbsp;&nbsp;&lt;Tr align=center&gt;<br>
+&nbsp;&lt;Td colspan=2&gt;B&lt;/TdxTd rowspan=2&gt;D&lt;/Td&gt;&lt;/Tr&gt;<br>
+&nbsp;&nbsp;&lt;Tr align=center&gt;<br>
+&nbsp;&lt;Td&gt;C&lt;/TdXTd&gt;A&lt;/Td&gt;<br>
+&nbsp;&nbsp;&lt;/Tr&gt;<br>
+&nbsp;&nbsp;&lt;/Table&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;/Body&gt;<br>
+&lt;/HTML&gt;<br><br>
+<b>11.</b>Ce va afi&#351;a pagina web cu urm&#259;torul cod html?<br><br>
+&lt;HTML&gt;<br>
+&nbsp;&nbsp;&lt;Head&gt;&lt;Title&gt;Ce afisam?&lt;/Title&gt;<br>
+&nbsp;&nbsp;&lt;/Head&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;Body&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;Table align=center width=100 border=2&gt;<br>
+&nbsp;&nbsp;&lt;Tr align=center&gt;<br>
+&nbsp;&lt;Td rowspan=2&gt;B&lt;/TdXTd&gt;C&lt;/TdxTd&gt;A&lt;/Td&gt;&lt;/Tr&gt;<br>
+&nbsp;&nbsp;&lt;Tr align=center&gt;<br>
+&nbsp;&lt;Td colspan=2&gt;D&lt;/Td&gt;<br>
+&nbsp;&nbsp;&lt;/Tr&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;/Table&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
+&lt;/HTML&gt;<br>
+
+</Body>
+</html>

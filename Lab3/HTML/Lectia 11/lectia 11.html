@@ -1,0 +1,288 @@
+<html>
+<head>
+<title>Lectia 1</title>
+</head>
+
+<body leftmargin="45px" oncontextmenu="return false" oncopy="return false;" oncontextmenu="return false" onselectstart="return false;">
+<h1 align=center>Atributele stilurilor (propriet&#259;&#355;i pentru formatare)</h1>
+<h3>11.1.	Modelul format&#259;rii</h3>
+Din punct de vedere al format&#259;rii fiecare element al documentului html este &icirc;ncadrat &icirc;n c&icirc;teva blocuri-dreptunghiuri:
+<br><br>
+<img src ="scr/ex1.jpg"> <br>
+Sintaxa CSS permite stabilirea dimensiunilor &#351;i a culorii fiec&#259;rui dintre blocurile elementului.<br>
+C&icirc;mpul este &icirc;ntotdeuna transparent &#351;i mo&#351;tene&#351;te culoarea p&#259;rintelui elementului.
+ De exemplu, p&#259;rintele paragrafului este elementul body.<br>
+Culoarea de fundal a intervalului coincide cu culoarea de fundal a elementului. Fiecare element are proprietatea-atribut Display cu urm&#259;toarele valori posibile:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;S "none" (elementul nu va fi afi&#351;at);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;S "block" (elementul este de tip bloc);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;S "list-item" (elementul este de tip list&#259;);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;S "inline" (elementul este de tip inline, adic&#259; &icirc;nglobat &icirc;n linie).<br>
+Pentru gestionarea blocurilor se utilizeaz&#259; urm&#259;toarele propriet&#259;&#355;i-atribute:<br>
+1.	Margin-left (Cs) - c&icirc;mpul st&icirc;ng;<br>
+2.	Border-left (Hs) - hotarul st&icirc;ng;<br>
+-Sec&#355;ia J J<br>
+3.	Paddind-left (Is) - intervalul st&icirc;ng;<br>
+4.	Width - l&#259;&#355;imea elementului (a blocului interior, valoarea implicit&#259; este auto);<br>
+5.	Padding-right (Id) - intervalul st&icirc;ng;<br>
+6.	Border-right (Hd) - hotarul drept;<br>
+7.	Margin-right (Cd) - c&icirc;mpul drept;<br>
+(Valorile acestor propriet&#259;&#355;i s&icirc;nt exprimate &icirc;n pixeli &#351;i suma lor este egal&#259; cu l&#259;&#355;imea elementului-p&#259;rinte sau cu l&#259;&#355;imea ferestrei browser-ului, dac&#259; elementul nu este inclus &icirc;n altul.)<br>
+8.	Margin-top (Csus) - c&icirc;mpul de sus;<br>
+9.	Border-top (Hsus) - hotarul de sus;<br>
+10.	Paddind-top (Isus) - intervalul de sus;<br>
+11.	Height - &icirc;n&#259;l&#355;imea elementului (a blocului interior, valoarea implicit&#259; este auto);<br>
+12.	Padding-bottom (Ij) - intervalul de jos;<br>
+13.	Border-bottom (Hj) - hotarul de jos;<br>
+14.	Margin-bottom (Cj) - c&icirc;mpul de jos.<br><br>
+De fapt, propriet&#259;&#355;ile-atribute de formatare a elementelor s&icirc;nt grupate &icirc;n c&icirc;teva categorii care se refer&#259; la:<br>
+Font - specific&#259; tipul caracterelor;<br><br>
+Culoare &#351;i fundal — precizeaz&#259; culorile textului &#351;i fundalului, precum &#351;i imaginea de fundal;<br><br>
+Text - stabile&#351;te aspectul textului (nu se refer&#259; la tipul de caractere, dar la spa&#355;iri, sublinieri etc.);<br><br>
+Margini, spa&#355;ieri &#351;i borduri - specific&#259; caracteristicile blocurilor-dreptunghiuri ale
+elementelor;<br><br>
+Clasificarea &#351;i pozi&#355;ionarea elementelor - stabile&#351;te comportarea general&#259; a celorlalte elemente, incluz&icirc;nd &#351;i propriet&#259;&#355;i-atribute pentru liste.<br><br>
+Formatarea vizual&#259; - precizeaz&#259; propriet&#259;&#355;ile de afi&#351;are a blocurilor-dreptunghiuri ale elementelor.<br><br>
+Pentru stabilirea valorilor propriet&#259;&#355;ilor care exprim&#259; distan&#355;e (lungimi) se folosesc unit&#259;&#355;i absolute de rti&#259;sur&#259; a lungimii &#351;i unit&#259;&#355;i relative de m&#259;sur&#259; a lungimii.<br><br>
+Unit&#259;&#355;ile relative de m&#259;sur&#259; a lungimii definesc lungimi relativ de alte propriet&#259;&#355;i, care exprim&#259; lungimi. Documentele html, care utilizeaz&#259; aceste unit&#259;&#355;i mai pu&#355;in depind de dispozitivul de afi&#351;are a lor (monitoare de diferite tipuri, printere etc.)<br><br>
+Unit&#259;&#355;ile absolute de m&#259;sur&#259; a lungimii definesc lungimi exacte &#351;i se folosesc atunci c&icirc;nd se cunoa&#351;te din timp dispozitivul de afi&#351;are a lor.<br><br>
+<br>
+<img src ="scr/ex2.jpg"> <br>
+<h3>11.2.	Propriet&#259;&#355;i-atribute ale fontului</h3>
+•	font-famiiy stabile&#351;te familia de fonturi (eventual fontul) sau lista familiilor de fonturi. A&#351;a cum un calculator poate s&#259; nu aib&#259; instalat un font, de regul&#259;, se opteaz&#259; pentru lista familiilor de fonturi. Denumirile fonturilor se delimiteaz&#259; prin virgule. Dac&#259; numele fontului este format din c&icirc;teva cuvinte, atunci el se &icirc;ncadreaz&#259; &icirc;ntre ghilimele. Browser-ul va alege primul font din list&#259; care este instalat pe calculator.<br>
+Majoritatea calculatoarelor au instalate fonturi standard (de exemplu, Times, Helvetica, Courier). Totu&#351;i, pentru a evita situa&#355;iile imprevizibile, se recomand&#259; includerea &icirc;n list&#259; a unui nume generic de familie, care are cel pu&#355;in principalele atribute solicitate. Sintaxa CSS utilizeaz&#259; urm&#259;toarele familii de caractere:<br>
+&#351;erif ('pentru por&#355;iuni mari de text; de exemplu, Times, Garamond);<br>
+sans-serif (pentru titluri sau blocuri mici de text; de exemplu, Helvetica, Arial, Avant Garde);<br>
+cursive (fonturi de manuscris, adic&#259; scrise cu m&icirc;na; de exemplu, Zapf-Chancery, Parc Avenue);<br>
+fantasv (pentru titluri stilate; de exemplu, Western, Blippo, Hobo, Broadway);<br>
+monospace (fonturi ca la ma&#351;ina de scris, fiecare liter&#259; ocup&icirc;nd acela&#351;i spa&#355;iu; de exemplu, Courier).<br>
+Astfel, la sf&icirc;r&#351;tul listei de fonturi se va ata&#351;a un nume generic de familie din lista prezentat&#259;, ca &icirc;n urm&#259;torul exemplu:
+&lt;BODY&gt; {font- f arai ly: "Times New Roman" , Garamond, &#351;erif}<br>
+•	font-style precizeaz&#259; stilul fontului. Valori posibile: normal, italic, oblique. Varianta bold nu exist&#259;, fiind inclus&#259; &icirc;n proprietatea font-weight.<br>
+•	font-variant specific&#259; dac&#259; textul va fi afi&#351;at (pentru valoarea small-caps) cu minuscule sau nu (pentru valoare normal).<br>
+•	font-weight stabile&#351;te grosimea caracterelor. Valori posibile: normal, bold, 100, 200, 300, 400, 500 (echivalent cu normal), 600, 700 (echivalent cu bold), 800, 900, bolder (este cu 100 mai mare dec&icirc;t grosimea curent&#259;), lighter (este cu 100 mai mic&#259; dec&icirc;t grosimea curent&#259;),<br>
+•	font-size define&#351;te m&#259;rimea fontului. Valorile pot fi absolute sau relative.<br>
+Valorile absolute se dau cu ajutorul cuvintelor-cheie xx-small, x-small, small, me-
+dium, large, x-large, xx-large sau cu valori exacte, exprimate &icirc;n milimetri, centimetri etc. Coeficientul de propor&#355;ionalitate sau de scalare (K) a m&#259;rimilor corespunz&#259;toare cuvintelor-cheie (de la st&icirc;nga spre dreapta) poate fi egal cu 1,5 sau cu 1,2. Astfel, me- dium este de K ori mai mare dec&icirc;t small.
+Valorile relative se dau cu ajutorul cuvintelor-cheie larger (de K ori mai mare) &#351;i smaller (de K ori mai mic). De exemplu, dac&#259; p&#259;rintele are dimensiunea fontului large, atunci valoarea laiger va transforma dimensiunea fontului curent &icirc;n x-large.
+Valorile absolute se pot da &#351;i cu ajutorul procentelor sau a unit&#259;&#355;ilor em, ex, px.<br>
+•	Font permite stabilirea &icirc;ntr-o singur&#259; defini&#355;ie a valorilor pentru propriet&#259;&#355;ile font- style, font-variant, font-weight, font-size, line-height, font-family (&icirc;n aceast&#259; ordine). Valorile primelor trei propriet&#259;&#355;i nu sint obligatorii (implicit fiind normal). Celelalte valori se delimiteaz&#259; prin spa&#355;ii cu excep&#355;ia valorii propriet&#259;&#355;ii line-height (define&#351;te &icirc;n&#259;l&#355;imea r&icirc;ndului de caractere), care se delimiteaz&#259; de valoarea font-size prin simbo¬lul /. Evident, valorile propriet&#259;&#355;ii font-family se delimiteaz&#259; prin virgule.<br>
+•	@font-face precizeaz&#259; familia de fonturi &#351;i adresa familiei &icirc;n cazul &icirc;n care calculatorul nu are instalat nici unul din fonturile familiei. Exemplu:<br>
+@font-face {font-family: Arial; src: uri(http://server.com/Arial.eot)}<br><br>
+
+<h3>11.3.	Propriet&#259;&#355;i-atribute pentru culoare &#351;i fundal</h3><br>
+
+•	color stabile&#351;te culoarea elementului text. &icirc;n calitate de valori pot 
+fi cuvintele-cheie care definesc culorile (red, blue, cyan, green etc.) sau triplete de
+ forma rgb(n 1, n2, n3), unde «1, «2, «3 e {0, 1,..., 255}, preciz&icirc;nd respectiv cantitatea de ro&#351;u, verde, albastru.<br>
+•	background-color stabile&#351;te culoarea de fundal pentru un stil.
+Valoarea transparent este implicit&#259;.<br>
+•	background-image stabile&#351;te imaginea de fundal pentru un stil.
+Proprietatea background-image poate avea valoarea none, care corespunde unui fundal f&#259;r&#259; imagine. De exemplu, foaia de stiluri
+&lt;Style&gt;
+Body { background-image: uri (desen.jpg)}
+P { background-image: none}
+&lt;/Style&gt;
+define&#351;te imaginea fi&#351;ierului desen.jpg drept fundal pentru document, &icirc;ns&#259; paragrafele nu vor avea fundal.<br>
+•	background-repeat se folose&#351;te atunci c&icirc;nd se dore&#351;te repetarea imaginii de fun¬dal (ob&#355;inerea efectului mozaic). Valori posibile:
+repeat (mozaicare normal&#259;);<br>
+repeat-x (repetarea imaginii orizontal pe o singur&#259; linie);<br>
+repeat-y (repetarea imaginii vertical pe o singur&#259; coloan&#259;).<br>
+•	background-attachment specific&#259; dac&#259; imaginea de fundal este ata&#351;at&#259; la textul din 
+prim-plan (pentru valoarea scroll) sau ancorat&#259; &icirc;n fundal (pentru valoarea f ixed).<br>
+In cazul valorii scroll la derularea documentului fundalul se va mi&#351;ca &icirc;mpreun&#259; cu textul.<br>
+•	background-position stabile&#351;te punctul de pornire al imaginii. Implicit punctul de 
+pornire este situat &icirc;n partea st&icirc;ng&#259;-sus a ecranului. Aceast&#259; valoare
+ poate avea una sau dou&#259; valori. &icirc;n cazul a dou&#259; valori, prima specific&#259;
+ pozi&#355;ionarea pe orizontal&#259;, iar a doua - pe vertical&#259;. Valori posibile: left, 
+ center, right (pentru plasarea orizontal&#259;), top, center, bottom (pentru plasarea vertical&#259;).
+ De asemenea, &icirc;n calitate de valori pot fi procentele (0%, 0% fiind col&#355;ul st&icirc;nga-sus 
+ al ecranului, iar 100%, 100% - col&#355;ul dreapta- jos al ecranului) sau valori &icirc;n inci sau centimetri.<br>
+•	Background permite stabilirea &icirc;ntr-o singur&#259; defini&#355;ie a propriet&#259;&#355;ilor pentru 
+fundal (este similar atributului font). Ordinea este: background-color, background-image, background-repeat, background-attachement, background-position.<br><br>
+Observa&#355;ie<br><br>
+Dac&#259; unele elemente html se con&#355;in &icirc;n altele, atunci, de regul&#259;, primele mo&#351;tenesc propriet&#259;&#355;ile pentru aspect ale ultimelor. Astfel, dac&#259; pentru eticheta &lt;Body&gt; a fost stabilit&#259; culoarea verde pentru text, atunci &icirc;n mod implicit paragrafele, de asemenea vor avea culoarea verde.<br>
+Toate propriet&#259;&#355;ile care stabilesc parametrii fundalului nu se mo&#351;tenesc. Totu&#351;i fundalul elementului-p&#259;rinte &icirc;n mod implicit se va afi&#351;a, deoarece valoarea predefinit&#259; a propriet&#259;&#355;ii
+backgound-color este transparent.<br><br>
+
+<h3>11.4.	Propriet&#259;&#355;i-atribute pentru text</h3>
+•	word-spacing specific&#259; intervalul (spa&#355;ierea) dintre cuvinte. Unitatea de m&#259;sur&#259; a intervalelor este em (1 em este spa&#355;iul ocupat de litera „m”). Valorile 0 &#351;i normai s&icirc;nt echivalente &#351;i corespund spa&#355;ierii implicite.<br>
+•	letter-spacing stabile&#351;te spa&#355;ierea dintre litere.<br>
+•	text-decoration precizeaz&#259; ornament&#259;ri pentru text. Valori posibile: none, underline, overline, line-through, blink (se pot specifica c&icirc;teva).<br>
+•	vertical-align specific&#259; pozi&#355;ionarea pe vertical&#259; a textului. Valori posibile:<br>
+-	baseiine - aliniaz&#259; linia de baz&#259; a stilului cu linia de baz&#259; a elementului-p&#259;rinte;<br>
+-	sub - stilul indicelui este definit ca &#351;i indicele p&#259;rintelui;<br>
+-	super - stilul exponentului este definit ca &#351;i exponentul p&#259;rintelui;<br>
+-	text-top — aliniaz&#259; partea de sus a textului cu parte de sus a p&#259;rintelui;<br>
+-	text-bottom - aliniaz&#259; partea de jos a textului cu partea de jos a p&#259;rintelui;<br>
+-	raiddie - aliniaz&#259; punctul de jum&#259;tate a elementului pe vertical&#259; la linia de baz&#259; 
+a p&#259;rintelui plus jum&#259;tate din &icirc;n&#259;l&#355;imea literei „x” a p&#259;rintelui;<br>
+-	top - aliniaz&#259; partea de sus a elementului cu cel mai &icirc;nalt element din linia curent&#259;;<br>
+-	bottom - aliniaz&#259; partea de jos a elementului cu cel mai mic element din linia curent&#259;;<br>
+-	peroentage - ridic&#259; sau coboar&#259; elementul &icirc;n dependen&#355;&#259; de linia de baz&#259; 
+a p&#259;rintelui. Valori pot fi procente &icirc;ntregi pozitive sau negative.<br>
+•	text-ident stabile&#351;te deplasarea primului rind.<br>
+Valoarea acestei propriet&#259;&#355;i corespunde lungimii spa&#355;iului l&#259;sat.<br>
+•	text-align stabile&#351;te alinierea st&icirc;nga-dreapta-centru.<br>
+Valori posibile: left, center, right, justify.<br>
+Alinierea are loc fa&#355;&#259; de blocul care con&#355;ine elementul (nu fa&#355;&#259; de fereastra browser-ului).<br>
+•	line-height specific&#259; distan&#355;a dintre liniile de baz&#259; adiacente. &icirc;n calitate de valoare poate fi un num&#259;r &icirc;ntreg (semnific&icirc;nd factorul de multiplicare) sau un num&#259;r &icirc;ntreg de em (stabilind distan&#355;a exact&#259;).<br>
+•	text-transform precizeaz&#259; dac&#259; textul va fi scris cu litere majuscule sau minus¬cule. Valori posibile: none, capitalize (prima liter&#259; a fiec&#259;rui cuv&icirc;nt va fi majuscul&#259;), uppercase (toate literele vor fi majuscule), &icirc;owercase (toate literele vor fi minuscule).<br>
+
+<h3>11.5.	Propriet&#259;&#355;i-atribute pentru margini, spa&#355;ieri &#351;i borduri</h3>
+•	margin-top stabile&#351;te spa&#355;iul dintre c&icirc;mpul de sus Csus (vezi modelul format&#259;rii de la 
+&icirc;nceputul acestei lec&#355;ii) al elementului &#351;i elementul al&#259;turat de sus.<br>
+•	margin-bottom stabile&#351;te spa&#355;iul dintre c&icirc;mpul de jos Cj al elementului &#351;i elementul al&#259;turat de jos.<br>
+•	margin-right stabile&#351;te spa&#355;iul dintre c&icirc;mpul drept Cd al elementului &#351;i elementul al&#259;turat din dreapta.<br>
+•	margin-ieft stabile&#351;te spa&#355;iul dintre c&icirc;mpul st&icirc;ng Cs al elementului &#351;i elementul al&#259;turat din 
+st&icirc;ng&#259;.<br>
+•	margin permite stabilirea &icirc;ntr-o singur&#259; 
+defini&#355;ie a celor patru propriet&#259;&#355;i precedente &icirc;n ordinea: sus, dreapta, jos, st&icirc;nga.<br>
+•	padding-top stabile&#351;te intervalul de sus Isus (vezi modelul format&#259;rii de la &icirc;nceputul acestei lec&#355;ii).<br>
+•	padding-bottom stabile&#351;te intervalul de jos Ij (vezi modelul format&#259;rii de la &icirc;nceputul acestei lec&#355;ii).<br>
+•	padding-right stabile&#351;te intervalul drept Id (vezi modelul format&#259;rii de la &icirc;nceputul acestei lec&#355;ii).<br>
+•	padding-lef t stabile&#351;te intervalul st&icirc;ng Is (vezi modelul format&#259;rii de la &icirc;nceputul acestei lec&#355;ii).<br>
+•	padding permite stabilirea intr-o singur&#259; defini&#355;ie a celor patru propriet&#259;&#355;i precedente &icirc;n ordinea:
+ sus, dreapta, jos, st&icirc;nga.<br>
+•	border-top stabile&#351;te stilul &#351;i culoarea hotarului de 
+sus Hsus (vezi modelul format&#259;rii de la &icirc;nceputul acestei lec&#355;ii). 
+Valori posibile pentru stil: none, dotted, dashed, solid, double, groove, ridge, inset, outset.<br>
+Culoarea se define&#351;te printr-un cuv&icirc;nt-cheie. Exemplu:<br>
+<i align=center>P (border-top: outset, green)</i><br>
+•	border-bottora stabile&#351;te stilul &#351;i culoarea hotarului de jos Hj (vezi modelul format&#259;rii de la &icirc;nceputul acestei lec&#355;ii).<br>
+•	border-right stabile&#351;te stilul &#351;i culoarea hotarului drept Hd (vezi modelul format&#259;rii de la &icirc;nceputul acestei lec&#355;ii).<br>
+•	border-lef t stabile&#351;te stilul &#351;i culoarea hotarului st&icirc;ng Hs (vezi modelul format&#259;rii de la &icirc;nceputul acestei lec&#355;ii).<br>
+•	border-top-width define&#351;te o bordur&#259; fizic&#259; pentru hotarul de sus Hsus (vezi modelul format&#259;rii de la &icirc;nceputul acestei lec&#355;ii). Valori posibile: thin (sub&#355;ire), medium, thick (gros), valori &icirc;ntregi de em sau puncte (pt),<br>
+•	border-bottcm-width define&#351;te o bordur&#259; fizic&#259; pentru hotarul de jos Hj (vezi modelul format&#259;rii de la &icirc;nceputul acestei lec&#355;ii).<br>
+•	border-right-width define&#351;te o bordur&#259; fizic&#259; pentru hotarul drept Hd (vezi modelul format&#259;rii de la &icirc;nceputul acestei lec&#355;ii).<br>
+•	border-ief t-width define&#351;te o bordur&#259; fizic&#259; pentru hotarul st&icirc;ng Hs (vezi modelul format&#259;rii de la &icirc;nceputul acestei lec&#355;ii).<br>
+•	border-width permite stabilirea &icirc;ntr-o singur&#259; defini&#355;ie a celor patru propriet&#259;&#355;i precedente &icirc;n ordinea: sus, dreapta, jos, st&icirc;nga.<br>
+•	border-color define&#351;te culoarea celor patru borduri.<br>
+•	border-styie stabile&#351;te stilul celor patru borduri ale elementului. Valori posibile:
+none, dotted, dashed, solid, double, groove, ridge, inset, outset.<br>
+
+•	border permite stabilirea &icirc;ntr-o singur&#259; defini&#355;ie a propriet&#259;&#355;ilor hotarului.<br>
+•	height stabile&#351;te &icirc;n&#259;l&#355;imea total&#259; a casetei care con&#355;ine elementul. 
+Dac&#259; elementul este text &#351;i nu &icirc;ncape &icirc;n caset&#259;, atunci automat apar barele de defilare.
+ &icirc;n cazul imaginii, aceasta este scalat&#259; (raportul dintre dimensiuni r&#259;m&icirc;ne acela&#351;i)
+ la dimensiunile casetei. Valorile pot fi exacte (exprimate &icirc;n puncte) sau poate fi utilizat&#259; 
+ constanta auto pentru a &icirc;ncredin&#355;a alocarea spa&#355;iului necesar browser-ului.<br>
+•	width stabile&#351;te l&#259;&#355;imea total&#259; a casetei care con&#355;ine elementul. Este similar&#259; propriet&#259;&#355;ii height.<br>
+•	fioat stabile&#351;te modul de aliniere a elementului. Valori posibile: left, right, none.<br>
+•	ciear define&#351;te modul &icirc;n care vor fi afi&#351;ate celelalte elemente fa&#355;&#259; de elementul curent. Valori posibile: left, 
+right, none.
+
+<h3>11.6.	Propriet&#259;&#355;i-atribute pentru clasificarea &#351;i pozi&#355;ionarea elementelor</h3><br>
+•	dispiay stabile&#351;te modul de folosire a unui element de stil. Valori posibile:<br>
+-	inline (creeaz&#259; o caset&#259; pe aceea&#351;i linie cu elementele de text al&#259;turate, fiind
+formatat&#259; &icirc;n dependen&#355;&#259; de cantitatea de con&#355;inut dintre marginile	sale);<br>
+-	biock (creeaz&#259; o caset&#259; &icirc;n dependen&#355;&#259; de elementele &icirc;nconjur&#259;toare);<br>
+-	list-item (creeaz&#259; o caset&#259; &icirc;n dependen&#355;&#259; de elementele &icirc;nconjur&#259;toare, 
+&icirc;n plus s&icirc;nt ad&#259;ugate marcatoare de articole din list&#259;);<br>
+-	none (stopeaz&#259; afi&#351;area elementului).<br>
+•	white-space specific&#259; modul de tratare a spa&#355;iilor &#351;i a &icirc;ntreruperilor de linie. Valori posibile:<br>
+-	normal (c&icirc;teva spa&#355;ii consecutive sint afi&#351;ate ca un singur spa&#355;iu);<br>
+-	pre (efect similar textului preformatat);<br>
+-	nowrap (liniile vor fi &icirc;ntrerupte doar cu eticheta &lt;br&gt;).<br>
+•	list-styie-type stabile&#351;te modul de marcare (adic&#259; imaginea marcatorului) a elementelor unei liste. Valori posibile:<br>
+-	disc;<br>
+-	circle;<br>
+-	square;<br>
+-	decimai;<br>
+-	lower-roman (cifre romane mici);<br>
+-	upper-roman (cifre romane mari);<br>
+-	lower-alpha (litere mici);<br>
+-	upper-alpha (litere mari);<br>
+*	none.<br>
+•	list-styie-image specific&#259; o imagine &icirc;n calitate de marcator de element al listei, &icirc;n calitate de valoare se sene adresa URL a imaginii.<br>
+•	list-styie-position stabile&#351;te modul de formatare a textului care urmeaz&#259; dup&#259; marcatorul elementului de list&#259;. Valori posibile:<br>
+-	outside (valoare prestabilit&#259;, aliniaz&#259; liniile suplimentare sub prima linie &icirc;ncep&icirc;nd cu coloana primului caracter din prima linie);<br>
+-	ins ide (aliniaz&#259; liniile suplimentare sub prima linie &icirc;ncep&icirc;nd cu coloana marca¬torului).<br>
+•	&icirc;ist-styie permite stabilirea &icirc;ntr-o singur&#259; defini&#355;ie a propriet&#259;&#355;ilor &icirc;ist-style- type, list-style-image &#351;i Xist-style-position.<br>
+•	position stabile&#351;te modul de afi&#351;are (pozi&#355;ionare) a elementului. Valori posibile:<br>
+-	relative;<br>
+-	absolute;<br>
+-	static (predefmit).<br>
+<hr>
+<font color=blue>
+<h3>Exemplul 1</h3>
+&lt;HTML&gt;<br>
+&lt;Head&gt;<br>
+&lt;Style&gt;<br>
+P.liniat {<br>
+border-style: solid; border-right-width: lpt; border-left-width: Opt; border-top-width: Opt; border-bottom-width: Opt; width: 5Opt; display: inline; padding-left: 5pt; padding-right: 5pt;<br>
+}<br>
+P.rind<br>
+{<br>
+display: inline; width: 5Opt; padding-left: 5pt;<br>
+}<br>
+&lt;/Style&gt;<br>
+&lt;/Head&gt;<br>
+&lt;Body&gt;<br>
+&lt;P&gt; A fost odata ca-n povesti &lt;/P&gt;<br>
+&lt;P class=liniat&gt; A fost ca niciodata &lt;/p&gt;<br>
+&lt;P class=liniat&gt; Din rude mari imparatesti &lt;/P&gt;<br>
+&lt;P class=rind&gt; O prea frumoasa fata &lt;/P&gt;<br>
+&lt;/body&gt;<br>
+&lt;/HTML&gt;<br>
+</font>
+<hr>
+<br>
+<img src ="scr/ex3.jpg"> <br>
+<h3>&Icirc;ntreb&#259;ri de control</h3>
+1.	Numi&#355;i blocurile care &icirc;ncadreaz&#259; orice element al documentului html. Specifica&#355;i incluziunile.<br>
+2.	Care s&icirc;nt categoriile propriet&#259;&#355;ilor-atribute de formatare a elementelor?<br>
+3.	Numi&#355;i propriet&#259;&#355;ile-atribute ale fontului.<br>
+4.	Care s&icirc;nt propriet&#259;&#355;ile-atribute pentru culoare &#351;i fundal?<br>
+5.	Numi&#355;i propriet&#259;&#355;ile-atribute ale textului.<br>
+6.	Care s&icirc;nt propriet&#259;&#355;ile-atribute pentru margini, spa&#355;ieri &#351;i borduri?<br>
+7.	Numi&#355;i propriet&#259;&#355;ile-atribute pentru clasificarea &#351;i pozi&#355;ionarea elementelor.<br>
+8.	Explica&#355;i rolul propriet&#259;&#355;ii Background.<br>
+9.	 Care este sintaxa de apelare a propriet&#259;&#355;ii padding?<br>
+10.	 Care este sintaxa de apelare a propriet&#259;&#355;ii list-style?<br>
+11.	Pentru ce se utilizeaz&#259; proprietatea margin?<br>
+
+<h3>Satcini pentzu lucru independent</h3>
+1.	Crea&#355;i o pagin&#259; web care va afi&#351;a un text aliniat din st&icirc;ng&#259; &#351;i din dreapta.<br><br>
+2.	F&#259;r&#259; a utiliza eticheta &lt;Table&gt;, crea&#355;i o pagin&#259; web care va afi&#351;a un text &icirc;ncadrat &icirc;ntr-un dreptunghi.<br><br>
+3.	F&#259;r&#259; a utiliza eticheta &lt;Table&gt;, crea&#355;i o pagin&#259; web care va afi&#351;a un text &icirc;n trei coloane.<br><br>
+4.	Crea&#355;i o pagin&#259; web care va afi&#351;a un text cu patru r&icirc;nduri astfel:<br><br>
+primul rind va avea fontul Arial, stilul italic; al doilea - fontul Times New Roman, stilul bold; al treilea - fontul Helvetica, stilul normal; al patrulea - fontul Courier, subliniat.<br><br>
+5.	Crea&#355;i o pagin&#259; web care va afi&#351;a un text cu &#351;ase r&icirc;nduri, astfel &icirc;nc&icirc;t m&#259;rimea literelor fiec&#259;rui r&icirc;nd urm&#259;tor s&#259; creasc&#259; propor&#355;ional. Indica&#355;ie. Folosi&#355;i atributul font-size &#351;i cuvintele-cheie medium, large, x-small, xx-small, x-large, xx-large, small.<br><br>
+6.	Crea&#355;i o pagin&#259; web care va afi&#351;a o list&#259;, a c&#259;ror elemente vor fi marcate cu litere romane mici.<br><br>
+7.	Crea&#355;i o pagin&#259; web care va afi&#351;a o list&#259;, a c&#259;ror elemente vor fi marcate cu o ima¬gine.<br><br>
+8.	Crea&#355;i o pagin&#259; web care va afi&#351;a o imagine &icirc;ncadrat&#259; &icirc;ntr-un dreptunghi-bord ur&#259; ro&#351;u.<br><br>
+9.	Crea&#355;i o pagin&#259; web care va afi&#351;a un text orientat vertical.<br><br>
+10.	Crea&#355;i o pagin&#259; web care va afi&#351;a urm&#259;torul tabel:<br><br>
+<br>
+<img src ="scr/ex4.jpg"> <br>
+11. Comenta&#355;i urm&#259;torul cod html.<br><br>
+<font color=blue>
+&lt;HTML&gt;<br>
+&lt;Head&gt;<br>
+&lt;Style&gt;<br>
+A:link {border-style: outset; width=250; background-color: red;<br>
+color: white; margin=2;}<br>
+A:visited {border-style: outset; width=250;background-color: red;<br>
+color: white; margin=2;}<br>
+A:hover {font-size: 16pt; border-style: inset; width=250;<br>
+background-color: red; color: white;margin=2;&gt;<br>
+&lt;/Style&gt;<br>
+&lt;H2&gt; Programele analitice ale cursurilor op&#355;ionale &lt;/H2&gt;<br>
+&lt;/Head&gt;<br>
+&lt;Body style="font-size: 12pt; background-color: gray; text-align: center;<br>
+vertical-align: center,-" &gt;<br>
+&lt;A href="col,html"&gt; Limbajul JavaScript&lt;/A&gt;&lt;br&gt;<br>
+&lt;A href="co2.html"&gt; Foi de stiluri in cascada&lt;/A&gt;&lt;br&gt;<br>
+&lt;A href="co3 ,html"&gt; Limbajul PHP&lt;/Axbr&gt;<br>
+&lt;A href="co4 . httnl"&gt; Serverul MySQL&lt;/A&gt;<br>
+&lt;/Body&gt;<br>
+&lt;/HTML&gt;<br>
+</font><br>
+12.	Crea&#355;i o pagin&#259; web care va afi&#351;a urm&#259;toarea pagin&#259; web
+Indica&#355;ie. Textul este scris cu fontul Courier New.
+
+<img src ="scr/ex5.jpg"> <br>
+
+<br>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<html>
+<head>
+<title>Lectia 7</title> <link rel="stylesheet" type="text/css" href="stylelesson.css">
+</head>
+<body leftmargin="45" oncontextmenu="return false" oncopy="return false;" oncontextmenu="return false" onselectstart="return false;">
+<H1 align="center" > Cadre </h1>
+Fereastra browser-ului poate fi &icirc;mp&#259;r&#355;it&#259; &icirc;n c&icirc;teva zone independente, &icirc;n sensul c&#259; diferite zone pot afi&#351;a con&#355;inutul a diferitor documente html. Aceste zone se numesc <b>cadre</b> sau <b>ferestre.</b><br>
+Pentru definirea cadrelor se creeaz&#259; un fi&#351;ier .html special, &icirc;n care &icirc;n loc de etichetele &lt;body&gt;, &lt;/body&gt; se scriu etichetele <b>&lt;frameset&gt;, &lt;/frameset&gt;</b>. Spre deosebire de eti¬chetele &lt;body&gt;, &lt;/body&gt; mai multe perechi &lt;frameset&gt;, &lt;/frameset&gt; pot fi imbricate.<br>
+Un cadru se specific&#259; cu ajutorul etichetei <b>&lt;frame&gt;.</b><br><br>
+&deg Eticheta &lt;FRAMESET&gt; poate avea urm&#259;toarele atribute:<br>
+1.	<i>cols</i> = list&#259; de elemente (creeaz&#259; cadre de tip coloan&#259;);<br>
+2.	<i>rows</i> = list&#259; de elemente (creeaz&#259; cadre de tip linie);<br>
+3.	<i>bordercolor</i> = "culoare" (stabile&#351;te  culoarea chenarelor tuturor cadrelor);<br>
+4.	<i>border</i> = "n" (stabile&#351;te  grosimea chenarelor tuturor cadrelor);<br>
+5.	<i>frameborder</i> = "yes" sau 1 / "no" sau 0 (afi&#351;eaz&#259; sau ascunde chenarele tuturor cadrelor).<br>
+<br><br>Elementele listei atributelor cols &#351;i rows pot fi:<br>
+-	numere &icirc;ntregi care specific&#259; dimensiunile &icirc;n pixeli ale cadrelor;<br>
+-	procente din dimensiunea ferestrei browser-ului;<br>
+-	simbolul * care specific&#259; spa&#355;iul r&#259;mas;<br>
+-	dou&#259; sau mai multe valori de forma n* care specific&#259; n p&#259;r&#355;i din spa&#355;iul r&#259;mas.<br>
+<br><br>Elementele listei men&#355;ionate se delimiteaz&#259; prin virgule.<br>
+Astfel, &lt;frameset cols = 100,200, 30%, *&gt; define&#351;te patru cadre de tip coloan&#259;: primul are l&#259;&#355;imea de 100 de pixeli, al doilea - de 200 de pixeli, al treilea are l&#259;&#355;imea 30% din l&#259;&#355;imea ferestrei browser-ului, iar al patrulea ocup&#259; zona r&#259;mas&#259;.
+<br>Eticheta &lt;frameset cols = 100, 2*, 3*&gt; define&#351;te trei cadre de tip coloan&#259;, primul fiind de 100 de pixeli. Celelalte dou&#259; cadre ocup&#259; 2 p&#259;r&#355;i respectiv 3 p&#259;r&#355;i din zona r&#259;mas&#259;.
+<br> <br>
+&deg Eticheta &lt;frame&gt; define&#351;te un cadru &#351;i are atributul obligator src = "URL", unde URL este numele fi&#351;ierului html care va fi &icirc;nc&#259;rcat &icirc;n acest cadru.
+&icirc;n afar&#259; de atributul src eticheta &lt;frame&gt; poate avea urm&#259;toarele atribute:
+<br>1.	<i>bordercolor</i> = "culoare" (stabile&#351;te  culoarea chenarului cadrului);
+<br>2.	<i>frameborder</i> - "yes" / "no" (afi&#351;eaz&#259;  sau ascunde chenarul cadrului);
+<br>3.	<i>scrolling</i> - "yes" / "no" / "auto" (afi&#351;eaz&#259;  permanent, ascunde sau afi&#351;eaz&#259; atunci c&icirc;nd este necesar bara de derulare a cadrului);
+<br>4.	<i>noresize</i> (far&#259; valori, interzice posibilitatea prestabilit&#259; a utilizatorului de a redimensiona cadrul cu ajutorul mouse-ului);
+<br>5.	<i>marginheight</i> = n / n% (stabile&#351;te distan&#355;a de n pixeli sau de n% din	&icirc;n&#259;l&#355;imea
+cadrului dintre con&#355;inutul cadrului &#351;i marginea de sus);
+<br>6.	<i>marginwidth</i> = n / n% (stabile&#351;te distan&#355;a de n pixeli sau	de	«%	din	l&#259;&#355;imea
+cadrului dintre con&#355;inutul cadrului &#351;i marginea din st&icirc;ng&#259;););
+<br>7.	<i>name</i> = "numele cadrului" (stabile&#351;te  numele cadrului).
+<br><br>
+<b><i>Observa&#355;ie</i><br>
+Dac&#259; acela&#351;i atribut este con&#355;inut at&icirc;t de eticheta &lt;frameset&gt;, c&icirc;t &#351;i  &lt;frameset&gt;, cit si de eticheta &lt;frame&gt;, atunci este prioritar atributul etichetei &lt;frame&gt;.
+</b><br> <br>
+&deg Numele cadrului se utilizeaz&#259; ca valoare a atributului <i>target</i> al etichetei &lt;A&gt; speci- fic&icirc;nd astfel &icirc;n care cadru se va &icirc;nc&#259;rca fi&#351;ierul referit de leg&#259;tura specificat&#259; de &lt;A&gt;. Dac&#259; se dore&#351;te ca toate documentele referite de leg&#259;turile unui document html s&#259; fie &icirc;nc&#259;rcate &icirc;n acela&#351;i cadru, atunci &icirc;ntre etichetele &lt;head&gt;, &lt;/head&gt; se va utiliza similar eticheta &lt;BASE&gt; cu atributul <i>target</i>.<br>
+In afar&#259; de numele cadrelor, atributul <i>target</i> accept&#259; urm&#259;toarele valori:
+<br>&nbsp &nbsp &deg "_top" (fi&#351;ierul referit se va &icirc;nc&#259;rca &icirc;n fereastra browser-ului ce con&#355;ine cadrul curent);
+<br>&nbsp &nbsp &deg "_blank" (fi&#351;ierul referit se va &icirc;nc&#259;rca &icirc;ntr-o pagin&#259; nou&#259; anonim&#259;);
+<br>&nbsp &nbsp &deg "_seif" (&#351;ierul referit se va &icirc;nc&#259;rca &icirc;n cadrul curent);
+<br>&nbsp &nbsp &deg "_parent" (fi&#351;ierul referit se va &icirc;nc&#259;rca &icirc;n cadrul p&#259;rinte al cadrului curent sau &icirc;n fereastra browser-ului curent, dac&#259; nu exist&#259; cadrul p&#259;rinte).
+<br><br> 
+<hr>
+<i><b>Exemplul 1</b></i><br>
+Fisierele <i>meniu.html, prima.html, fmi.html, biohim.html, geo.html, fii.html, ped.html, fondal.jpg</i> se afla in acelasi catalog.<br>
+&deg	Fisierul<i> Meniu.html</i> are urmatoarea structura (sageata indica cu ce document html este legat fiecare paragraf al sectiunii &lt;body&gt; a fisierului):<br>
+FMT1_____________________><i>fmi.html</i><br>
+Biologie si chimie_____________><i>biohim.html</i><br>
+Geografie___________________><i>geo.html</i><br>
+Filologie___________________><i>fil.html</i><br>
+Pedagogie__________________><i>ped.html</i><br>
+<br>
+Continutul fisierului <i>Meniu.html:</i><br>
+<font color="blue">
+&lt;html&gt;<br>
+&lt;head&gt; &lt;H2&gt;Facultati&lt;/H2&gt; &lt;/head&gt;<br>
+&lt;body background="fondai. jpg" alink="green"&gt;<br>
+&lt;H4&gt;<br>
+&lt;P&gt; &lt;A	href	=”fmi.html"	target="cadrul2"&gt;	FMTI&lt;/A&gt;<br>
+&lt;P&gt; &lt;A	href	="biohim.html" target="cadrul2"&gt; Biologie si chimie &lt;/A&gt;<br>
+&lt;P&gt; &lt;A	href	="geo.html"	target="cadrul2"&gt;	Geografie &lt;/A&gt;<br>
+&lt;P&gt; &lt;A	href	="fil.html"	target="cadrul2"&gt;	Filologie &lt;/A&gt;<br>
+&lt;P&gt; &lt;A	href	="ped.html"	target="cadrul2"&gt;	Pedagogie &lt;/A&gt;<br>
+&lt;/H4&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+</font>
+<hr>
+<br><br> 
+&deg Fisierul <i>Prima.html</i> creeaza doua cadre fara chenar si are urmatoarea structura:
+<table border="1" width="600">
+<tr>
+<td>
+Cadrul 1 (fara nume) <br><br>
+&Icircncarca fisierul <br>
+<i>Meniu.html</i>
+</td>
+<td>
+Cadrul 2 (cu numele „cadrul2”)<br><br>
+Initial incarca fisierul <i>fmi.html,</i> apoi incarca fisierele referite<br> de legaturile fisierului <i>Meniu.html,</i> adica fisierele <i> fmi.html,<br> biohim.html, geo.html, fil.html, ped.html</i>.
+</td> </tr> </table> <br>
+Continutul fisierului <i>Prima.html:</i>
+<hr>
+<font color="blue">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;Exemplu cu cadre&lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;frameset cols= ”180,*" border=0&gt;<br>
+&lt;frartie src= "meniu-html" noresize &gt;<br>
+&lt;frame src="fmi.html"name="cadrul2"&gt;<br>
+&lt;/frameset&gt;<br>
+&lt;/html&gt;<br>
+</font>
+<hr> <br> <br>
+Continutul fisierului <i>biohim.html:</i> <br>
+<hr>
+<font color="blue">
+&lt;html&gt;<br>
+&lt;head&gt; &lt;H2&gt;Biologie si Chimie&lt;/H2&gt; &lt;/head&gt;<br>
+&lt;body&gt;<br>
+Informatia despre facultatea Biologie si Chimie &lt;/body&gt;<br>
+&lt;/html&gt;<br>
+</font>
+<hr><br><br>
+Continutul fisierului <i>fmi.html:</i><br>
+<hr>
+<font color="blue">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;H2&gt;FMTI&lt;/H2&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+Informatia despre facultatea Fizica, Matematica si Tehnologii <br>informationale <br>
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+</font>
+<hr>
+<br>
+<img src ="scr/ex1.jpg"> <br>
+<h3>Observatii</h3>
+
+Evident, fisierul <i>Meniu.html</i> putea fi scris mai scurt utilizind eticheta &lt;base&gt;: <br>
+<hr>
+<font color="blue">
+&lt;html&gt; <br>
+&lt;head&gt; &lt;base target="cadrul2"&gt; &lt;H2&gt;Facultati&lt;/H2&gt; &lt;/head&gt; 
+<br>&lt;body background="fondai.jpg" alink="green"&gt;
+<br>&lt;H4&gt;
+<br>&lt;P&gt; &lt;A	href	="fmi.html"	&gt;	FMTI&lt;/A&gt;
+<br>&lt;P&gt; &lt;A	href	="biohim.html" &gt; Biologie si chimie &lt;/A&gt;
+<br>&lt;P&gt; &lt;A	href	="geo.html"	&gt;	Geografie	&lt;/A&gt;
+<br>&lt;P&gt; &lt;A	href	="fil.html"	&gt;	Filologie	&lt;/A&gt;
+<br>&lt;P&gt; &lt;A	href	="ped.html"	&gt;	Pedagogie	&lt;/A&gt;
+<br>&lt;/H4&gt;
+<br>&lt;/body&gt;
+<br>&lt;/html&gt;
+</font>
+<hr>
+<br><br>
+<i><b>Exemplul 2.</i> Cadre imbricate</b><br>
+Fie ca in acelasi catalog cu fisierele din exemplul 1 se afla fisierul <i>antet.jpg.</i> <br>Modificam fisierul <i>prima.html</i> din exemplul 1 astfel, incit sa aiba urmatoarea structura:<br>
+<table width="700" border="1">
+<tr>
+<td rowspan="2"> Cadrul 1 (fara nume)<br>
+&Icircncarca fisierul<br><br> 
+<i>Meniu.html</i>
+</td>
+
+<td><h4 align="center">Cadrul 3 (fara nume)</h4><br> 
+Afiseaza un desen (continutul fisierului antet.jpg)
+</td>
+</tr>
+<tr>
+<td> <h4 align="center">Cadrul 2 (cu numele „cadrul2”)</h4> <br>
+Initial incarca fisierul <i>fmi.html</i>, apoi incarca fisierele specifi-<br>cate de legaturile fisierului <i>Meniu.html,</i> adica fisierele <br><i>fmi.html, biohim.html, geo.html, fil.html, ped.html</i>
+</td>
+</tr>
+</table><br>
+<font color=blue>
+Continutul fisierului <i>Prima.html:</i><br><br>
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;Exemplu cu cadre&lt;/title&gt; <br>
+&lt;/head&gt;<br>
+&lt;frameset cols= "180" border=0&gt;<br>
+&lt;frame src="meniu.html" noresize &gt;<br>
+&lt;frameset rows = "120" border = 0&gt;<br>
+&lt;frame src="antet.jpg" scrolling="no"&gt; <br>
+&lt;frame src="fmi.html" name="cadrul2"&gt; <br>
+&lt;/frameset&gt;<br>
+&lt;/frameset&gt;<br>
+&lt;/html&gt;<br>
+</font>
+<img src ="scr/ex2.jpg"> <br>
+<hr>
+
+•	Dac&#259; un browser nu suport&#259; cadre, atunci el va ignora 
+toate etichetele html cuprinse &icirc;ntre etichetele &lt;frameset&gt;,
+ &lt;/frameset&gt; cu excep&#355;ia celor cuprinse &icirc;ntre etichetele 
+ &lt;NOFRAMES&gt;, &lt;/NOFRAMES&gt; (care se scriu &icirc;ntre &lt;frameset&gt;,
+ &lt;/frameset&gt;). Men&#355;ion&#259;m c&#259; &icirc;ntre &lt;noframes&gt;, 
+ &lt;/noframes&gt; pot fi scrise majoritatea etichetelor html.<br><br>
+•	Sintaxa HTML permite crearea a&#351;a-numitor cadre interne. 
+Cadrele inteme se inse-reaz&#259; similar unei imagini (adic&#259; for&#259; utilizarea etichetelor &lt;frameset&gt;, &lt;/frameset&gt;). 
+Pentru definirea unui cadru intem se utilizeaz&#259; etichetele &lt;iframe&gt;, &lt;/iframe&gt;.<br><br>
+Eticheta &lt;IFRAME&gt; poate avea urm&#259;toarele atribute:
+<ol>
+<li>src = "URL", unde URL este numele fi&#351;ierului html care va fi &icirc;nc&#259;rcat ini&#355;ial &icirc;n acest cadru;</li>
+<li>bordei-color = "culoare" (stabile&#351;te culoarea chenarului cadrului);</li>
+<li>border = "n" (stabile&#351;te grosimea chenarului cadrului);</li>
+<li>frameborder = "yes" sau 1 / "no" sau 0 (afi&#351;eaz&#259; sau ascunde chenarul cadrului);</li>
+<li>scrolling = "yes" / "no" / "auto" (afi&#351;eaz&#259; permanent, ascunde sau afi&#351;eaz&#259; atunci c&icirc;nd este necesar bara de derulare a cadrului);</li>
+<li>noresize (fSr&#259; valori, interzice posibilitatea prestabilit&#259; a utilizatorului de a redimensiona cadrul cu ajutorul mouse-ului);</li>
+<li>marginheight = n / «% (stabile&#351;te distan&#355;a de n pixeli sau de n% din l&#259;&#355;imea cadrului dintre con&#355;inutul cadrului &#351;i marginile verticale);</li>
+<li>marginwidth - nl n% (stabile&#351;te distan&#355;a de n pixeli sau de n% din &icirc;n&#259;l&#355;imea cadrului dintre con&#355;inutul cadrului &#351;i marginile orizontale);</li>
+<li>name ” „numele cadrului” (stabile&#351;te numele cadrului);</li>
+<li>width = n / n% (stabile&#351;te l&#259;&#355;imea cadrului);</li>
+<li>height = n / n% (stabile&#351;te &icirc;n&#259;l&#355;imea cadrului);</li>
+<li>align (stabile&#351;te modul de aliniere a cadrului);</li>
+<li>vspace (stabile&#351;te distan&#355;a dintre marginile de sus &#351;i de jos ale cadrului &#351;i celelalte elemente ale documentului);</li>
+<li>hspace (stabile&#351;te distan&#355;a dintre marginea st&icirc;ng&#259; &#351;i marginea dreapt&#259; ale cadrului &#351;i celelalte elemente ale documentului).</li>
+</ol> <br>
+<hr>
+<font color=blue>
+<h4>Exemplul 3. Cadru intern</h4>
+Fi&#351;ierele ex3.html, dl.jpg, d2.jpg, d3.jpg, d4.jpg, d5.jpg se afl&#259; &icirc;n acela&#351;i catalog.<br><br>
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;Exeinplu cu cadru intern&lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;cbody alink="green"&gt;<br>
+&lt;iframe src="dl.jpg" name="cadru_intern" width =3 00 height = 250 align = right&gt;<br>
+&lt;/iframe&gt;<br><br>
+Acest document con&#355;ine un cadru intern &lt;P&gt; &lt;A href = *dl.jpg" target="cadru_intern"&gt; Desenul 1&lt;/A&gt;<br>
+&lt;P&gt; &lt;A href	= "d2.jpg"	target="cadru_intern"&gt;	Desenul	2	&lt;/A&gt;<br>
+&lt;P&gt; &lt;A href	="d3.jpg"	target="cadru_intern"&gt;	Desenul	3	&lt;/A&gt;<br>
+&lt;P&gt; &lt;A href	»"d4.jpg"	target="cadru_intern"&gt;	Desenul	4	&lt;/A&gt;<br>
+&lt;P&gt; &lt;A href	="d5.jpg"	target="cadru_intern"&gt;	Desenul	5	&lt;/A&gt;<br>
+</font>
+<hr><br>
+<img src ="scr/ex3.jpg"> <br>
+Intteb&#259;ri de control.<br><br>
+1.	Care este rolul cadrelor &icirc;ntr-un document html?<br>
+2.	Ce etichete se utilizeaz&#259; pentru definirea cadrelor &#351;i care s&icirc;nt atributele lor?<br>
+3.	Pot fi imbricate etichetele pentru definirea cadrelor?<br>
+4.	Numi&#355;i atributele etichetei &lt;FRAME&gt;. Care este atributul obligatoriu al acestei etichete?<br>
+5.	Numi&#355;i atributul etichetei &lt;A&gt; care specific&#259; cadrul &icirc;n care se va &icirc;nc&#259;rca fi&#351;ierul
+reffirit.<br>
+6.	Ce valori &icirc;n afar&#259; de numele cadrului mai accept&#259; acest atribut?<br>
+7.	Ce este un cadru intern &#351;i care s&icirc;nt etichetele pentru definirea unui astfel de cadru?<br>
+8.	Numi&#355;i atributele lor.<br>
+9.	Explica&#355;i rolul etichetei &lt;BASE&gt;.<br><br>
+
+Satcini pentru. Luctu, independent<br><br>
+1.	Crea&#355;i o pagin&#259; web format&#259; din dou&#259; cadre de tip linie cu chenar de culoare blue: primul cu l&#259;&#355;imea de 200 de pixeli, al doilea ocup&icirc;nd zona r&#259;mas&#259;. Primul cadru va afi&#351;a con&#355;inutul unui fi&#351;ier cu defini&#355;ia p&#259;tratului, iar al doilea - con&#355;inutul unui fi&#351;ier cu defini&#355;ia dreptunghiului.<br><br>
+2.	Crea&#355;i o pagin&#259; web format&#259; din dou&#259; cadre de tip coloan&#259; cu chenar ro&#351;u &#351;i l&#259;&#355;imea de 160 de pixeli. Primul cadru va afi&#351;a o list&#259; de denumiri de figuri geometrice, iar al doilea - desenele corespunz&#259;tor acestor figuri. Indica&#355;ie. Utiliza&#355;i redactorul grafic Paint.<br><br>
+3.	Crea&#355;i o pagin&#259; web format&#259; din patru cadre de tip coloan&#259; cu chenar verde av&icirc;nd l&#259;&#355;imile respectiv de 100 de pixeli, 100 de pixeli, 20% din l&#259;&#355;imea ferestrei brow¬ser-ului &#351;i zona r&#259;mas&#259;. Fiecare cadru va afi&#351;a un mesaj de forma: „Salut! S&icirc;nt cadrul num&#259;rul x".<br><br>
+4.	Crea&#355;i o pagin&#259; web format&#259; din dou&#259; cadre de tip coloan&#259; f&#259;r&#259; chenar: unul cu l&#259;&#355;imea de 160 de pixeli, al doilea ocup&icirc;nd zona r&#259;mas&#259;. Primul cadru va afi&#351;a imaginea cu fotografia unei persoane, iar al doilea - CV-ul corespunz&#259;tor. Indica&#355;ii. Crea&#355;i fi&#351;ierele care vor fi afi&#351;ate de cadre, apoi pagina web.<br><br>
+5.	Crea&#355;i o pagin&#259; web format&#259; din trei cadre conform imaginii:<br>
+<img src ="scr/ex4.jpg"> <br>
+Fiecare cadru va afi&#351;a con&#355;inutul unui fi&#351;ier html diferit de fi&#351;ierele celorlalte dou&#259; cadre.<br><br>
+6.	Crea&#355;i o pagin&#259; web format&#259; din trei cadre conform imaginii:<br>
+<img src ="scr/ex5.jpg"> <br>
+Cadrul 1 va afi&#351;a o imagine cu diferite figuri geometrice, cadrul 2 - o list&#259; de leg&#259;turi- denumiri de figuri geometrice, iar cadrul 3 - defini&#355;ia figurii geometrice selectate din ca¬drul 2.<br><br>
+7. Crea&#355;i o pagin&#259; web format&#259; din trei cadre conform imaginii:<br>
+<img src ="scr/ex6.jpg"> <br>
+Cadrul 1 va afi&#351;a o imagine, cadrul 2 - un meniu cu leg&#259;turi-denumiri de etichete HTML pentru tabele, iar cadrul 3 - semnifica&#355;ia (rolul) etichetei selectate din cadrul 2.<br><br>
+8.	Reprezenta&#355;i schematic structura repartiz&#259;rii cadrelor definite de urm&#259;torul cod HTML:<br><br>
+&lt;frajneset cols = "*,**,&gt;<br>
+&lt;frameset rows="*,*"&gt;<br>
+&lt;frameset cols=**,*“&gt;<br>
+&lt;frame src="cl.html"&gt;<br>
+&lt;frame src="c2.html"&gt;<br>
+&lt;/frameset&gt;<br>
+&lt;frame src="c3 .html"&gt;<br>
+&lt;/frameset&gt;<br>
+&lt;frame src="c4.html"&gt;<br>
+&lt;/frameset&gt;<br><br>
+9.	Reprezenta&#355;i schematic structura repartiz&#259;rii cadrelor definite de urm&#259;torul cod HTML:<br><br>
+&lt;frameset cols="*,*"&gt;<br>
+&lt;frame src="cl. html"&gt;<br>
+&lt;frairteset rows="*,*"&gt;<br>
+&lt;frameset cols="*,*"&gt;<br>
+&lt;frame src="c2.html"»<br>
+&lt;frame src="c3 .html"&gt;<br>
+&lt;/frameset&gt;<br>
+&lt;frame src="c4.html"&gt;<br>
+&lt;/frameset&gt;<br>
+&lt;/frameset&gt;<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+</html>

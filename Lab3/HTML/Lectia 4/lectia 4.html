@@ -1,0 +1,201 @@
+<html>
+<head>
+<title>Lectia 4. Legaturi</title>
+</head>
+
+<body leftmargin="45px" oncontextmenu="return false" oncopy="return false;" oncontextmenu="return false" onselectstart="return false;">
+<h1 align="center">Leg&#259;turi</h1><br>
+&Icirc;n lec&#355;ia 1 am men&#355;ionat c&#259; leg&#259;turile (se mai numesc link-uri) reprezint&#259;, 
+probabil, cea mai important&#259; caracteristic&#259; a limbajului HTML.
+O leg&#259;tur&#259; transform&#259; un text obi&#351;nuit &icirc;n hipertext 
+sau hiperleg&#259;tur&#259;, prin intermediul c&#259;ruia se poate ajunge rapid 
+c&#259;tre alt&#259; secven&#355;&#259; a documentului curent sau c&#259;tre alt document 
+(pe acela&#351;i sau pe alt server). Leg&#259;turile s&icirc;nt zone active ale paginii web,
+&icirc;n sensul c&#259; la executarea unui click de mouse pe ele, browser-ul va actualiza pagina.
+<br />
+&middot;&nbsp; Pentru a pune &icirc;n eviden&#355;&#259; o hiperleg&#259;tur&#259; se folosesc etichetele <b>&lt;A&gt </b> (de la "ancor&#259;") &#351;i <b>&lt;/A&gt </b>. Atributul href al etichetei <b> &lt;A&gt </b> este obligatoriu. Valoarea acestui atribut este
+I numele fi&#351;ierului .html c&#259;tre care se face leg&#259;tura. Numele acestui fi&#351;ier se scrie &icirc;ntre
+simbolurile " &#351;i Textul sau imaginea cuprins&#259; &icirc;ntre etichetele <b>&lt;A&gt </b> &#351;i <b>&lt;/A&gt </b> devine zon&#259;
+activ&#259;.
+<br />
+Astfel, o hiperleg&#259;tur&#259; se declar&#259; &icirc;n modul urm&#259;tor:
+<br />
+<b> &lt;A href="URL"&gt text sau imagine&lt;/A&gt </b>, 
+unde URL ("Uniform Resourse Locator" - identificator unic al resursei) este numele
+fi&#351;ierului-destina&#355;ie.
+
+<br /><br />
+<i><b>Observa&#355ie </b></i>
+&icirc;n aceast&#259; lec&#355;ie vom examina doar leg&#259;turi, &icirc;n care zona activ&#259; este un text.
+
+<br />
+&Icirc;n general o hiperleg&#259;tur&#259; poate:
+<br />
+a)	lega	documentul	curent	cu un document	aflat &icirc;n acela&#351;i catalog	(director);
+<br />
+b)	lega	documentul	curent	cu un document	aflat pe acela&#351;i disc local,
+<br />
+c)	lega	documentul	curent	cu un alt site;
+<br />
+d)	lega	documentul	curent	cu alt&#259; secven&#355;&#259;	a aceluia&#351;i document;
+<br />
+e)	lega documentul curent cu o secven&#355;&#259; a altui document:
+<br />
+f)	lansa la execu&#355;ie o aplica&#355;ie de expediere a mesajelor electronice;
+<br />
+g)	lega documentul curent cu un fi&#351;ier de format arbitrar cu scopul cre&#259;rii unei copii pe disc a acestui fi&#351;ier.
+<br />
+<br />
+a)	Dac&#259; documentul referit se afl&#259; &icirc;n acela&#351;i director, atunci URL-ul este chiar numele cestui document.
+<br />
+b)	Dac&#259; documentul referit se afl&#259; pe acela&#351;i disc local, dar &icirc;ntr-un alt catalog, atunci se utilizeaz&#259; adresarea relativ&#259;.
+<br />
+c)	Dac&#259; documentul referit reprezint&#259; un alt site, atunci se indic&#259; adresa acestui site, cris&#259; &icirc;ntre simbolurile " &#351;i "
+<br />
+<br />
+<hr />
+<i><b>Exemplul 1</b></i>
+<br />
+Prezent&#259;m con&#355;inutul fi&#351;ierului D:\HTML\exemplul4.html, care con&#355;ine leg&#259;turi c&#259;tre:
+<br />
+&middot;&nbsp; fi&#351;ierul D:\HTML\exemplul1.html(fi&#351;ierul referit se afl&#259; &icirc;n acela&#351;i ca-
+talog);
+<br />
+&middot;&nbsp; fi&#351;ierul D:\HTML\EXEMPLE\
+exemplul2.html (fi&#351;ierul referit se afl&#259;
+&icirc;n subcatalogul EXEMPLE al catalogului curent);
+<br />
+&middot;&nbsp; fi&#351;ierul D:\exemplul3.html (fi&#351;ierul
+referit se afl&#259; pe discul D: , deci pe
+un nivel ierarhic imediat superior);
+<br />
+&middot;&nbsp; site-ul Colegiului Politehnic din Chisinau: http://www.cptc.md.
+<br /><br /><img src="scr/1.jpg" align="left" height="25%" />
+<font color=blue>
+&lt;HTML&gt <br />
+&lt;Head&gt &lt;Title&gt Ini&#355;iere in HTML. Hiperlegaturi&lt;/Title&gt &lt;/Head&gt <br />
+&lt;Body> <br />
+&nbsp;&nbsp;  &lt;H4> &lt;a href="exemplul1.html" &gt Treci la exemplul 1 &lt;/a&gt   <br />
+&nbsp;&nbsp;&nbsp;&nbsp;    &lt;p&gt &lt;a href="EXEMPLE\exemplul2.html"&gt Treci la exemplul 2 &lt;/a&gt &lt;/p&gt 	<br />
+&nbsp;&nbsp;&nbsp;&nbsp;    &lt;p&gt &lt;a href="\exemplul3 .html"&gt Treci la exemplul 3 &lt;/a&gt &lt;/p&gt 	<br />
+&nbsp;&nbsp;&nbsp;&nbsp;    &lt;p&gt &lt;a href="http:\\www.cptc.md"&gt Colegiul Politehnic din Chisinau &lt;/a&gt &lt;/p&gt 	<br />
+&nbsp;&nbsp;  &lt;/H4&gt   <br />
+&lt;/Body&gt <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/HTML&gt <br />
+</font>
+<img src="scr/ex1.jpg"> <br>
+
+<br />
+d)	O leg&#259;tur&#259; c&#259;tre o alt&#259; secven&#355;&#259; a aceluia&#351;i document se nume&#351;te ancor&#259; cu nume. &icirc;n acest caz URL-ul este numele atribuit secven&#355;ei, precedat de simbolul #. Pentru a atribui unei secven&#355;e un nume se va scrie o ancor&#259; de genul:
+<b> &lt;A name=numele secven&#355;ei&gt </b> <b> &lt;/A&gt; </b>, unde numele secven&#355;ei se scrie &icirc;ntre simbolurile " &#351;i "
+<br />
+e)	URL-ul c&#259;tre o secven&#355;&#259; a altui document este format din numele fi&#351;ierului &#351;i numele secven&#355;ei, ultimul fiind precedat de simbolul #. De exemplu, URL-ul secven&#355;ei cu numele <i>capitolul2</i> al fi&#351;ierului <i>exemplul1.html</i> din acela&#351;i catalog este
+<br /><pre>"exemplull.html#capitolul2"</pre>
+<hr />
+<br />
+<b><i>Exemplul 2</i></b>
+<br />
+<font color=blue>
+&lt;HTML><br />
+&lt;Head><br />
+&lt;Title> Ini&#355;iere in HTML. Hiperlegaturi&lt;/Title><br />
+&lt;/Head><br />
+&lt;Body><br />
+&nbsp;&nbsp;  &lt;H2>  <br />
+&nbsp;&nbsp;&nbsp;&nbsp;  &lt;a name="inceput"/a>  <br />
+&nbsp;&nbsp;&nbsp;&nbsp;    &lt;P>A&lt;/P> &lt;P>fost&lt;/P> &lt;P>odata&lt;/P> &lt;P>ca-n&lt;/P> &lt;P>povesti&lt;/P> &lt;P>A&lt;/P> &lt;P>fost&lt;/P> &lt;P>ca&lt;/P> &lt;P>niciodata&lt;/p>	<br />
+&nbsp;&nbsp;&nbsp;&nbsp;    &lt;P>Din&lt;/P> &lt;P>rude&lt;/P> &lt;P>mari&lt;/P> &lt;P>imparatesti&lt;/P>	<br />
+&nbsp;&nbsp;&nbsp;&nbsp;    &lt;P>O&lt;/P> &lt;P>prea&lt;/P> &lt;P>frumoasa&lt;/P> &lt;P>fata&lt;/p>	<br />
+&nbsp;&nbsp;&nbsp;&nbsp;    &lt;a href="#inceput"> Treci la inceput &lt;/a>	<br />
+&nbsp;&nbsp;  &lt;/H2>  <br />
+&lt;/Body><br />
+&lt;/HTML><br />
+</font>
+<img src="scr/ex2.jpg"> <br>
+<br />
+f)	Pentru lansarea la execu&#355;ie a unei aplica&#355;ii de expediere a mesajelor electronice (se presupune c&#259; aceast&#259; aplica&#355;ie este instalat&#259; pe calculatorul utilizatorului) se va scrie
+o	ancor&#259; de genul: <br />
+<b> &lt;A <i>name="mailto: adresa e-mail valid&#259;"</i>>. </b>
+<br />
+g)	Pentru a crea o leg&#259;tur&#259; c&#259;tre un fi&#351;ier de format arbitrar cu scopul cre&#259;rii unei copii pe disc a acestui fi&#351;ier sau cu scopul lans&#259;rii la execu&#355;ie a aplica&#355;iei care va interpreta astfel de fi&#351;iere se va utiliza o ancor&#259; de genul <b> &lt;A href="URL"> </b> <i>text</i>, unde <i>URL</i> este numele fisierului, iar <i>text</i> este zona activa.
+<br /> 
+<i><b>Observa&#355ie </b></i>
+<br /> 
+Etichetei &lt;A> i se poate ata&#351;a atributul <i>title</i>, care se folose&#351;te pentru a furniza informa&#355;ii suplimentare despre semnifica&#355;ia leg&#259;turii, atunci c&icirc;nd mouse-ul este plasat asupra ei. Valoarea atributului <i> title</i> se scrie &icirc;ntre simbolurile " &#351;i ".
+<hr />
+<br />
+<b><i>Exemplul 3</i></b><br />
+<font color=blue>
+&lt;HTML><br />
+&lt;Head> &lt;Title> Ini&#355;iere in HTML. Hiperlegaturi&lt;/Title><br />
+&nbsp;&nbsp;  &lt;H2>Exemplul 3&lt;/H2>  <br />
+&lt;/Head><br />
+&lt;Body><br />
+&nbsp;&nbsp;  &lt;a href=mailto: delta_mi@mail.md> Cutia po&#351;tala a Deltei &lt;/a>  <br />
+&nbsp;&nbsp;  &lt;pxa href="exemplul6.doc" title-"Salvearea pe disc a fi&#351;ierului exemplul6.doc "> Salveaza exemplul.doc &lt;/p>  <br />
+&lt;/Body><br />
+&lt;/HTML><br />
+</font>
+<img src="scr/ex3.jpg"> <br>
+
+<br />
+&Icirc;n urma execut&#259;rii unui click pe leg&#259;tura <i>salveaz&#259; exemplul6.doc</i> va ap&#259;rea urm&#259;toarea fereastr&#259; (care ne permite s&#259; cre&#259;m pe disc o copie a fi&#351;ierului <i>exemplul6.doc</i> sau s&#259; deschidem acest fi&#351;ier &icirc;n aplica&#355;ia Microsoft Word);
+<img src="scr/ex4.jpg"> <br>
+<br />
+<h3>&Icirc;ntreb&#259;ri de control</h3>
+1.	Ce semnifica&#355;ie au leg&#259;turile pentru o pagin&#259; web?<br />
+2.	Care s&icirc;nt etichetele folosite pentru declararea unei hiperleg&#259;turi?<br />
+3.	Numi&#355;i atributul obligatoriu pentru eticheta <A>. Ce valoarea poate avea acest atribut?<br />
+4.	Ce este o zon&#259; activ&#259;?<br />
+5.	Explica&#355;i sensul expresiei a actualiza o pagin&#259; web.<br />
+6.	Care este forma general&#259; de declarare a unei hiperleg&#259;turi?<br />
+7.	Care elemente ale unei pagini web pot fi hiperleg&#259;turi?<br />
+8.	La ce poate referi o hiperleg&#259;tur&#259;?<br />
+9.	Unde se poate afla documentul referit?<br />
+10.	Ce este o ancor&#259; cu nume?<br />
+11.	Cum se atribuie nume unei secven&#355;e de document html?<br />
+12.	Explica&#355;i &icirc;n ce caz simbolul # se folose&#351;te la scrierea URL-ului.<br />
+13.	Cum se creeaz&#259; o leg&#259;tur&#259; c&#259;tre o secven&#355;&#259; din acela&#351;i document?<br />
+14.	Din ce este format URL-ul unei secven&#355;e din alt document?<br />
+15.	Cum dintr-un document html se poate lansa la execu&#355;ie o aplica&#355;ie de expediere a mesajelor electronice?<br />
+
+
+<h3>Sarcini pentru lucrul independent</h3>
+1.	Crea&#355;i o pagin&#259; web care va afi&#351;a o list&#259; cu disciplinele studiate &icirc;ntr-un semestru. Fiecare element al listei va fi o referin&#355;&#259; c&#259;tre un fi&#351;ier (aflat &icirc;n catalogul &icirc;n care se afl&#259; pagina web) cu informa&#355;ia despre disciplina respectiv&#259;.
+<br /><br />
+2.	Crea&#355;i o pagin&#259; web care va afi&#351;a o list&#259; ordonat&#259; cu denumirea unor universit&#259;&#355;i din Republica Moldova. Fiecare element al listei va fi o hiperleg&#259;tur&#259;c&#259;tre site-ul universit&#259;&#355;ii respective.
+<br /><br />
+3.	Crea&#355;i o pagin&#259; web care va afi&#351;a o list&#259; de licee. Fiecare element al listei va fi o hiperleg&#259;tur&#259; c&#259;tre fi&#351;ierul (site-ul) liceului respectiv. Pagina creat&#259;se va afla &icirc;n catalogul LICEE, iar fiecare fi&#351;ier referit - &icirc;n subcatalogul cu numele liceului. Toate subcataloagele se vor afla &icirc;n catalogul LICEE.
+<br /><br />
+4.	Examina&#355;i desenul exemplului 1. Care este URL-ul referin&#355;ei c&#259;tre fi&#351;ierul:<br />
+a)	exemplul1 .html dac&#259; referin&#355;a se afl&#259; &icirc;n fi&#351;ierul exemplul3.html;<br />
+b)	exemplul2.html dac&#259; referin&#355;a se afl&#259; &icirc;n fi&#351;ierul exemplul1.html;<br />
+c)	exemplul4.html dac&#259; referin&#355;a se afl&#259; &icirc;n fi&#351;ierul exemplul2.html;<br />
+d)	exemplul3.html dac&#259;referin&#355;a se afl&#259; &icirc;n fi&#351;ierul exemplul2.html?<br /><br />
+5.	Crea&#355;i o pagin&#259; web care va afi&#351;a o list&#259; cu c&icirc;teva titluri de c&#259;r&#355;i. Fiecare titlu va fi o referin&#355;&#259;c&#259;tre o scurt&#259; prezentare &icirc;n acela&#351;i document html a c&#259;r&#355;ii cu acest titlu.<br />
+<br />
+6.	Crea&#355;i dou&#259; pagini web, astfel &icirc;nc&icirc;t prima pagin&#259; s&#259; afi&#351;eze cinci titluri de re&#355;et&#259; pentru prepararea respectiv a ciorbei, a pl&#259;cintei, a tortului, a cartofilor pr&#259;ji&#355;i, a micilor, iar pagina a doua - descrierea complet&#259; a re&#355;etelor respective. Titlurile din prima pagin&#259;vor fi hiperleg&#259;turi c&#259;tre secven&#355;ele corespunz&#259;toare din pagina a doua.<br />
+<br />
+7.	Examina&#355;i desenul. Care este URL-ul referin&#355;ei c&#259;tre fi&#351;ierul:<br />
+a)	fisierl.html dac&#259; referin&#355;a se afl&#259; &icirc;n fi&#351;ierul fisier4.html;<br />
+b)	fisier2.html dac&#259; referin&#355;a se afl&#259; &icirc;n fi&#351;ierul fisier3.html;<br />
+c)	fisier4.html dac&#259; referin&#355;a se afl&#259; &icirc;n fi&#351;ierul fisier2.html;<br />
+d)	fisier4.html dac&#259; referin&#355;a se afl&#259; &icirc;n fi&#351;ierul fisier3.html?<br />
+<img src="scr/6.jpg" align=right height="35%" />
+<br />
+8. Examina&#355;i desenul. &icirc;n ce map&#259;se afl&#259; documentul html care con&#355;ine referin&#355;a dac&#259; URL-ul ei este:<br />
+a)	"Mapa4\fisier4.html";<br/>
+b)	"Mapa 1 \Mapa2\Mapa4\fisier4.html";<br/>
+c)	"A Mapal\Mapa2\Mapa4\fisier4.html";<br/>
+d)	"A ..\ Mapa3\fisier4.html"?<br/>
+<br />
+9.	Crea&#355;i dou&#259; pagini web, astfel &icirc;nc&icirc;t prima va con&#355;ine c&icirc;teva leg&#259;turi c&#259;tre diferite secven&#355;e ale paginii a doua, iar pagina a doua - c&icirc;teva leg&#259;turi c&#259;tre diferite secven&#355;e ale primei pagini.
+<br /><br />
+10.	Crea&#355;i o pagin&#259; web care va afi&#351;a o list&#259; cu leg&#259;turi c&#259;tre fi&#351;iere de diferite tipuri pentru a fi deschise spre vizionare sau stocare.
+<br />
+
+
+
+</body>
+</html>

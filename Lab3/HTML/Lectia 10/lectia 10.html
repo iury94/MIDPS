@@ -1,0 +1,284 @@
+<html>
+<head>
+<title>Lectia 10</title>
+</head>
+<body leftmargin="45px" oncontextmenu="return false" oncopy="return false;" oncontextmenu="return false" onselectstart="return false;">
+<h1 align=center>Stiluri. Clase. Pseudoclase.
+Modalit&#259;&#355;i de utilizare
+</h1>
+<br>
+<h3>10.1.	Stiluri</h3><br>
+Stilurile se folosesc pentru a crea diferite efecte de aspect pentru document. Prin stil se sub&icirc;n&#355;elege un ansamblu de propriet&#259;&#355;i, care pot fi atribuite unui fragment de document,<br>
+P&icirc;n&#259; acum modificam aspectul documentului cu ajutorul etichetei &lt;Font&gt; &#351;i a atributelor etichetelor &lt;P&gt;, &lt;Body&gt; &lt;Hn&gt; etc. Aceast&#259; modalitate nu este foarte comod&#259;, deoarece ori de c&icirc;te ori se dore&#351;te formatarea unui text trebuie s&#259; definim din nou toate caracte- risticele care formeaz&#259; aspectul necesar,<br>
+Foia de stiluri reprezint&#259; un „&#351;ablon” care „dirijeaz&#259;” cu aspectul elementelor HTML. A&#351;a cum &icirc;ntr-un document se pot utiliza mai multe foi de stiluri &#351;i browser-ul creeaz&#259; o „ordine” (numit&#259; cascad&#259;) pentru a le interpreta, &icirc;n uz a fost introdus termenul Foi de stiluri &icirc;n cascad&#259; (CSS - Cascading Style Sheet).<br>
+Foile de stiluri &icirc;n cascad&#259; pot fi utilizate &icirc;n c&icirc;teva moduri fundamentale:
+<ul>
+<li>Inline;</li>
+<li>&icirc;nglobat;</li>
+<li>Extern (sau legat);</li>
+<li>Importat.</li>
+</ul>
+<p>Folosirea inline a stilurilor se realizeaz&#259; cu ajutorul atributului STYLE, care poate fi scris &icirc;n interiorul majorit&#259;&#355;ii etichetelor.<br>
+<hr>
+<font color=blue>
+<h4>Exemplul 1</h4>
+&lt;HTML&gt;<br>
+&lt;Bcdy&gt;<br>
+&lt;P Style="color: red"&gt; Primul paragraf<br> &lt;P Style="color: green"&gt; Al doilea paragraf<br> &lt;P Style="color: blue"&gt; Al treilea paragraf <br>
+&lt;P Style="color: black"&gt; Al patrulea paragraf <br>&lt;Body&gt;<br>
+&lt;HTML&gt;<br>
+<img align="center" src="scr/ex1.jpg" ><br>
+<hr>
+</font>
+Prin acest mod se pot defini stiluri pentru fiecare tip de element al documentului: paragraf, nivel de titlu, textul de baz&#259; etc.<br>
+Pentru definirea unui stil &icirc;nglobat se folosesc etichetele &lt;StyIe&gt;, &lt;/Style&gt;, care se scriu, de regul&#259;, 
+&icirc;n blocul &lt;Head&gt; &lt;/Head&gt;.<br><br>
+•	Eticheta &lt;STYLE &gt; are atributul obligator TYPE = "text/css".
+Definirea stilului respect&#259; sintaxa:<br><br>
+El{atribute}<br><br>
+E2{atribute}... <br> <br>
+unde E1, E2,... s&icirc;nt tipuri de elemente ale documentului.<br><br>
+Sintaxa pentru atributele stilului &icirc;nglobat sau in line este diferit&#259; de sintaxa atributelor etichetelor HTML:<br><br>
+Atributul1: valoareal;<br><br>
+Atributul2 : valoarea2;. . .<br><br>
+<hr>
+<font color=blue>
+<h4>Exemplu 2</h4>
+&lt;HTML&gt;<br>
+&lt;Head&gt;<br>
+&lt;Style type = "text/css"&gt;<br>
+P {color: green; font-size: 12pt)<br>
+HI {color: red; font-size: 18pt}<br>
+H2 {color: blue; font-size: 15pt}<br>
+&lt;/Style&gt;<br>
+&lt;/Head&gt;<br>
+&lt;Body&gt;<br>
+&lt;P&gt; Un paragraf&lt;/P&gt;<br>
+ &lt;Hl&gt;Text-nivel de titlu 1&lt;/Hl&gt; <br>
+ &lt;H2&gt;Text-nivel de titlu 2&lt;/H2&gt; <br>
+&lt;/Body&gt;<br>
+&lt;/HTML&gt;<br>
+<img align="center" src="scr/ex2.jpg" ><br>
+</font>
+<hr>
+<br><br>
+Secven&#355;a de cod html &lt;Style&gt;<br>
+P {color: green; font-size: 12pt}<br>
+HI {color: red; font-size: 18pt}<br>
+H2 {color: blue; font-size: 15pt}<br>
+&lt;/Style&gt;<br>
+este o foaie de stiluri &#351;i influen&#355;eaz&#259; asupra paragrafelor &#351;i nivelurilor de titlu 1 &#351;i 2.><br><br>
+© In cazul stilurilor externe, defini&#355;iile lor se scriu &icirc;ntr-un fi&#351;ier aparte (se mai spune fi&#351;ier extern) cu extinderea .css sau .html. Sintaxa con&#355;inutului acestui fi&#351;ier este similar&#259; sintaxei stilului &icirc;nglobat (Etichetele &lt;Style&gt; &#351;i &lt;/Style&gt; nu se scriu).<br><br>
+•	Pentru a folosi stilurile externe, &icirc;n interiorul blocului &lt;Head&gt; &lt;/Head&gt; se scrie eti¬cheta &lt;LINK&gt; cu atributele:<br>
+<ul>
+<li>Rel = "stylesheet";</li>
+<li>Href= "URL", unde URL este adresa fi&#351;ierului &icirc;n care au fost definite stilurile;</li>
+<li>Type = "text/css"</li>
+</ul><br>
+In acest mod stilurile pot fi utilizate &icirc;n mai multe documente .html.<br>
+<br>
+
+<hr>
+<font color=blue>
+<h3>Exemplul 3</h4>
+Documentul .html din exemplul 2 putea fi scris astfel:<br>
+1.	Cre&#259;m fi&#351;ierul stiluri, css cu urm&#259;torul con&#355;inut:<br>
+P {color: green; font-size: 12pt}<br>
+Hl {color: red; font-size: 18pt}<br>
+H2 {color: blue; font-size: 15pt}<br>
+2.	Scriem con&#355;inutul documentului .html:<br>
+&lt;HTML&gt;<br>
+&lt;Head&gt;<br>
+&lt;Link Rel="stylesheet"<br>
+Href="stiluri.css"<br>
+Type="text/css*&gt;<br>
+&lt;/Head&gt;<br>
+&lt;Body&gt;<br>
+&lt;P&gt; Un paragrafe/P&gt;<br>
+&lt;Hl&gt;Text-nivel de titlu 1&lt;/H1&gt; &lt;H2&gt;Text-nivel de titlu 2&lt;/H2&gt;<br>
+&lt;/Body&gt;<br>
+&lt;/HTML&gt;<br><br>
+</font>
+O	Pentru a importa o foaie de stiluri, &icirc;ntre etichetele &lt;Style&gt; &#351;i &lt;/Style&gt; se scrie:<br>
+@import: uri (Adresa fi&#351;ierului cu foaia de stiluri) ;<br><br>
+Astfel, con&#355;inutul documentului html din exemplul 3 este „echivalent” cu urm&#259;torul cod html:<br><br>
+<font color=blue>
+&lt;HTML&gt;<br>
+&lt;Head&gt;<br>
+&lt;Style&gt;<br>
+©import: uri(stiluri.css);<br>
+&lt;/Style&gt;<br>
+&lt;/Head&gt;<br>
+&lt;Body&gt;<br>
+&lt;P&gt; Un paragraf&lt;/P&gt;<br>
+&lt;Hl&gt;Text-nivel de titlu 1&lt;/H1&gt;<br>
+&lt;H2&gt;Text-nivel de titlu 2&lt;/H2&gt;<br>
+&lt;/Body&gt;<br>
+&lt;/HTML&gt;<br>
+</font>
+<hr>
+<br>
+<h3>10.2. Clase &#351;i pseudoclase de stiluri</h3>
+Uneori se dore&#351;te ca unele elemente de acela&#351;i tip al paginii web (paragraf, nivel de titlu etc.) s&#259; apar&#259; &icirc;n pagin&#259; cu aspecte diferite.<br>
+•	O clas&#259; permite definirea c&icirc;torva moduri de formatare pentru acela&#351;i tip de ele-ment sau pentru toate tipurile de elemente.<br>
+•	Clasa se define&#351;te &icirc;n interiorul blocului &lt;Style&gt; &lt;/Style&gt; (aflat la r&icirc;ndul s&#259;u &icirc;n blocul &lt;Head&gt; &lt;/Head&gt;) conform sintaxei
+E.Nume (atribute),<br>
+unde E este tipul elementului, iar Nume - numele clasei. &icirc;n cazul &icirc;n care clasa se va aplica tuturor blocurilor de text din document, tipul elementului nu se scrie.<br>
+•	Pentru a utiliza o clas&#259; de stiluri &icirc;n interiorul etichetei care define&#351;te tipul elementului se scrie atributul CLASS, a c&#259;rei valoare este numele clasei (adic&#259; valoarea Nume).<br><br>
+<br>
+<hr>
+<font color=blue>
+<h4>Exemplul 4</h4>
+&lt;HTML&gt;<br>
+&lt;Head&gt;<br>
+&lt;Style&gt;<br>
+P.mare	{font-size: 16pt}<br>
+P.mic	{font-size: 8pt}<br>
+.verde {color:green}<br>
+&lt;/Style&gt;<br>
+&lt;/Head&gt;<br>
+&lt;Body&gt;<br>
+&lt;P class=mare&gt; Un paragraf cu litere mari&lt;/P&gt;<br>
+&lt;P&gt; Un paragraf cu litere obi&#351;nuite&lt;/P&gt;<br>
+&lt;P class=mic&gt; Un paragraf cu litere mici&lt;/P&gt;<br>
+&lt;H3 class=verde&gt; Titlu verde &lt;/H3&gt;<br>
+&lt;P class-verde&gt; Paragraf verde &lt;/H3&gt;<br>
+&lt;/Body&gt;<br>
+&lt;/HTML&gt;<br>
+<img align="center" src="scr/ex4.jpg" ><br>
+</font>
+<hr>
+<br>		
+•	Clasele se pot defini &#351;i &icirc;n fi&#351;iere externe,<br>	<br>
+•	De obicei, un set de reguli de formatare se refer&#259; Ia un element al paginii web. Pseudoclasele extind posibilit&#259;&#355;ile regulelor de formatare prin faptul c&#259; permit informa&#355;iei (ac&#355;iunilor) externe s&#259; influen&#355;eze asupra procesului de formatare. Astfel, pseudoclasele s&icirc;nt apelate de browser dac&#259; au loc unele condi&#355;ii pentru document.<br>
+<ul>
+<li>In Internet Explorer &#351;i Netscape Navigator s&icirc;nt implementate doar pseudo¬clasele pentru personalizarea leg&#259;turilor. Ele se definesc &icirc;n interiorul blocului &lt;Style&gt; &lt;/Style&gt; sau &icirc;ntr-un fi&#351;ier extern respect&icirc;nd urm&#259;toarea ordine sintax&#259;:<br>
+A : link {atribute)	leg&#259;tur&#259;	nevizitatâ<br>
+A:visited {atribute)	- leg&#259;tur&#259; vizitat&#259;<br>
+A:active {atribute)	- leg&#259;tur&#259; activ&#259; (curent&#259;)<br>
+A:hover {atribute)	- leg&#259;tur&#259; pe care se afl&#259;	cursorul de mouse<br>
+</li><br>
+<li>Dac&#259; se dore&#351;te ca diferite leg&#259;turi s&#259; utlizeze diferite format&#259;ri se vor folosi separatorii Class sau Id.<br>
+Definirea unei clase pentru hiperleg&#259;turi se realizeaz&#259; conform sintaxei:<br><br>
+A: Tip.Nuniei atribute), unde7i/&gt;e {link, visited, active, hover), iar Nume - numele clasei.</li><br>
+<li>Pentru a utiliza o clas&#259; de stiluri &icirc;n interiorul etichetei &lt;A&gt; se scrie atributul CLASS, a c&#259;rei valoare este numele clasei (adic&#259; valoarea Nume).
+</li>
+</ul>
+<hr>
+<font color=blue>
+<h4>Exemplul 5</h4>
+&lt;HTML&gt;<br>
+&lt;Head&gt;<br>
+&lt;Style&gt;<br>
+A:link {color: blue}<br>
+A:visited {color: black}<br>
+A:active {color: red}<br>
+A:hover {color: lime}<br>
+A:hover.frumos{color: green; font-size: 18pt}<br>
+&lt;/Style&gt;<br>
+&lt;/Head&gt;<br>
+&lt;Body&gt;<br>
+&lt;A Href=*fisierl.html"&gt; Prima hiperlegatura&lt;/Axbr&gt;<br>
+&lt;A Href="fisier2.html"&gt; A doua hiperlegatura&lt;/Axbr&gt;<br>
+&lt;A Href='fisier3.html"&gt; A treia hiperlegatura&lt;/Axbr&gt;<br>
+&lt;A class=frumos Href="fisier4,html"&gt; A patra hiperlegatura&lt;/A&gt;&lt;br&gt;<br>
+&lt;A Href="fisier5.html"&gt; A cincea hiperlegatura&lt;/A&gt;&lt;br&gt; <br>
+&lt;/Body&gt;<br>
+&lt;/HTML&gt;<br>
+<img align="center" src="scr/ex5.jpg" ><br>
+<hr>
+</font>
+• Separatorul ID se folose&#351;te pentru adresarea (&icirc;ntr-o foaie de stiluri sau &icirc;ntr-un scenariu Java Script) c&#259;tre numele unui element html. Parametrul ID poate fi aplicat oric&#259;rui element html. Pentru a atribui nume elementului se folose&#351;te simbolul #.
+<br><br>
+<font color=blue>
+<hr>
+<h4>Exemplul 6</h4>
+&lt;HTML&gt;<br>
+&lt;Head&gt;<br>
+&lt;Style&gt;<br>
+#corpl2 {font-size: 12pt}<br>
+#corpl8 {font-size: 18pt}<br>
+&lt;/Style&gt;<br>
+&lt;/Head&gt;<br>
+&lt;Body&gt;<br>
+&lt;P ID=corpl2&gt; Corp-litera 12&lt;/P&gt;<br>
+&lt;H2 ID=corpl8&gt;Corp-litera 18&lt;/H2&gt;<br>
+&lt;/Body&gt;<br>
+&lt;/HTML&gt;<br>
+<hr>
+</font>
+<b>Intreb&#259;ri de control.<br></b><br>
+1.	Ce este un stil?<br>
+2.	Care s&icirc;nt modurile fundamentale de utilizare a foilor de stil &icirc;n cascad&#259;?<br>
+3.	Cum se creeaz&#259; stilurile inline?<br>
+4.	Cum se define&#351;te un stil &icirc;nglobat?<br>
+5.	Care este atributul obligatoriu al etichetei STYLE folosit&#259; &icirc;ntr-un stil &icirc;nglobat?<br>
+6.	Care este sintaxa pentru atributele stilului &icirc;nglobat sau inline?<br>
+7.	Ce este un stil extern? Un stil importat?<br>
+8.	&icirc;n ce cazuri se folose&#351;te eticheta &lt;LINK&gt; &#351;i care s&icirc;nt atributele ei?<br>
+9.	Pentru ce se utilizeaz&#259; clasele?<br>
+10.	Cum se define&#351;te o clas&#259;?<br>
+11.	Ce este numele clasei &#351;i cum se apeleaz&#259; el?<br>
+12.	Cum poate fi creat&#259; o clas&#259; aplicabil&#259; asupra tuturor blocurilor de text ale unui document html?<br>
+13.	Ce valori poate primi atributul Class?<br>
+14.	Ce rol joac&#259; pseudoclasele &icirc;ntr-un document html?<br>
+15.	Ce fel de pseudoclase s&icirc;nt implementate &icirc;n Internet Explorer &#351;i Netscape Navi¬gator?<br>
+16.	Cum se creeaz&#259; o clas&#259; pentru o hiperleg&#259;tur&#259;?<br><br>
+
+<b>Satcini pentru Lucru Independent.</b><br><br>
+1.	Utiliz&icirc;nd stiluri inline &#351;i atributele color, font-size crea&#355;i o pagin&#259; web care va afi&#351;a o poezie cu titlul albastru de m&#259;rime 18 pt, iar restul textului av&icirc;nd culoare gri &#351;i m&#259;rimea 14 pt.<br><br>
+2.	Utiliz&icirc;nd stiluri inline &#351;i atributele color, font-size, background-color crea&#355;i o pagin&#259; web care va afi&#351;a pagina de titlu a unei lucr&#259;ri de licen&#355;a. (O pagin&#259; de titlu con&#355;ine denumirea institu&#355;iei, denumirea catedrei, titlul lucr&#259;rii, numele autorului, numele conduc&#259;torului &#351;tiin&#355;ific, ora&#351;ul &icirc;n care se afl&#259; institu&#355;ia &#351;i anul c&icirc;nd a fost elaborat&#259; lucrarea.)<br><br>
+3.	Utiliz&icirc;nd stiluri inline &#351;i atributele color, font-size, background-color crea&#355;i o pagin&#259; web care va afi&#351;a un CV.<br><br>
+4.	Comenta&#355;i urm&#259;toarea secven&#355;&#259; de document html:<br><br>
+<font color=blue>
+&lt;Style type = "text/css"&gt;<br>
+HI {color: red; font-size: 24pt}<br>
+H2 {color: red; font-size: 2Opt}<br>
+H3 {color: red; font-size: 16pt}<br>
+P {color: cyan; font-size: 14pt}<br>
+&lt;/Style&gt;<br><br>
+</font>
+5.	Comenta&#355;i urm&#259;toarea secven&#355;&#259; de document html:<br><br>
+<font color=blue>
+&lt;Style type = "text/css"&gt;<br>
+H3	{color:	orange;	font-size:	20pt}<br>
+H4	(color:	orange;	font-size:	18pt}<br>
+H5	(color:	orange;	font-size:	ISpt}<br>
+P	(background-color: green; color: blue; font-size: 12pt}<br>
+&lt;/Style&gt;<br>
+</font>
+6.	Comenta&#355;i urm&#259;toarea secven&#355;&#259; de document html:<br><br>
+<font color=blue>
+&lt;HTML&gt;<br>
+&lt;Head&gt;<br>
+&lt;Style&gt;<br>
+Hl.Cl {color: red}<br>
+H1.C2 {color: green}<br>
+H2.C1 { color: red }<br>
+H2.C1 { color: green }<br>
+P.C1 { color: red }<br>
+P.C2 { color: green }<br>
+&lt;/Style&gt<br>
+&lt;/Head&gt;<br><br>
+</font>
+7.	Scrie&#355;i codul html care define&#351;te pentru paragrafe dou&#259; clase: una va stabili m&#259;rimea 20 pt &#351;i culoarea oranj, a doua - m&#259;rimea 14 pt &#351;i culoarea verde.<br><br>
+8.	Scrie&#355;i codul html care define&#351;te pentru paragrafe trei clase: prima va stabili fundalul de culoare aqua, m&#259;rimea 15 pt &#351;i culoarea neagr&#259;, a doua - fundalul galben, m&#259;rimea 17 pt &#351;i culoarea albastr&#259;, iar a treia - f&#259;r&#259; fundal, m&#259;rimea 12 pt &#351;i culoarea maro.<br><br>
+9.	Comenta&#355;i urm&#259;toarea secven&#355;&#259; de document html:<br><br>
+<font color=blue>
+&lt;Head&gt;<br>
+&lt;Style&gt;<br>
+A:active {color: blue; font-size: 14pt }<br>
+A:hover {color: red; font-size: 14pt }<br>
+A:link {color: orange; font-size: 14pt }<br>
+A:visited {color: black}<br>
+A:hover.interesant{color: lime; font-size: 14pt}<br>
+&lt;/Style&gt;<br>
+&lt;/Head&gt;<br>
+</font>
+
+
+<hr>
+</font>
+
+</body>
+</html>

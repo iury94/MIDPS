@@ -1,0 +1,232 @@
+<html>
+<head>
+<title>Lectia 8</title>
+</head>
+<h1 align="center">Formulare</h1>
+<body leftmargin="45px" oncontextmenu="return false" oncopy="return false;" oncontextmenu="return false" onselectstart="return false;">
+&nbsp;&nbsp;&nbsp;&Icirc;n afara de texte, imagini, tabele, un document html poate contine butoane de comanda, casete de text, zone de editare, butoane radio, liste de selectie, casete de validare etc. De regula, aceste elemente se folosesc pentru a dinamiza documentul si/sau pentru a oferi utilizatorului posibilitatea transmiterii unor informatii (date) pentru prelucrarea lor ulterioara de catre un server WWW sau de catre un program special inserat in docu¬ment. in cazul in care informatiile ajung la server, un program le prelucreaza si/sau le stocheaza intr-o baza de date. Unele programe retumeaza un mesaj de raspuns sau lanseaza o actiune referitoare la document.<br><br>
+<img src="scr/ex1.jpg"><br>
+Pentru a insera intr-o pagina web astfel de elemente se creeaza formulare. Un document html poate avea unul sau mai multe formulare.<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;<b><i>Formularul</i></b> reprezinta un ansamblu de zone active (vezi lectia 1) pentru introducerea, selectarea si transmiterea datelor. El se defineste de etichetele <b>&lt;form&gt; &lt;/form&gt;</b>. Astfel, marcajele care definesc fiecare dintre elementele enuntate se scriu intre <b>&lt;form&gt; si &lt;/form &gt;.</b><br><br>
+&middot;&nbsp; Elicheta <b>&lt;FORM&gt;</b> poate avea urmatoarele atribute:<br>
+1.	<i><b>action</b></i> = "URL" / "mailto: ADRESA";<br>
+2.	<i><b>method </b></i>= "get" / "post";<br>
+3.	<i><b>name</b></i> - "nume";<br>
+4.	<i><b>target</b></i> = "numele cadrului";<br>
+5.	<i><b>disabled</b></i> = "true" / "false".<br><br>
+1.	Valoarea URL a atributului <i><b>action</b></i> este adresa programului pe serverul WWW care prelucreaza datele transmise, iar ADRESA este o adresa valida de e-mail catre care se vor expedia datele.<br><br>
+2.	Atributul <i><b>method</b></i> stabileste metoda utilizata de browser pentru transmiterea datelor.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Valoarea get este implicita, semnificind ca datele din formular vor fi adaugate la adresa URL a atributului action. in acest caz browser-ul automat insereaza mai intii simbolul ?, apoi datele conform sintaxei <u><i><b>numele cimpului = valoarea cimpului</b></i></u>. intre fiecare doua seturi de date se insereaza simbolul &amp. Evident, cantitatea de date astfel transmise nu poate fi prea mare (cel mult 1KB).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&Icirc;n cazul valorii post datele sint transmise separat si pot fi mult mai mari.<br><br>
+3.	Valoarea atributului <i><b>name</b></i>, de regula, se utilizeaza ca identificator al formularului. Un subprogram Java, JavaScript, VBScript (sau de alt tip) poate primi in calitate de parametru actual un nume de formular sau un nume al unui element al formularului.<br><br>
+4.	Am mentionat ca in urma expedierii datelor unui formular, serverul WWW poate retuma un raspuns. Valoarea atributului <i><b>target</b></i> este numele cadrului in care va fi afisat acest raspuns.<br><br>
+5.	Atributul <i><b>disabled</b></i> dezactiveaza (pentru valoarea <b>true</b>) sau activeaza toate elementele unui formular.
+Majoritatea elementelor unui formular se definesc cu ajutorul marcajului <b>&lt;input&gt;.</b><br><br>
+&middot; Eticheta <b>&lt;INPUT&gt;</b> poate avea urmatoarele atribute:<br>
+1.	<i><b>type</b></i> = "text" / "submit" / "reset" / "password" / "checkbox" / "radio" / "file" / "button";<br>
+2.	<i><b>name </b></i>- "nume";<br>
+3.	<i><b>value</b></i> = "valoare" / "URL";<br>
+4.	<i><b>disabled</b></i> = "true" / "false";<br>
+5.	<i><b>size</b></i> = "n";<br>
+6.	<i><b>readonly;</b></i><br>
+7.	<i><b>maxlength</b></i> ="n";<br>
+8.	<i><b>checked;</b></i><br>
+9.	<i><b>enctype</b></i> ="multipart"  / "form-data".<br><br>
+
+1.	Atributul <b><i>type</i></b> este cel mai important &#351i stabile&#351te tipul elementului.<br>
+-	Valoarea <b>"text"</b> este implicit&#259; &#351;i corespunde casetei de text (se mai spune c&icirc;mp de editare).<br>
+-	Valoarea <b>"submit"</b> specific&#259; un buton de expediere a datelor.<br>
+-	<b>"Reset"</b> corespunde unui buton care, fiind ap&#259;sat, atribuie tuturor elementelor formu
+larului valorile prestabilite.<br><br>
+-	<b>"Password"</b> se folose&#351te pentru crearea unei casete de text &icirc;n care utilizatorul va
+ putea scrie texte, &icirc;ns&#259; &icirc;n caset&#259; &icirc;n locul oric&#259;rui simbol va ap&#259;rea caracterul *.<br>
+-	Valoarea <b>"checkbox"</b> specific&#259; o caset&#259; de validare (se mai spune <b>buton de op&#355;iunele</b>), 
+utilizat&#259; pentru a activa (a valida) sau a interzice o stare, o op&#355;iune etc.<br>
+-	Valoarea <b>"radio"</b> specific&#259; un buton radio, care, &icirc;n cazul &icirc;n care este singur,<br>
+ are acela&#351i rol ca &#351i o caset&#259; de validare. De regul&#259;, butoanele radio se folosesc &icirc;n grup. 
+ La selectarea unui buton din grup celelalte butoane din grup automat &icirc;&#351;i pierd selec&#355;ia. Se consider&#259; c&#259; 
+ dou&#259; sau mai multe butoane radio ale unui formular apar&#355;in aceluia&#351i grup dac&#259; valorile atributelor <i><b>name</b></i> (ale etichetei &lt;input&gt;) coincid.<br>
+-	<b>"File"</b> se utilizeaz&#259; pentru a crea o caset&#259; de fi&#351;iere. Prin intermediul unei astfel de casete se
+poate transmite tot con&#355;inutul unui fi&#351;ier. Numele fi&#351;ierului se scrie &icirc;n caset&#259; sau se 
+alege cu ajutorul butonului Browse..., care &icirc;nso&#355;e&#351;te caseta.<br>
+-	Valoarea <b>"button"</b> corespunde unui buton de comand&#259;. Butonul de comand&#259; lanseaz&#259; 
+la execu&#355;ie un subprogram (scris &icirc;n unul din limbajele Java, Java Script, VBScript).<br>
+2.	Valoarea atributului <i><b>name</b></i> se folose&#351;te pe post de identificator al elementului corespunz&#259;tor.<br><br>
+3.	Atributul value desemneaz&#259; valoarea ini&#355;ial&#259; a elementului. &icirc;n cazul butonului
+de comand&#259; &#351;i a butonului de tip <b>"reset"</b> valoarea acestui atribut este afi&#351;at&#259; pe
+ buton. Un buton radio selectat sau o caset&#259; de validare selectat&#259; transmite date de
+ forma <u><b><i>numele = nai</i></b></u>. unde <u><b><i>numele</u></b></i> este valoarea atributului <i><b>name</b></i>, iar <u><b>val</b></u> - este 
+ valoarea atributului <i><b>value.</i></b><br><br>
+4.	Atributul <i><b>disabled</i></b> dezactiveaz&#259; (pentru valoarea true) sau activeaz&#259; elementul unui formular.<br><br>
+5.	Atributul <i><b>size</i></b> se folose&#351;te doar &icirc;n cazul casetelor de text (adic&#259; pentru <i><b>type = "text"</i></b> / "password") &#351;i 
+specific&#259; lungimea casetei.<br><br>
+7.	Valoarea atributului maxlength reprezint&#259; num&#259;rul maxim de caractere care pot fi scrise &icirc;ntr-o caset&#259; de text.<br><br>
+8.	&icirc;n cazul unei casete de validare sau a unui buton radio atributul cheked (f&#259;r&#259; valori) "selecteaz&#259;" caseta sau butonul.<br><br>
+9.	Atributul enctype se folose&#351;te doar &icirc;n cazul casetelor de fi&#351;iere (adic&#259 pentru <b>type = "file"</b>) &#351;i specific&#259; modul de 
+criptare a fi&#351;ierului care urmeaz&#259; a fi expediat.<br><br>
+
+Un element des &icirc;nt&icirc;lnit &icirc;n formulare este lista de selec&#355;ie. O list&#259; de selec&#355;ie se creeaz&#259; cu ajutorul etichetelor 
+<b>&lt;select&gt;, &lt;/select&gt; &#351;i &lt;option&gt;.</b>
+&middot
+<ul>
+<li>Eticheta <b>&lt;SELECT&gt;</b> poate avea urm&#259;toarele atribute:<br>
+1.	<b>name = "nume"</b> (specific&#259; numele listei, utilizat ca identificator al listei);<br>
+2.	<b>size = "n"</b> (stabile&#351;te num&#259;rul de elemente vizibile din list&#259;, valoarea 1 este prestabilit&#259);<br>
+3.	<b>multiple</b> (permite selectarea simultan&#259; a c&icirc;torva elemente din list&#259;).</ul>
+<ul>
+<li>Eticheta <b>&lt;OPTION&gt;</b> define&#351;te un element al listei. Ea se scrie &icirc;ntre etichetele
+<b>&lt;select&gt; &lt;/select&gt;</b> &#351;i poate avea atributele:<br>
+1.	<b>value = "&#351;ir de caractere"</b> (precizeaz&#259; valoarea care va fi transmis&#259; serverului &icirc;n cazul &icirc;n care
+ elementul va fi selectat; datele se expediaz&#259; sub <br> forma <b>name = value</b>, unde name este numele listei, 
+ iar value - valoarea atributului cu acela&#351;i nume; dac&#259; atributul value lipse&#351;te, atunci se va 
+ transmite &#351;irul de caractere care urmeaz&#259; dup&#259; eticheta <b>&lt;option&gt;</b> );<br>
+2.	<b>selected</b> (elementul devine selectat prestabilit).<br></ul>
+
+O	zon&#259; de editare se creeaz&#259; cu ajutorul etichetelor <b>&lt;textarea&gt;&#351;i &lt;/textarea&gt;</b>
+<ul>
+<li>Eticheta &lt;TEXTAREA&gt; poate avea urm&#259;toarele atribute:<br>
+1.	<b>name = "nume"</b> (specific&#259; numele zonei, utilizat ca identificator al zonei);<br>
+2.	<b>cols = "n"</b> (stabile&#351;te num&#259;rul de caractere dintr-o linie);<br>
+3.	<b>rows = "n"</b> (stabile&#351;te num&#259;rul de linii afi&#351;ate simultan);<br>
+4.<b>wrap = "off" / "hard" / "soft"</b> (stabile&#351;te dac&#259; textul va fi &icirc;ntrerupt automat 
+(doar &icirc;n cazul valorilor hani &#351;i soft) sau nu (pentru valoarea off) la atingerea
+ marginii din dreapta a zonei &#351;i dac&#259; &icirc;n textul transmis serverului o dat&#259; cu formularul
+ se va include (doar &icirc;n cazul valorilor off &#351;i hard) sau nu (pentru valoarea soft) caracterul de sf&icirc;r&#351;it de linie).<br>
+</ul>
+<hr>
+<i><h3>Exemplul 1</h3></i><br>
+
+Urm&#259;torul cod HTML afi&#351;eaz&#259; documentul html din imaginea prezentat&#259; la 
+&icirc;nceputul lec&#355;iei.<br> (Evident, con&#355;inuturile casetei, zonei de editare, 
+listei de selec&#355;ie, st&#259;rile butonului radio &#351;i casetei de validare au fost modificate de utilizator).<br><br>
+<font color="blue">
+&lt;HTML&gt;<br>
+&lt;body&gt;<br>
+&lt;form &gt;<br>
+&lt;input type=button value="	"&gt;	- buton de comanda&lt;br&gt;&lt;br&gt;<br>
+&lt;input size=10 &gt;- caseta de text &lt;br&gt;<br>
+&lt;input type=checkbox&gt; - caseta de validare &lt;br&gt;&lt;br&gt;<br>
+&lt;input type=radio checked&gt; - buton radio &lt;br&gt; lista de selec&#355;ie cselect name = "Nota:"&gt;<br>
+&lt;option&gt;l<br>
+&lt;option&gt;2<br>
+&lt;option&gt;3<br>
+&lt;/select&gt; &amp;nbsp &amp;nbsp &amp;nbsp <br>
+ zona de editare<br>
+&lt;textarea cols=l0 rows=4 vscrolling = "no"&gt;<br>
+&lt;/textarea&gt;<br>
+&lt;br&gt;&lt;br&gt;<br>
+caseta de fi&#351;iere &lt;input type="file" value="D:\ex2\test.html"&gt;<br>
+&lt;/form&gt;<br>
+&lt;/body&gt;<br>
+&lt;/HTML&gt;<br>
+</font>
+<br><hr>
+<img src="scr/ex3.jpg"><br>
+<i><h3>Exemplul 2</h3></i><br>
+<font color="blue">
+&lt;HTML&gt;<br>
+&lt;Body&gt;<br>
+&lt;Center&gt;Completeaza formularul&lt;/Center&gt;<br>
+&lt;TABLE border="2"&gt;<br>
+&lt;FORM action="mailto: NumeSserver.domeniu" method="POST"&gt;<br>
+&lt;TR&gt;<br>
+&nbsp&nbsp&nbsp;&lt;TD&gt;Numele: &lt;TDxINPUT type="text" name="nume"&gt;<br>
+&lt;TR&gt;<br>
+&nbsp&nbsp&nbsp;&lt;TD&gt;Prenumele: &lt;TD&gt;&lt;INPUT type="text" name="prenume"&gt;<br>
+&lt;TR&gt;<br>
+&nbsp&nbsp&nbsp;&lt;TD&gt;Data na&#351;terii (zi-luna-an) &lt;TD&gt;&lt;INPUT type="text" name="data_na"&gt;&lt;TR&gt;<br>
+&nbsp&nbsp&nbsp;&lt;TD&gt; Telefonul: &lt;TD&gt;&lt;INPUT type="text" name="telefon"&gt;<br>
+&lt;TR&gt;<br>
+&nbsp&nbsp&nbsp;&lt;TD&gt;Sexul: &nbsp;fcnbsp;<br>
+&nbsp&nbsp&nbsp;&nbsp&nbsp&nbsp;&lt;INPUT type="radio" name="sex" value="M" checked&gt; Mase knbsp;<br>
+&nbsp&nbsp&nbsp;&nbsp&nbsp&nbsp;&lt;INPUT type="radio" name="sex" value="F"&gt; Fem &nbsp;<br>
+&nbsp&nbsp&nbsp;&lt;TD&gt;<br>
+&nbsp&nbsp&nbsp;&nbsp&nbsp&nbsp;&lt;INPUT type="submit" value="Transmite" align="bottom"&gt;<br>
+&nbsp&nbsp&nbsp;&nbsp&nbsp&nbsp;&lt;INPUT type="reset" value="Sterge"&gt;<br>
+&lt;/form&gt;<br>
+&lt;/table&gt;<br>
+&lt;/body&gt;<br>
+&lt;/HTML&gt;<br>
+</font>
+<hr>
+<img src="scr/ex2.jpg"><br>
+<h3>&Icirc;ntreb&#259;ri de control</h3>
+1. Ce reprezint&#259; un formular?<br>
+2. Care etichete definesc un formular &#351;i care s&icirc;nt atributele lor?<br>
+3. Numi&#355;i valorile acceptate pentru aceste atribute.<br>
+4. Ce define&#351;te eticheta &lt;INPUT&gt;?<br>
+5.	Ce stabile&#351;te atributul type al etichetei &lt;INPUT&gt;	&#351;i	ce valori	poate	avea	el?<br>
+6.	Numi&#355;i celelalte atribute ale etichetei &lt;INPUT&gt;.<br>
+7. Ce etichet&#259; define&#351;te o list&#259; de selec&#355;ie?<br>
+8. Ce atribute poate avea aceast&#259; etichet&#259;?<br>
+9.	Numi&#355;i eticheta de definire a unui element al listei	de	selec&#355;ie &#351;i	atributele	ei.<br>
+10.	Ce etichet&#259; se utilizeaz&#259; pentru crearea unei zone	de	editare?<br><br>
+
+<h3>Sarcini pentru (Lucru independent)</H3>
+1. Crea&#355;i o pagin&#259; web care va afi&#351;a un formular de introducere a datelor despre stu-dent: numele, prenumele, sexul, patru note la sesiune, anul de studiu (ales dintr-o list&#259; de selec&#355;ie) etc.<br><br>
+2. Crea&#355;i un document html care va afi&#351;a urm&#259;toarea pagin&#259; web:<br><br>
+<ol type="a">
+<li><br><img src="scr/ex4.jpg"><br>
+<li><br><img src="scr/5.jpg"><br>
+</ol>
+3.	Crea&#355;i un document html care va afi&#351;a urm&#259;toarea pagin&#259; web:<br><br>
+<img src="scr/ex5.jpg"><br>
+
+4.	Comenta&#355;i urm&#259;torul cod html:<br><br>
+&lt;html&gt;<br>
+&lt;headxtitle&gt;Probleina 4&lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&lt;form naroe= "fermi "&gt;<br>
+Denumirea produsului<br>
+&lt;input type='text" name="casetal' size=20&gt;&lt;br&gt; Anul expir&#259;rii &lt;input type=*text" name="caseta2' size=10&gt;&lt;br&gt;Luna expir&#259;rii<br>
+&lt;input type="text" name="caseta3" size=10&gt;&lt;br&gt; Ziua expir&#259;rii<br>
+&lt;input type="text" name="caseta4" size=10&gt;&lt;br&gt;<br>
+&lt;input type="button” value="Confirma"&gt;&lt;/form&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+<br><br>
+
+5.	Crea&#355;i un document html care va afi&#351;a urm&#259;toarea pagin&#259; web:<br>
+<img src="scr/ex6.jpg"><br>
+
+6.	Ce va afi&#351;a pagina web cu urm&#259;torul cod html?<br><br>
+&lt;HTML&gt;<br>
+&lt;HEAD&gt;<br>
+&lt;TITLE&gt;Problema&lt;/TITLE&gt;<br>
+&lt;/head&gt;<br>
+&lt;BODY&gt;<br>
+&lt;CENTER&gt;<br>
+&lt;FORM&gt;<br>
+&lt;Table border=2&gt;<br>
+&lt;TR&gt;<br>
+&lt;TD&gt;&lt;INPUT TYPE=button VALUE=" 1 "&gt;&lt;/TD&gt;<br>
+&lt;TD&gt;&lt;INPUT TYPE=button VALUE=" 2 "&gt;&lt;/TD&gt;<br>
+&lt;TD&gt;&lt;INPUT TYPE=button VALUE=" 3 "&gt;&lt;/TD&gt;<br>
+&lt;/TR&gt;<br>
+&lt;TR&gt;<br>
+&lt;TD&gt;&lt;INPUT TYPE=button VALUE=" 4 "&gt;&lt;/TD&gt;<br>
+&lt;TD&gt;&lt;INPUT TYPE=button VALUE=" 5 "&gt;&lt;/TD&gt;<br>
+&lt;TD&gt;&lt;INPUT TYPE=button VALUE=" 6 "&gt;&lt;/TD&gt;<br>
+&lt;/TR&gt;<br>
+&lt;TR&gt;<br>
+&lt;TD&gt;&lt;INPUT TYPE=button VALUE=" 7 "&gt;&lt;/TD&gt;<br>
+&lt;TD&gt;&lt;INPUT TYPE=button VALUE=" 8 "&gt;&lt;/TD&gt;<br>
+&lt;TD&gt;&lt;INPOT TYPE=button VALUE=" 9 "&gt;&lt;/TD&gt;<br>
+&lt;/TR&gt;<br>
+&lt;TR&gt;<br>
+&lt;TD&gt;&lt;INPUT NAME=b0 TYPE=button VALUE=" 0 "&gt;&lt;/TD&gt;<br>
+&lt;TD COLSPAN=2&gt;&lt;INPUT TYPE=button VALUE=" OK "&gt;<br>
+&lt;TD&gt;&lt/TR&gt;<br>
+&lt;/TABLE&gt;<br>
+&lt;/FORM&gt;<br>
+&lt;/CENTER&gt;<br> 
+&lt;/BODY&gt;<br>
+&lt;/HTML&gt;<br>
+<br>
+
+7.	Scrie&#355;i codul html al paginii web care va afi&#351;a urm&#259;torul formular. <br>
+<img src="scr/ex7.jpg"><br>
+</body>
+</html>

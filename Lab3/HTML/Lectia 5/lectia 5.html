@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>Lectia 5</title>
+</head>
+<h1 align="center">Imagini</h1>
+<body leftmargin="45px" oncontextmenu="return false" oncopy="return false;" oncontextmenu="return false" onselectstart="return false;">
+&nbsp;&nbsp;&nbsp;&nbsp;&Icircn afara de faptul ca imaginile furnizeaza informatii, ele pot conferi unei paginii web atractivitate. Totusi utilizarea lor <br>intr-un document html se va face rational, deoarece fiecare imagine „consuma” timp pentru decodificarea si <br>afisarea ei. Practica arata ca daca incarcarea unei pagini web dureaza mai mult de 12 secunde, atunci 50% dintre <br>utilizatori renunta accesarea ei.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Fisierele-imagini au diferite formate. Browsere-le accepta (de regula) urmatoarele formate:<br>
+<b>&deg GIF (Grafics Interchange Format)</b> - fisiere cu extensia .gif;<br>
+<b>&deg JPEG (Join Photographic Expert Group) </b>- fisiere cu extensia .jpeg sau .jpg;<br>
+<b>&deg TIFF (Tagged Image File Format)</b> - fisiere cu extensia ,tif sau .tiff;<br>
+<b>&deg BMP (BitMap) </b>- fisiere cu extensia .bmp;<br>
+<b>&deg XPM (X PixMap)</b> - fisiere cu extensia .xmp;<br>
+<b>&deg XBM (X BitMap)</b> - fisiere cu extensia .xbm.<br>
+&nbsp;&nbsp;&nbsp;Pentru a insera o imagine „inline” (adica linga text) se utilizeaza eticheta < IMG >, cu atributul obligator SRC,, a carui <br>valoare este adresa URL a imaginii:<br>
+<h4 align="center">< IMG SRC = "URL" ><br></h4>
+Sintaxa pentru URL este identica cu cea utilizata pentru legaturi (vezi lectia 4).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Icircnn afara de atributul SRC eticheta <IMG> poate avea urmatoarele atribute:<br>
+<b>&deg;ALIGN</b>. utilizat pentru alinierea imaginii si care are una din valorile top (aliniere<br>
+deasupra - partea de sus a imaginii se aliniaza cu partea de sus a textului ce precede imaginea), <b><i>bottom</i> </b>(aliniere la baza<br> partea de jos a imaginii se aliniaza cu linia de baza a textului), <b><i>middle</i></b> (aliniere la	mijloc - mijlocul	imaginii<br>	se aliniaza<br>
+cu linia de baza a textului ce precede imaginea), <b><i>left </i></b>(aliniere	la stinga	-	textul si<br>
+celelalte elemente sint plasate in dreapta imaginii), <b><i>right</i></b>(aliniere la dreapta - textul si celelalte elemente sint plasate in <br>stinga imaginii);<br>
+<b>&deg ALT,</b> utilizat pentru afisarea unui text <b><i>explicativ</i></b> in locul imaginii (in cazul in care browser-ul nu incarca imaginea - <br>optiune stabilita de utilizator sau alta cauza) si care are ca valoare insusi textul explicativ (scris intre " si ");<br>
+<b>&deg WIDTH si HEIGHT</b>, folosite pentru specificarea marimii in pixeli a imaginii;<br>
+<b>&deg BORDER </b>, folosit pentru crearea in jurul imaginii a unui chenar de grosime (in pixeli) egala cu valoarea atributului;<br>
+<b>&deg HSPACE si VSPACE,</b> utilizate pentru precizarea distantei in pixeli pe orizontala, respectiv pe verticala, dintre <br>imagine si restul elementelor din pagina.<br><br>
+<hr>
+<h4>Exemplul I</h4>
+<font color="blue">
+&lt;HTML&gt<br>
+&lt;Head&gt<br>
+&lt;Title&gt;Initiere in HTML. Imagine&lt;/Title&gt<br>
+&lt;/Head&gt<br>
+&lt;Body&gt<br>
+&lt;H3 align=center>Universitatea de Stat din Tiraspol&lt;/H3&gt<br>
+&lt;P&gt<br>
+Fondat in anul 1959 ca Tehnicumul Elecromecanic din Chisinau.<br> <br>
+&lt;IMG SRC="scr/Colegiu.jpg" align=right hspace=10 vspace=10&gt<br><br>
+Din 01 septembrie 2002 conform Hotararii Guvernului Republicii Moldova institutia respectiva este reorganizata in <br>Colegiul Politehnic din mun. Chisinau, la care este comasat fostul Colegiul de Telecomunicatii din Chisinau.<br>
+Colegiul Politehnic din mun. Chisinau este acredidat de catre Stat prin Hotarirea nr. 010 din 23 mai 2002 a Consiliului <br>National de Evaluare Academica si Acreditare a Institutiilor de Invatamint din Republica Moldova.In anul 2006 si <br>2007 Colegiul Politehnic din mun. Chisinau se reacrediteaza la toate specialitatile.<br>
+&lt;/body&gt<br>
+&lt;/html&gt
+</font>
+<hr>
+<img src="scr/ex1.jpg"> <br>
+<h4>Exemplul 2</h4>
+<font color="blue">
+&lt;HTML&gt<br>
+&lt;head&gt<br>
+&lt;Title&gt;Imagine&lt;/Title&gt<br>
+&lt;/head&gt<br>
+&lt;Body&gt<br>
+AAAAA AAAAA	AAAAA	AAAAAA AAAAA AAAAA	AAAAA	AAAAA	AAAAA<br>
+AAAAA AAAAA	AAAAA	AAAAA AAAAA AAAAAA	AAAAA	AAAAA	AAAAA<br><br>
+&lt;IMG SRC="glob.jpg" align=middle width=80 height=120 vspace=0&gt<br><br>
+AAAAA AAAAA	AAAAA	AAAAAA AAAAA AAAAA	AAAAA	AAAAA	AAAAA<br>
+AAAAA AAAAA	AAAAA	AAAAA AAAAA AAAAAA	AAAAA	AAAAA	AAAAA<br>
+&lt;/Body&gt<br>
+&lt;/HTML&gt<br><br>
+</font>
+<hr>
+Observam ca imaginea este inserata „inline” si, prin urmare, la redimensionarea ferestrei browser-ului ea apare in diferite zone ale acestei ferestre.<br><br>
+<img src="scr/ex2.jpg"> <br>
+<hr>
+<h4>Exemplul 3</h4>
+&nbsp;&nbsp;Urmatoarea pagina web afiseaza 4 imagini-referinta. La executarea unui click pe una dintre referinte se va afisa imaginea corespunzatoare avind dimensiuni reale.<br>
+&nbsp;&nbsp;Aceasta tehnica este deseori folosita la crearea asa-numitelor „galerii-foto” (referintele pot fi fisiere de dimensiuni mai mici decit fisirele-imagini referite). Fisierele-imagini se afla in subcatalogul DESENE.<br><br>
+<font color="blue">
+&lt;HTML&gt<br>
+&lt;head&gt<br>
+&lt;Title&gt;lmagini&lt;/Title&gt<br>
+&lt;/head&gt<br>
+&lt;Body&gt<br>
+&lt;A HREF="Desene\desenl.jpg"&gt&lt;img src=Desene\desenl.jpg width=50 height=50&gt&lt;/A&gt<br>
+&lt;A HREF="Desene\desen2.jpg"&lt;img src=Desene\desen2.jpg width=50 height=50&gt&lt;/A&gt<br>
+&lt;A HREF="Desene\desen3 . jpg'&lt;img src=Desene\desen3 . jpg width=50 height=50&gt&lt;/A&gt<br>
+&lt;A HREF="Desene\desen4.jpg"&gt&lt;img src=Desene\desen4.jpg width=50 height=50&lt;/A&gt<br>
+&lt;/Body&gt<br>
+&lt;/HTML&gt<br><br>
+</font>
+<img src="scr/ex3.jpg"> <br>
+<hr>
+
+<h3>&Icircntreb&#259ri de control</h3>
+1.	Care sint formatele fisierelor-imagini acceptate de browser-ele web?<br>
+2.	Ce eticheta se utilizeaza pentru inserarea unei imagini intr-un document html? Care este atributul obligatoriu al acestei etichete?<br>
+3.	Explicati sensul expresiei imaginea este inserata „inline".<br>
+4.	Ce atribute neobligatorii poate avea eticheta pentru inserarea imaginilor intr-un document html si care sint valorile acestor atribute?<br>
+5.	Cum poate fi creata o referinta-imagine?<br><br>
+
+<h3>Sarcini pentru luctu independent</h3>
+
+1.	Creati o pagina web care va afisa un CV cu fotografia autorului de CV, aliniata la centrul paginii.<br><br>
+2.	Creati o pagina web care va afisa citeva imagini-hiperlegaturi de dimensiunile 50 pixeli x 50 pixeli. La executarea unui click pe fiecare imagine browser-ul va afisa aceasta imagine cu dimensiunile 150 pixeli x 150 pixeli.<br><br>
+3.	Creati o pagina web care va afisa un text despre orasul Chisinau cu titlul de nivelul 5, culoarea neagra si fundal gri. O imagine a orasului va aparea in chenar si va fi aliniata la dreapta textului.<br><br>
+4.	Creati o pagina web care va afisa graficul unei functii.
+Indicatie: Acest grafic poate fi construit cu programul Microsoft Excel.<br><br>
+5.	Creati o pagina web care va afisa o organigrama.<br><br>
+6.	Creati un document html care va afisa urmatoarea pagina web (imaginea inserata repetat poate fi alta).<br><br>
+<img src="scr/ex4.jpg"> <br>
+7.	Creati un document html care va afisa urmatoarea pagina web.<br>
+<img src="scr/ex5.jpg"> <br>
+8.	Creati un document html care va afisa urmatoarea pagina web.<br>
+<img src="scr/ex6.jpg"> <br>
+
+
+</body>
+</html>

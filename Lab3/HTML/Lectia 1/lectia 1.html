@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>Lectia 1</title>
+</head>
+<body style=background-image: url(src/3.jpg) leftmargin="45px" oncontextmenu="return false" oncopy="return false;" oncontextmenu="return false" onselectstart="return false;">
+<h1 align="center">Structura generala a unui <br>document HTML</h1><br>
+Un document HTML are, de regula, urmatoarea structura:<br><br>
+<table border="1px" width="600px">
+ <tr>
+  <td width="50%">&nbsp;&lt;HTML&gt</td>
+  <td>&nbsp;&nbsp;&nbsp; Inceputul documentului</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&lt; Head &gt<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt; Title&gt<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;Titlul documentului<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Title&gt;<br>&nbsp;&nbsp;&nbsp;&lt;/Head&gt</td>
+  <td>&nbsp;&nbsp;&nbsp;Sectiunea de antet a documentului</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&lt;Body&gt<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Continutul documentului&gt;<br>&nbsp;&nbsp;&nbsp;&lt;/Body&gt</td>
+  <td>&nbsp;&nbsp;&nbsp;Sectiunea de text a documentului</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&lt;HTML&gt</td>
+  <td>&nbsp;&nbsp;&nbsp;Sfirsitul documentului</td>
+ </tr>
+</table>
+<br>
+Textul scris intre marcajele &lt;<b>TITLE</b>&gt si &lt;<b>/TITLE</b>&gt; este afisat pe bara de titlu a ferestrei browser-ului.<br>
+Etichetele &lt;BODY&gt si &lt;<b>/BODY</b>&gt cuprind continutul propriu-zis al documentului HTML, care va fi afisat in fereastra browser-ului si va fi vazut de utilizator.<br>
+Eticheta &lt;<b>BODY</b>&gt poate avea urmatoarele atribute:<br>
+&gt	bgcolor = "#n<sub>1</sub>n<sub>2</sub>n<sub>3</sub>n<sub>4</sub>n<sub>5</sub>n<sub>6</sub>", unde #n<sub>1</sub>n<sub>2</sub>,n<sub>3</sub>n<sub>4</sub>,n<sub>5</sub>n<sub>6</sub>" sint numere hexazecimale care determina intensitatea culorilor rosu, verde, respectiv albastru ale fundalului paginii.<br>
+Culoarea poate fi precizata si prin numele ei (red, blue, black, yellow, green, cyan, purple, white, gray etc.);<br>
+&deg text ="#n<sub>1</sub>n<sub>2</sub>n<sub>3</sub>n<sub>4</sub>n<sub>5</sub>n<sub>6</sub>" specifica culoarea textului;<br>
+&deg link = "#n<sub>1</sub>n<sub>2</sub>n<sub>3</sub>n<sub>4</sub>n<sub>5</sub>n<sub>6</sub>" determina culoarea hiperlegaturii-text;<br>
+&deg vlink = "#n<sub>1</sub>n<sub>2</sub>n<sub>3</sub>n<sub>4</sub>n<sub>5</sub>n<sub>6</sub>" determina culoarea hiperlegaturii-text dupa vizionarea documentului referit de aceasta hiperlegatura;<br>
+&deg alink = "#n<sub>1</sub>n<sub>2</sub>n<sub>3</sub>n<sub>4</sub>n<sub>5</sub>n<sub>6</sub>" specifica culoarea hiperlegaturii-text active;<br>
+&deg background = "URL", unde URL este adresa si numele fisierului grafic a carui imagine va fi utilizata ca fundal al documentului;<br>
+&deg leftmargin = "n" unde n este numar natural, stabileste distanta in pixeli dintre marginea stinga a ferestrei browser-ului si marginea stinga a continutului paginii;<br>
+&deg topmargin = "n" unde n este numar natural, stabileste distanta in pixeli dintre marginea de sus a ferestrei browser-ului si marginea de sus a continutului paginii.<br>
+
+<hr>
+<strong><i>Exemplul 1.</i></strong> Urmatorul fisier prezinta o pagina cu fundalul de culoare aqua si textul de culoarea #FF2233.<br><br>
+<font color="blue">
+&lt;HTML&gt<br>
+&nbsp;&nbsp;&nbsp;&lt;Head&gt<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Title&gt Initiere in HTML. Exemplul 1 &lt;/Title&gt<br>
+&nbsp;&nbsp;&nbsp;&lt;/Head&gt<br>
+&nbsp;&lt;Body leftniargin="140" topmargin="200" bgcolor="aqua" text=''#FF2233"&gt<br>
+Salut! Acesta este un document .html<br>
+&nbsp;&lt;/Body&gt<br>
+&lt;/HTML&gt<br>
+</font>
+<img src="scr/ex1.jpg">
+<hr>
+<h3>Intrebari de control</h3>
+1.	Explica&#355;i sensul expresiei leg&#259;tur&#259; hipertext.<br>
+2.	Ce editor de texte se poate folosi	pentru crearea unui	fi&#351;ier	.html?<br>
+3.	Ce &icirc;n&#355;elege&#355;i prin element al unui	document html?<br>
+4.	Ce s&icirc;nt etichetele &#351;i pentru ce se	utilizeaz&#259;?<br>
+5.	Ce simboluri se utilizeaz&#259; pentru	a pune &icirc;n eviden&#355;&#259;	o	etichet&#259;?<br>
+6.	Prin ce se deosebe&#351;te eticheta de &icirc;nceput de cea de sf&icirc;r&#351;it?<br>
+7.	C&icirc;te atribute poate avea o etichet&#259;?<br>
+8.	Care este structura general&#259; a unui document html?<br>
+9.	Cum se utilizeaz&#259; etichetele &lt;Title> &#351;i &lt;/Title&gt ?<br>
+10.	La ce folosesc etichetele &lt;Body> &#351;i &lt;/Body&gt ?<br>
+
+<br>
+<hr>
+<h3>Sarcini pentru lucrul independent</h3><br>
+<b>1.</b>	Crea&#355;i o pagin&#259; web cu fundalul galben &#351;i textul verde, con&#355;inutul paginii fiind afi&#351;at la 110 pixeli de marginea sting&#259; &#351;i 105 pixeli de marginea de sus a ferestrei browser-ului.<br><br>
+<b>2.</b>	Crea&#355;i o pagin&#259; web cu fundalul albastru &#351;i textul alb, con&#355;inutul paginii fiind afi&#351;at la 10 pixeli de marginea st&icirc;ng&#259; &#351;i 15 pixeli de marginea de sus a ferestrei browser-ului.<br><br>
+<b>3.</b>	Ce va afi&#351;a documentul html cu urm&#259;torul con&#355;inut:<br><br>
+&lt;HTML&gt<br>
+&nbsp;&nbsp;&nbsp;&lt;Head&gt<br>
+&nbsp;&nbsp;&nbsp;Ce este un fi&#351;ier .html?<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Title&gt PROBLEMA &lt;/Title&gt<br>
+&nbsp;&nbsp;&nbsp;&lt;/Head&gt<br>
+&lt;Body&gt<br>
+Care este structura unui document .html?<br>
+&lt;/Body&gt<br>
+&lt;/HTML&gt<br>
+<b>4.</b>	Crea&#355;i o pagin&#259; web care va afi&#351;a pe bara de titlu a ferestrei browser-ului textul PRIMA LEC&#354;IE HTML &#351;i va avea &icirc;n calitate de fundal o imagine.<br><br>
+<b>5.</b>	Ce va afi&#351;a documentul html cu urm&#259;torul con&#355;inut:<br><br>
+&lt;HTML&gt<br>
+&nbsp;&nbsp;&nbsp;&lt;head&gt<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Title&gt; Tabel sau ...?&lt;/Title&gt<br>
+&nbsp;&nbsp;&nbsp;&lt;/head&gt<br>
+&lt;Body background="f.jpg" text="aqua"&gt<br>
+ &nbsp;__________________<br>
+|__________________<br>
+|__________________<br>
+&lt;/body&gt<br>
+&lt;/html&gt<br>
+<b>6.</b> Crea&#355;i un document HTML care va afi&#351;a urmatoarea pagina web:<br><br>
+<img src="scr/ex6.jpg">
+</body>
+
+</html>
